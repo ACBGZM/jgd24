@@ -7,6 +7,11 @@ public class BombManager : MonoBehaviour
     private bool m_is_detonating = false;
 
     private static BombManager s_instance;
+
+    [SerializeField]
+    [Tooltip("放置偏移")]
+    public Vector2 plantOffet;
+
     private BombManager() { }
     public static BombManager GetInstance() // => s_instance;
     {
@@ -46,7 +51,7 @@ public class BombManager : MonoBehaviour
     {
         if (m_bomb_prefab != null)
         {
-            GameObject bomb = GameObject.Instantiate(m_bomb_prefab, transform.position, transform.rotation);
+            GameObject bomb = GameObject.Instantiate(m_bomb_prefab, transform.position + new Vector3(plantOffet.x, plantOffet.y, 0), transform.rotation);
             bomb.transform.SetParent(null);
             m_bombs.Add(bomb.GetComponent<Bomb>());
         }

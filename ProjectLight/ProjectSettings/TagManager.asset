@@ -52,14 +52,17 @@ TagManager:
   - name: Ray
     uniqueID: 3684654543
     locked: 0
+  - name: DropItem
+    uniqueID: 534666907
+    locked: 0
   - name: Boss
     uniqueID: 1723428189
     locked: 0
   - name: Player
     uniqueID: 1174141911
     locked: 0
-  - name: DropItem
-    uniqueID: 534666907
+  - name: SceneItems
+    uniqueID: 32393179
     locked: 0
   - name: Box
     uniqueID: 571473963
