@@ -2,7 +2,10 @@ using System;
 using UnityEngine;
 
 public class PlayerOnHit : MonoBehaviour, BombDamage, LaserDamage, BossDamage, BulletDamage
-{
+{   
+
+    [SerializeField]
+     public int maxHealth = 100;
     [SerializeField]
     private int health = 100;
     public int Health
@@ -54,6 +57,7 @@ public class PlayerOnHit : MonoBehaviour, BombDamage, LaserDamage, BossDamage, B
     private Animator m_animator = null;
     private Action m_on_hit_action = null;
 
+
     void Awake()
     {
         currentBombTime = 0;
@@ -65,6 +69,7 @@ public class PlayerOnHit : MonoBehaviour, BombDamage, LaserDamage, BossDamage, B
     private void Start()
     {
         m_animator = GetComponentInChildren<Animator>();
+       
     }
 
     public void FixedUpdate()
@@ -121,8 +126,11 @@ public class PlayerOnHit : MonoBehaviour, BombDamage, LaserDamage, BossDamage, B
     }
 
     public void OnHit()
-    {
+    {   
+        HealthChangeEvent.CallOnHealthChanged(Health,gameObject);
+
         m_animator.SetTrigger("Hit");
         m_on_hit_action?.Invoke();
+        
     }
 }

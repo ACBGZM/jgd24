@@ -5,7 +5,9 @@ using UnityEngine;
 public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
 {   
      [SerializeField]
-    private int health = 100;
+     public int maxHealth = 1000;
+     [SerializeField]
+    private int health = 1000;
     public int Health
     {
         get { return health; }
@@ -34,9 +36,12 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
     private float laserDamageProtectTime = 0.1f;
     private float currentLaserTime;
 
-    void Awake()
-    {
+
+
+    void Start()
+    {   
         currentLaserTime = 0;
+      
     }
 
     void FixUpdate()
@@ -61,7 +66,9 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
     }
 
     public void OnHit()
-    {
-        Debug.Log("TODO: OnHit Animation");
+    {   
+        Debug.Log("TODO: 怪物受击动画");
+        HealthChangeEvent.CallOnHealthChanged(Health,gameObject);
+        
     }
 }
