@@ -1,9 +1,9 @@
 using System.ComponentModel;
 using UnityEngine;
 
-public class Launcher : MonoBehaviour
+public class BulletLauncher : MonoBehaviour
 {
-    public LauncherStat launcherStat;
+    public BulletLauncherStat launcherStat;
 
     public int currentLaunchQuantity;
     public float currentLaunchAngle;
@@ -27,7 +27,7 @@ public class Launcher : MonoBehaviour
         }
     }
 
-    public void Init(LauncherStat launcherStat)
+    public void Init(BulletLauncherStat launcherStat)
     {
         this.launcherStat = launcherStat;
         currentLaunchQuantity = 0;

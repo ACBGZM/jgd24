@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Bullet.LauncherStat", fileName = "New LauncherStat")]
-public class LauncherStat : ScriptableObject
+[CreateAssetMenu(menuName = "Launcher/BulletLauncherStat", fileName = "New BulletLauncherStat")]
+public class BulletLauncherStat : ScriptableObject
 {
     public bool Instantiated = false;
 

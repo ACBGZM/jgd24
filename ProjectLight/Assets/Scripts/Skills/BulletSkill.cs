@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletSkill : Skill
 {
     public GameObject launcherPrefab;
-    public List<LauncherStat> launcherStats;
+    public List<BulletLauncherStat> launcherStats;
 
     public bool aimToPlayer = false;
 }

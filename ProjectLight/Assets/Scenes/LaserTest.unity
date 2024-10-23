@@ -875,6 +875,11 @@ MonoBehaviour:
   MAX_LENGTH: 1000
   OFFSET: 0.0001
   lineWidth: 1
+  laserLifeTime: 5
+  initLaunchAngle: 0
+  initLaunchDistanceOffet: 0
+  rotateTime: 3
+  rotateAngle: 90
   meterialList:
   - {fileID: 2100000, guid: 3bf99e8e562894327a45f36e04255f9c, type: 2}
   - {fileID: 2100000, guid: 56f6cdd1fe3444214966f92173f67ab5, type: 2}

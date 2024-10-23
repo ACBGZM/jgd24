@@ -118,7 +118,7 @@ public class Debug_Spider : MonoBehaviour
             if (showSnipeDirection)
             {
                 Gizmos.color = SnipeLineColor;
-                foreach (LauncherStat launcher in SnipeSO.launcherStats)
+                foreach (BulletLauncherStat launcher in SnipeSO.launcherStats)
                 {
                     Vector2 direction = SnipeSO.aimToPlayer
                         ? (playerPos - spiderPos).normalized
@@ -130,7 +130,7 @@ public class Debug_Spider : MonoBehaviour
             if (showOctoShotDirection)
             {
                 Gizmos.color = OctoShotLineColor;
-                foreach (LauncherStat launcher in OctoShotSO.launcherStats)
+                foreach (BulletLauncherStat launcher in OctoShotSO.launcherStats)
                 {
                     Vector2 direction = OctoShotSO.aimToPlayer
                         ? (playerPos - spiderPos).normalized

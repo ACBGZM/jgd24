@@ -28,7 +28,7 @@ public class SpiderState_Skill : SpiderState
             if (skill.GetType() == typeof(BulletSkill))
             {
                 BulletSkill bulletSkill = (BulletSkill)skill;
-                foreach (LauncherStat launcherStat in bulletSkill.launcherStats)
+                foreach (BulletLauncherStat launcherStat in bulletSkill.launcherStats)
                 {
                     Quaternion bulletRotation = bulletSkill.aimToPlayer
                         ? Quaternion.LookRotation(Vector3.forward,
@@ -36,7 +36,7 @@ public class SpiderState_Skill : SpiderState
                         : Quaternion.identity;
                     GameObject launcher = Instantiate(bulletSkill.launcherPrefab, stateMachine.transform.position,
                         bulletRotation);
-                    launcher.GetComponent<Launcher>().Init(launcherStat);
+                    launcher.GetComponent<BulletLauncher>().Init(launcherStat);
                 }
             }
             if (skill.GetType() == typeof(SummonSkill))
