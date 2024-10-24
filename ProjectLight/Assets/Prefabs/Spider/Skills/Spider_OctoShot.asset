@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41fd3f8b45d85aa46abc939cbd4543ff, type: 3}
   m_Name: Spider_OctoShot
   m_EditorClassIdentifier: 
-  skillID: 2
-  skillName: OctoShot
   launcherPrefab: {fileID: 8171210220696821468, guid: 78f5f57a905b3744db693084d042e943, type: 3}
   launcherStats:
   - {fileID: 11400000, guid: eb234739cf843144f8fedb88d85d8ccb, type: 2}
@@ -24,4 +22,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8a85f82187e45b6479058e06976ca78b, type: 2}
   - {fileID: 11400000, guid: 34e2ed319c24b9341ab114af7cee4692, type: 2}
   - {fileID: 11400000, guid: 23e96149ea7fa8242952d4bea3989a97, type: 2}
+  animationClipName: Spider_OctoShot
   aimToPlayer: 0
+  originalPos: {x: -3.7823832, y: 0.75448793}
+  playerPos: {x: -5.41909, y: -4.796244}

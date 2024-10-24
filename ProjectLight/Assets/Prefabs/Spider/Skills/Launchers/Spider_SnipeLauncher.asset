@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9eb95c5122cd88439e269e0fde08a17, type: 3}
   m_Name: Spider_SnipeLauncher
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
+  Instantiated: 0
+  bulletPrefab: {fileID: 5867816866915418574, guid: 2e1c7c4c349677f46bc47b845ebca0c6, type: 3}
   bulletSpeed: 5
   bulletSize: 1
   bulletLifeTime: 5

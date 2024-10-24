@@ -11,9 +11,14 @@ public class SpiderState_Move : SpiderState
     private Vector2 playerPos;
     private Vector2 targetPos;
 
+    private bool isChangingState = false;
+    private bool canMove = false;
+
     public override void Enter()
     {
         base.Enter();
+        isChangingState = false;
+        canMove = false;
         stateMachine.SetCurrentStateType(SpiderStateType.Move);
         playerPos = stateMachine.GetPlayerPosition();
         Vector2 currentPos = stateMachine.transform.position;
@@ -71,6 +76,13 @@ public class SpiderState_Move : SpiderState
         Debug.DrawLine(currentPos, targetPos, Color.yellow, 1f);
 
         #endregion 目标点计算
+        
+        animator.Play("Spider_Cocoon2Spider");
+        AnimationTool.AwaitCurrentAnimWhenEnd(animator, () =>
+        {
+            animator.Play("Spider_Walk");
+            canMove = true;
+        });
     }
 
     public override void Execute()
@@ -78,9 +90,14 @@ public class SpiderState_Move : SpiderState
         base.Execute();
 
         // 判断是否到达目标点
-        if (Vector2.Distance(stateMachine.transform.position, targetPos) <= 0.1f)
+        if (Vector2.Distance(stateMachine.transform.position, targetPos) <= 0.1f && !isChangingState)
         {
-            stateMachine.GoToNextState();
+            isChangingState = true;
+            animator.Play("Spider_Spider2Cocoon");
+            AnimationTool.AwaitCurrentAnimWhenEnd(animator, () => { stateMachine.GoToNextState(); });
+            //stateMachine.animationPlayControl.PlayAnimation("Spider_Spider2Cocoon", null,
+            //    () => { stateMachine.GoToNextState(); });
+            // stateMachine.GoToNextState();
         }
     }
 
@@ -88,7 +105,10 @@ public class SpiderState_Move : SpiderState
     {
         base.FixedExecute();
         // 移动到目标点
-        stateMachine.rb.MovePosition(Vector2.MoveTowards(stateMachine.transform.position, targetPos, stateMachine.MoveSpeed * Time.fixedDeltaTime));
+        if (canMove)
+        {
+            stateMachine.rb.MovePosition(Vector2.MoveTowards(stateMachine.transform.position, targetPos, stateMachine.MoveSpeed * Time.fixedDeltaTime));
+        }
     }
 
     private (float, float) GetLengthRange(Vector2 center, float externalRadius, float innerRadius, Vector2 point,

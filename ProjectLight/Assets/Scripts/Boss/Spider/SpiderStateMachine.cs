@@ -82,12 +82,16 @@ public class SpiderStateMachine : StateMachine
 
     private SpiderStateType currentStateType;
     public SpiderStateType CurrentStateType => currentStateType;
+    
+    public AnimationPlayControl animationPlayControl;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         currentServantAmonut = 0;
+        animationPlayControl = gameObject.AddComponent<AnimationPlayControl>();
+        animationPlayControl.Init(animator);
 
         foreach (SpiderState state in states)
         {
@@ -130,5 +134,11 @@ public class SpiderStateMachine : StateMachine
     public void SetCurrentStateType(SpiderStateType type)
     {
         currentStateType = type;
+    }
+
+    public void BulletCast(BulletSkill bulletSkill)
+    {
+        bulletSkill.UpdatePlayerPos(GetPlayerPosition());
+        bulletSkill.Cast();
     }
 }

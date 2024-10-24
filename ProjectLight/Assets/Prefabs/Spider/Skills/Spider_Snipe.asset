@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41fd3f8b45d85aa46abc939cbd4543ff, type: 3}
   m_Name: Spider_Snipe
   m_EditorClassIdentifier: 
-  skillID: 1
-  skillName: Snipe
   launcherPrefab: {fileID: 8171210220696821468, guid: 78f5f57a905b3744db693084d042e943, type: 3}
   launcherStats:
   - {fileID: 11400000, guid: 95f8dbd7fcded3d41b4808f7c565fdcd, type: 2}
+  animator: {fileID: 0}
+  clip: {fileID: 7400000, guid: 845f61457ae944103ada4660b3de8be2, type: 2}
+  animationClipName: Spider_Snipe
+  castFrame: 8
   aimToPlayer: 1
+  originalPos: {x: 0.4695332, y: 1.6106374}
+  playerPos: {x: 5.4913154, y: 1.91}

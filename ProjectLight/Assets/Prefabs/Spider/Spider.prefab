@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1123213704893091941}
   - component: {fileID: 3943057742598967982}
   - component: {fileID: 6321515746929434457}
+  - component: {fileID: 6537470218143919507}
   m_Layer: 11
   m_Name: Spider
   m_TagString: Untagged
@@ -78,8 +79,8 @@ SpriteRenderer:
   m_SortingLayerID: 1723428189
   m_SortingLayer: 3
   m_SortingOrder: 10
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
+  m_Sprite: {fileID: 21300000, guid: d4f4c88964ccbf34584f9199e64306a1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -208,14 +209,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8c61fc85a51404aa2725cc9b9a5f65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateMachine: {fileID: 5824706029707694627}
-  idleTimer: 0
-  showMoveRange: 0
-  showSnipeDirection: 0
+  currentState: 0
+  showMoveRange: 1
+  showSnipeDirection: 1
   SnipeSO: {fileID: 11400000, guid: 588d4efe79bddac47a3999da121e5a0e, type: 2}
   SnipeLineColor: {r: 1, g: 0, b: 0, a: 1}
   SnipeLineLength: 3
-  showOctoShotDirection: 0
+  showOctoShotDirection: 1
   OctoShotSO: {fileID: 11400000, guid: 1426e4305dec56a428e15f8ac0e0c83c, type: 2}
   OctoShotLineColor: {r: 0.9685534, g: 0, b: 0, a: 1}
   OctoShotLineLength: 3
+--- !u!95 &6537470218143919507
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338319636300714571}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16a02caa287e54f8683307f90e5d4ad3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

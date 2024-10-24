@@ -28,6 +28,16 @@ public class SpiderState_Skill : SpiderState
             if (skill.GetType() == typeof(BulletSkill))
             {
                 BulletSkill bulletSkill = (BulletSkill)skill;
+                bulletSkill.Init(stateMachine.transform.position, stateMachine.GetPlayerPosition());
+                /* stateMachine.animationPlayControl.PlayAnimation(bulletSkill.animationClipName, null, () =>
+                {
+                    stateMachine.GoToNextState();
+                });
+                */
+                animator.Play(bulletSkill.animationClipName);
+                AnimationTool.AwaitCurrentAnimWhenEnd(animator, () => { stateMachine.GoToNextState(); });
+                // bulletSkill.Cast();
+                /*
                 foreach (BulletLauncherStat launcherStat in bulletSkill.launcherStats)
                 {
                     Quaternion bulletRotation = bulletSkill.aimToPlayer
@@ -38,6 +48,7 @@ public class SpiderState_Skill : SpiderState
                         bulletRotation);
                     launcher.GetComponent<BulletLauncher>().Init(launcherStat);
                 }
+                */
             }
             if (skill.GetType() == typeof(SummonSkill))
             {
@@ -52,6 +63,7 @@ public class SpiderState_Skill : SpiderState
                     Instantiate(summonSkill.summonPrefab, summonPosition, Quaternion.identity);
                     stateMachine.currentServantAmonut ++;
                 }
+                stateMachine.GoToNextState();
             }
         }
     }
@@ -59,11 +71,5 @@ public class SpiderState_Skill : SpiderState
     public override void Execute()
     {
         base.Execute();
-        timer += Time.deltaTime;
-
-        if (timer >= 1)
-        {
-            stateMachine.GoToNextState();
-        }
     }
 }
