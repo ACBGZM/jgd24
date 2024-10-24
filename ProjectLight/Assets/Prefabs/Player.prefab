@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 218095345358881656}
   - component: {fileID: 8541635785553283771}
   - component: {fileID: 942027811654469703}
-  - component: {fileID: 7553305671967528957}
+  - component: {fileID: 5048216309222368413}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430e6d60ed3354c68921c7436bd7b6ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   health: 100
   bombDamageRate: 5
   laserDamageRate: 1
@@ -102,8 +103,8 @@ MonoBehaviour:
   laserDamageProtectTime: 0.5
   bossDamageProtectTime: 0.5
   bulletDamageProtectTime: 0.5
---- !u!58 &7553305671967528957
-CircleCollider2D:
+--- !u!70 &5048216309222368413
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -134,9 +135,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.9568795}
-  serializedVersion: 2
-  m_Radius: 0.879254
+  m_Offset: {x: 0.02483368, y: -0.66399074}
+  m_Size: {x: 1.5430183, y: 2.926168}
+  m_Direction: 0
 --- !u!1 &5488094138936702785
 GameObject:
   m_ObjectHideFlags: 0

@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3dad3afc2ee94dd3bc98c16a6c3a3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 1000
   health: 1000
   bombDamageRate: 20
   laserDamageRate: 1
@@ -190,9 +191,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.1143378, y: 0.5621652}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.767255
 --- !u!1 &7587384583952795277
 GameObject:
   m_ObjectHideFlags: 0
