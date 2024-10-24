@@ -8,6 +8,7 @@ public class ServantSpiderState_Hanging : ServantSpiderState
     public override void Enter()
     {
         base.Enter();
+        animator.Play("ServantSpider_Up");
         stateMachine.transform.localScale = 1.5f * Vector3.one;
     }
 
@@ -21,6 +22,7 @@ public class ServantSpiderState_Hanging : ServantSpiderState
 
         if(distance <= stateMachine.AttackRadius)
         {
+            animator.Play("ServantSpider_Drop");
             stateMachine.transform.localScale = Vector3.one;
             stateMachine.ChangeState(typeof(ServantSpiderState_Idle));
         }

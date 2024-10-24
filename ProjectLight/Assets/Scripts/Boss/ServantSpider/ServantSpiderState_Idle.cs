@@ -15,6 +15,7 @@ public class ServantSpiderState_Idle : ServantSpiderState
     {
         base.Enter();
         timer = 0;
+        animator.Play("ServantSpider_Idle");
     }
 
     public override void Execute()

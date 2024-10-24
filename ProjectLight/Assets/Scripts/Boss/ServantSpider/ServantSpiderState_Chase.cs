@@ -17,6 +17,7 @@ public class ServantSpiderState_Chase : ServantSpiderState
     {
         base.Enter();
         timer = 0;
+        animator.Play("ServantSpider_Move");
     }
 
     public override void Execute()

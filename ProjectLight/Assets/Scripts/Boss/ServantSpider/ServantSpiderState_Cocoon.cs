@@ -15,7 +15,7 @@ public class ServantSpiderState_Cocoon : ServantSpiderState
     {
         base.Enter();
         timer = 0;
-        stateMachine.sr.sprite = stateMachine.cocoonSprite;
+        animator.Play("ServantAnimation_EggIdle");
     }
 
     public override void Execute()
@@ -25,6 +25,7 @@ public class ServantSpiderState_Cocoon : ServantSpiderState
 
         if(timer >= stateMachine.CocoonTime)
         {
+            animator.Play("ServantAnimation_Egg2Spider");
             stateMachine.ChangeState(typeof(ServantSpiderState_Idle));
         }
     }
@@ -32,6 +33,5 @@ public class ServantSpiderState_Cocoon : ServantSpiderState
     public override void Exit()
     {
         base.Exit();
-        stateMachine.sr.sprite = stateMachine.spiderSprite;
     }
 }
