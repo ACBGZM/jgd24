@@ -8,6 +8,7 @@ public enum PlayerStatus
     planting_a_bomb = 1,
     moving = 2,
     idle = 3,
+    on_hit = 4,
 }
 
 public class PlayerController : MonoBehaviour
@@ -21,18 +22,23 @@ public class PlayerController : MonoBehaviour
     private InputAction m_detonate_all_bombs_action;
 
     private InputAction m_pause_game_action;
-    [SerializeField] private GameObject m_pause_panel = null;
-    [SerializeField] private UILogic m_ui_logic;
+
+    [SerializeField]
+    private UILogic m_ui_logic;
 
     // movement
     [SerializeField
 #if UNITY_EDITOR
         , ReadOnly
 #endif
-        ] private Vector2 m_input_movement;
+    ]
+    private Vector2 m_input_movement;
 
-    [SerializeField] private float m_speed;
-    [SerializeField] private float m_speed_while_planting;
+    [SerializeField]
+    private float m_speed;
+
+    [SerializeField]
+    private float m_speed_while_planting;
 
     // planting bomb
     private LineRenderer m_planting_progress_line;
@@ -40,15 +46,21 @@ public class PlayerController : MonoBehaviour
     private const float m_planting_progress_line_width = 0.3f;
     private const float m_planting_progress_line_height = 0.8f;
 
-    private const double m_planting_duration = 0.4f;    // todo
+    private const double m_planting_duration = 1.0f; // todo
     private double m_planting_start_time;
+
+    // animation
+    private PlayerAnimationController m_animation_controller = null;
+    private PlayerOnHit m_player_on_hit = null;
 
     // status
     [SerializeField
 #if UNITY_EDITOR
         , ReadOnly
 #endif
-    ] private PlayerStatus m_status = PlayerStatus.default_status;
+    ]
+    private PlayerStatus m_status = PlayerStatus.default_status;
+
     public PlayerStatus getPlayerStatus() => m_status;
 
     public void Awake()
@@ -97,16 +109,61 @@ public class PlayerController : MonoBehaviour
         m_planting_progress_line.endColor = Color.yellow;
         m_planting_progress_line.material = new Material(Shader.Find("Sprites/Default"));
         m_planting_progress_line.enabled = false;
+
+        m_planting_progress_line.sortingLayerName =  "Player";
+        m_planting_progress_line.sortingOrder = 30;
+
+
+
+        m_animation_controller = GetComponentInChildren<PlayerAnimationController>();
+        Debug.Log(m_animation_controller);
+        m_animation_controller.SetResetHitAction(ResetOnHitStatus);
+
+        m_player_on_hit = GetComponent<PlayerOnHit>();
+        m_player_on_hit.SetOnHitAction(SetOnHitStatus);
     }
+
+    private bool m_is_on_hit_last_frame = false;
 
     public void Update()
     {
+        if (m_status == PlayerStatus.on_hit)
+        {
+            if (!m_is_on_hit_last_frame)
+            {
+                DisableInput();
+            }
+
+            m_is_on_hit_last_frame = true;
+            return;
+        }
+        else
+        {
+            if (m_is_on_hit_last_frame)
+            {
+                m_player_input.Enable();
+            }
+
+            m_is_on_hit_last_frame = false;
+        }
+
         ProcessInput();
         DrawPlantingProgressLine();
+        SetAnimation();
     }
 
     public void FixedUpdate()
     {
+        if (m_status == PlayerStatus.on_hit)
+        {
+            DisableInput();
+            return;
+        }
+        else
+        {
+            m_player_input.Enable();
+        }
+
         PlayerMovement();
     }
 
@@ -119,18 +176,23 @@ public class PlayerController : MonoBehaviour
     private void PlayerMovement()
     {
         if (m_input_movement.x != 0 || m_input_movement.y != 0)
-        if (m_input_movement.x != 0 || m_input_movement.y != 0)
         {
-            float2 movement_input = math.normalize(new float2(m_input_movement.x, m_input_movement.y));
-            float speed = m_status == PlayerStatus.planting_a_bomb ? m_speed_while_planting : m_speed;
-            m_rigidbody.MovePosition(m_rigidbody.position + (new Vector2(movement_input.x, movement_input.y)) * speed * Time.deltaTime);
+            float2 movement_input = math.normalize(
+                new float2(m_input_movement.x, m_input_movement.y)
+            );
+            float speed =
+                m_status == PlayerStatus.planting_a_bomb ? m_speed_while_planting : m_speed;
+            m_rigidbody.MovePosition(
+                m_rigidbody.position
+                    + (new Vector2(movement_input.x, movement_input.y)) * speed * Time.deltaTime
+            );
 
             if (m_status != PlayerStatus.planting_a_bomb)
             {
                 m_status = PlayerStatus.moving;
             }
         }
-        else if(m_status != PlayerStatus.planting_a_bomb)
+        else if (m_status != PlayerStatus.planting_a_bomb)
         {
             m_status = PlayerStatus.idle;
         }
@@ -151,9 +213,13 @@ public class PlayerController : MonoBehaviour
 
     private void PlantABombCanceled(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
-        m_status = PlayerStatus.default_status;
+        if (m_status != PlayerStatus.on_hit)
+        {
+            m_status = PlayerStatus.default_status;
+        }
 
         m_planting_start_time = 0f;
+        m_planting_progress_line.enabled = false;
     }
 
     private void DetonateAllBombs(UnityEngine.InputSystem.InputAction.CallbackContext context)
@@ -168,11 +234,24 @@ public class PlayerController : MonoBehaviour
             m_planting_progress_line.enabled = true;
 
             double planting_time = Time.time - m_planting_start_time;
-            float progress_line_length = Mathf.Lerp(0, m_planting_progress_line_length, (float)(planting_time / m_planting_duration));
+            float progress_line_length = Mathf.Lerp(
+                0,
+                m_planting_progress_line_length,
+                (float)(planting_time / m_planting_duration)
+            );
 
-            Vector3 playerHeadPosition = transform.position + new Vector3(-m_planting_progress_line_length / 2.0f, m_planting_progress_line_height, 0);
+            Vector3 playerHeadPosition =
+                transform.position
+                + new Vector3(
+                    -m_planting_progress_line_length / 2.0f,
+                    m_planting_progress_line_height,
+                    0
+                );
             m_planting_progress_line.SetPosition(0, playerHeadPosition);
-            m_planting_progress_line.SetPosition(1, playerHeadPosition + Vector3.right * progress_line_length);
+            m_planting_progress_line.SetPosition(
+                1,
+                playerHeadPosition + Vector3.right * progress_line_length
+            );
         }
         else
         {
@@ -184,5 +263,27 @@ public class PlayerController : MonoBehaviour
     {
         m_ui_logic.PauseGame();
         m_ui_logic.ShowPanel(true);
+    }
+
+    private void SetOnHitStatus()
+    {
+        m_status = PlayerStatus.on_hit;
+    }
+
+    private void ResetOnHitStatus()
+    {
+        m_status = PlayerStatus.default_status;
+    }
+
+    private void SetAnimation()
+    {
+        m_animation_controller.PlayerStatus = m_status;
+    }
+
+    private void DisableInput()
+    {
+        m_player_input.Disable();
+        m_plant_a_bomb_action.Disable();
+        m_detonate_all_bombs_action.Disable();
     }
 }

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1765958672373448022}
   - component: {fileID: 1671531524099906219}
   - component: {fileID: 3733798265229966044}
-  - component: {fileID: 6520775710332987859}
   - component: {fileID: 8746967768863615933}
+  - component: {fileID: 5638636209022814067}
   m_Layer: 3
   m_Name: Box
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.499, y: -0.506, z: 0}
-  m_LocalScale: {x: 3.08, y: 3.08, z: 3.08}
+  m_LocalScale: {x: 0.49999997, y: 0.49999997, z: 0.49999997}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 1801338562, guid: d9f3cff1f4e444dea93436a0f4dc2526, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb27b2505b92340b5b3049c5d8c4af9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,8 +114,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &6520775710332987859
-BoxCollider2D:
+--- !u!114 &8746967768863615933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727602073023670250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf2ec77d22d146d58297811049bec38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renewable: 1
+  dropItemPrefab: {fileID: 3205158364899642757, guid: 6a023645ddf434a179906a8f0d31ef63, type: 3}
+  boxExplodeAnimPrefab: {fileID: 661661869279156837, guid: 23da71e8ea92b46308be2fb117e5234e, type: 3}
+  spriteList:
+  - {fileID: 21300000, guid: eb27b2505b92340b5b3049c5d8c4af9b, type: 3}
+  - {fileID: 486664378, guid: 46ba48698d60f42d7a5d0d06217c4792, type: 3}
+--- !u!58 &5638636209022814067
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -146,34 +164,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.0000004768372, y: 0.4740029}
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.32}
-  m_EdgeRadius: 0
---- !u!114 &8746967768863615933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727602073023670250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bf2ec77d22d146d58297811049bec38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  renewable: 1
-  dropItemPrefab: {fileID: 3205158364899642757, guid: 6a023645ddf434a179906a8f0d31ef63, type: 3}
-  boxExplodeAnimPrefab: {fileID: 661661869279156837, guid: 23da71e8ea92b46308be2fb117e5234e, type: 3}
-  spriteList:
-  - {fileID: 1801338562, guid: d9f3cff1f4e444dea93436a0f4dc2526, type: 3}
-  - {fileID: 1185755888, guid: d9f3cff1f4e444dea93436a0f4dc2526, type: 3}
+  m_Radius: 2.2046707
