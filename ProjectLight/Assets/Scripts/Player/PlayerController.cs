@@ -1,6 +1,4 @@
-using System;
 using Unity.Mathematics;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -215,9 +213,13 @@ public class PlayerController : MonoBehaviour
 
     private void PlantABombCanceled(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
-        m_status = PlayerStatus.default_status;
+        if (m_status != PlayerStatus.on_hit)
+        {
+            m_status = PlayerStatus.default_status;
+        }
 
         m_planting_start_time = 0f;
+        m_planting_progress_line.enabled = false;
     }
 
     private void DetonateAllBombs(UnityEngine.InputSystem.InputAction.CallbackContext context)
