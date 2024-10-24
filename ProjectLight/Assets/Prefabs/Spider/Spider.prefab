@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5824706029707694627}
   - component: {fileID: 8090122043248374448}
   - component: {fileID: 1123213704893091941}
-  - component: {fileID: 3943057742598967982}
+  - component: {fileID: 8171021780488424934}
   - component: {fileID: 6321515746929434457}
   - component: {fileID: 6537470218143919507}
   m_Layer: 11
@@ -116,7 +116,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4661eaeb0cedbbd44b60dc9518032cb7, type: 2}
   - {fileID: 11400000, guid: 95527a240b75875498069249bbb01f62, type: 2}
   - {fileID: 11400000, guid: 711b0a89425084c7b8fd7fadabc67b51, type: 2}
-  - {fileID: 11400000, guid: 95527a240b75875498069249bbb01f62, type: 2}
   - {fileID: 11400000, guid: 96ee094defe621749928b85a8b8c16ce, type: 2}
   - {fileID: 11400000, guid: 26e8f5a46e5e5d44e95adb106dc9b00c, type: 2}
 --- !u!50 &8090122043248374448
@@ -162,8 +161,8 @@ MonoBehaviour:
   bombDamageRate: 20
   laserDamageRate: 1
   laserDamageProtectTime: 0.1
---- !u!58 &3943057742598967982
-CircleCollider2D:
+--- !u!70 &8171021780488424934
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -194,9 +193,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Offset: {x: 0, y: -2.6}
+  m_Size: {x: 6, y: 3}
+  m_Direction: 1
 --- !u!114 &6321515746929434457
 MonoBehaviour:
   m_ObjectHideFlags: 0

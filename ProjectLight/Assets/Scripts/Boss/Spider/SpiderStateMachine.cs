@@ -13,6 +13,17 @@ public enum SpiderStateType
 public class SpiderStateMachine : StateMachine
 {
     [Header("Boss属性")]
+
+#if UNITY_EDITOR
+    [Label("处于弱点状态")]
+#endif
+    public bool isWeak = false;
+
+#if UNITY_EDITOR
+    [Label("可以被伤害")]
+#endif
+
+    public bool canBeDamaged = true;
     [Header("Idle状态参数")]
     [SerializeField
 #if UNITY_EDITOR
@@ -82,16 +93,12 @@ public class SpiderStateMachine : StateMachine
 
     private SpiderStateType currentStateType;
     public SpiderStateType CurrentStateType => currentStateType;
-    
-    public AnimationPlayControl animationPlayControl;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         currentServantAmonut = 0;
-        animationPlayControl = gameObject.AddComponent<AnimationPlayControl>();
-        animationPlayControl.Init(animator);
 
         foreach (SpiderState state in states)
         {

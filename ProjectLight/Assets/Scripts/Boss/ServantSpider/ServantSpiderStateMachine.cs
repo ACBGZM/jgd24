@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class ServantSpiderStateMachine : StateMachine
 {
+    [Header("Boss属性")]
+#if UNITY_EDITOR
+    [Label("可以被伤害")]
+#endif
+    public bool canBeDamaged = true;
     [Header("Cocoon状态参数")]
     [SerializeField 
 #if UNITY_EDITOR 
@@ -11,19 +16,6 @@ public class ServantSpiderStateMachine : StateMachine
     ]
     private float cocoonTime;
     public float CocoonTime => cocoonTime;
-
-    [SerializeField 
-#if UNITY_EDITOR 
-    ,Label("茧Spirte") 
-#endif
-    ]
-    public Sprite cocoonSprite;
-    [SerializeField
-#if UNITY_EDITOR
-    , Label("蜘蛛Sprite")
-#endif
-    ]
-    public Sprite spiderSprite;
 
     [Header("Idle状态参数")]
 
@@ -95,10 +87,10 @@ public class ServantSpiderStateMachine : StateMachine
         foreach (ServantSpiderState state in states)
         {
             state.Init(animator, this);
-            if(state.GetType() == typeof(ServantSpiderState_Cocoon))
+            if(state.GetType() == typeof(ServantSpiderState_Egg))
             {
-                ServantSpiderState_Cocoon newState = ScriptableObject.CreateInstance<ServantSpiderState_Cocoon>();
-                newState.Init((ServantSpiderState_Cocoon)state);
+                ServantSpiderState_Egg newState = ScriptableObject.CreateInstance<ServantSpiderState_Egg>();
+                newState.Init((ServantSpiderState_Egg)state);
                 stateTable.Add(state.GetType(), newState);
                 AvailableStates.Add(newState);
             }
@@ -128,7 +120,7 @@ public class ServantSpiderStateMachine : StateMachine
 
     void Start()
     {
-        SwitchOn(stateTable[typeof(ServantSpiderState_Cocoon)]);
+        SwitchOn(stateTable[typeof(ServantSpiderState_Egg)]);
     }
 
     public Vector2 GetPlayerPosition()

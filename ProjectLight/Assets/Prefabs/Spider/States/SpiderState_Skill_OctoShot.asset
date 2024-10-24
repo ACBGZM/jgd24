@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SpiderState_Skill_OctoShot
   m_EditorClassIdentifier: 
   skillList:
-  - {fileID: 11400000, guid: 588d4efe79bddac47a3999da121e5a0e, type: 2}
+  - {fileID: 11400000, guid: 1426e4305dec56a428e15f8ac0e0c83c, type: 2}
   skill: {fileID: 11400000, guid: 588d4efe79bddac47a3999da121e5a0e, type: 2}

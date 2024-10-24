@@ -23,11 +23,11 @@ public class ServantSpiderState_Idle : ServantSpiderState
         base.Execute();
         timer += Time.deltaTime;
 
-        if(timer >= stateMachine.IdleTime)
+        if (timer >= stateMachine.IdleTime)
         {
             Vector2 playerPos = stateMachine.GetPlayerPosition();
             float distance = (playerPos - (Vector2)stateMachine.transform.position).magnitude;
-            if(distance <= stateMachine.ChaseDistance)
+            if (distance <= stateMachine.ChaseDistance)
             {
                 stateMachine.ChangeState(typeof(ServantSpiderState_Chase));
             }
