@@ -20,10 +20,10 @@ public class TestState_Skill : TestState
             if (skill.GetType() == typeof(BulletSkill))
             {
                 BulletSkill bulletSkill = (BulletSkill) skill;
-                foreach(LauncherStat launcherStat in bulletSkill.launcherStats)
+                foreach(BulletLauncherStat launcherStat in bulletSkill.launcherStats)
                 {
                     GameObject launcher = Instantiate(bulletSkill.launcherPrefab, stateMachine.transform.position, Quaternion.identity);
-                    launcher.GetComponent<Launcher>().Init(launcherStat);
+                    launcher.GetComponent<BulletLauncher>().Init(launcherStat);
                 }
             }
         }

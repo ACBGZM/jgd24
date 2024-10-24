@@ -28,6 +28,17 @@ public class Laser : MonoBehaviour
 
     public float lineWidth = 0.1f;
 
+    public float laserLifeTime = 5;
+
+    public float initLaunchAngle = 0;
+    public float initLaunchDistanceOffet = 0;
+    public float rotateTime = 0;
+    public float rotateAngle = 0;
+
+    private float currentRotateAngle = 0;
+    private float rotateTimer = 0;
+
+
     public List<Material> meterialList; // 0: Aim ; 1: Emit
 
 
@@ -44,6 +55,8 @@ public class Laser : MonoBehaviour
 
         // 碰撞关系配置
         layerMask = LayerMask.GetMask(layerMasks);
+
+        currentRotateAngle = 0;
     }
 
     void Start()
@@ -53,6 +66,7 @@ public class Laser : MonoBehaviour
 
     void Update()
     {
+        /*
         // Test: 鼠标方向射线
         Vector2 mousePosition;
         if (Mouse.current != null)
@@ -72,8 +86,18 @@ public class Laser : MonoBehaviour
             worldMousePosition.y - transform.position.y
         ).normalized;
         // Vector2 startDirection =  AngleToUnitVector2D(testAngle);
+        */
 
-        LaserRay(transform.position, startDirection);
+
+        if (currentRotateAngle < rotateAngle && rotateTime != 0)
+        {
+            currentRotateAngle += (rotateAngle / rotateTime) * Time.deltaTime;
+        }
+
+        Vector2 startDirection = MathTool.RotateVector2(Vector2.up, Mathf.Deg2Rad * (initLaunchAngle + currentRotateAngle));
+        Vector2 StartPosition = transform.position + (Vector3)startDirection * initLaunchDistanceOffet;
+
+        LaserRay(StartPosition, startDirection);
     }
 
     Vector2 AngleToUnitVector2D(float angleInDegrees)
@@ -89,7 +113,7 @@ public class Laser : MonoBehaviour
         lineRenderer.positionCount = 1;
         laserStatus = true;
 
-        lineRenderer.SetPosition(0, transform.position);
+        lineRenderer.SetPosition(0, startPosition);
 
         // Raycast Hit
         RaycastHit2D hit = Physics2D.Raycast(
@@ -148,5 +172,12 @@ public class Laser : MonoBehaviour
             {
                 damageable.OnLaserHit(m_damage);
             }
+    }
+
+    public void SetLaserStat(LaserLauncherStat launcherStat)
+    {
+        lineWidth = launcherStat.LaserWidth;
+        laserLifeTime = launcherStat.LaserLifeTime;
+        initLaunchAngle = launcherStat.InitLaunchAngle;
     }
 }

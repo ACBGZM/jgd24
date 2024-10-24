@@ -13,23 +13,32 @@ public class SpiderState_Skill : SpiderState
         ]
     private Skill skill;
 
+    private float timer = 0;
+
     public override void Enter()
     {
         base.Enter();
-
+        timer = 0;
+        stateMachine.SetCurrentStateType(SpiderStateType.Skill);
+        stateMachine.UpdateServantAmount();
         skill = skillList[Random.Range(0, skillList.Count)];
-    }
-
-    public override void Execute()
-    {
-        base.Execute();
 
         if (skill != null)
         {
             if (skill.GetType() == typeof(BulletSkill))
             {
                 BulletSkill bulletSkill = (BulletSkill)skill;
-                foreach (LauncherStat launcherStat in bulletSkill.launcherStats)
+                bulletSkill.Init(stateMachine.transform.position, stateMachine.GetPlayerPosition());
+                /* stateMachine.animationPlayControl.PlayAnimation(bulletSkill.animationClipName, null, () =>
+                {
+                    stateMachine.GoToNextState();
+                });
+                */
+                animator.Play(bulletSkill.animationClipName);
+                AnimationTool.AwaitCurrentAnimWhenEnd(animator, () => { stateMachine.GoToNextState(); });
+                // bulletSkill.Cast();
+                /*
+                foreach (BulletLauncherStat launcherStat in bulletSkill.launcherStats)
                 {
                     Quaternion bulletRotation = bulletSkill.aimToPlayer
                         ? Quaternion.LookRotation(Vector3.forward,
@@ -37,8 +46,9 @@ public class SpiderState_Skill : SpiderState
                         : Quaternion.identity;
                     GameObject launcher = Instantiate(bulletSkill.launcherPrefab, stateMachine.transform.position,
                         bulletRotation);
-                    launcher.GetComponent<Launcher>().Init(launcherStat);
+                    launcher.GetComponent<BulletLauncher>().Init(launcherStat);
                 }
+                */
             }
             if (skill.GetType() == typeof(SummonSkill))
             {
@@ -53,9 +63,13 @@ public class SpiderState_Skill : SpiderState
                     Instantiate(summonSkill.summonPrefab, summonPosition, Quaternion.identity);
                     stateMachine.currentServantAmonut ++;
                 }
+                stateMachine.GoToNextState();
             }
         }
-        
-        stateMachine.GoToNextState();
+    }
+
+    public override void Execute()
+    {
+        base.Execute();
     }
 }

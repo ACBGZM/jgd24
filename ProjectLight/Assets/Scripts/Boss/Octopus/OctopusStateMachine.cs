@@ -3,6 +3,27 @@ using UnityEngine;
 
 public class OctopusStateMachine : StateMachine
 {
+    [Header("Idle状态参数")]
+    [SerializeField
+#if UNITY_EDITOR
+    , Label("待机时间")
+#endif
+]
+    private float idleTime = 2f;
+    public float IdleTime => idleTime;
+
+    [Header("Transport状态参数")]
+    [SerializeField
+#if UNITY_EDITOR
+    , Label("传送点")
+#endif
+    ]
+    private Transform[] tpPoints;
+    public Transform[] TpPoints => tpPoints;
+
+    public Transform currentPosition;
+    public List<Transform> randomTpPoints = new List<Transform>();
+
     [Header("状态机参数")]
     public Animator animator;
     public Rigidbody2D rb;
@@ -15,12 +36,15 @@ public class OctopusStateMachine : StateMachine
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        
-        foreach(OctopusState state in states)
+        currentPosition = tpPoints[0];
+        transform.position = currentPosition.position;
+
+        foreach (OctopusState state in states)
         {
             state.Init(animator, this);
             stateList.AddLast(state);
         }
+        nextState = stateList.First;
     }
 
     void Start()
@@ -44,5 +68,22 @@ public class OctopusStateMachine : StateMachine
     public Vector2 GetPlayerPosition()
     {
         return GameObject.FindGameObjectWithTag("Player").transform.position;
+    }
+
+    public void UpdateRandomPosition()
+    {
+        randomTpPoints.Clear();
+        foreach(Transform transform in tpPoints)
+        {
+            if(transform != currentPosition)
+            {
+                randomTpPoints.Add(transform);
+            }
+        }
+    }
+
+    public Transform GetRandomPosition()
+    {
+        return randomTpPoints[Random.Range(0, randomTpPoints.Count)];
     }
 }

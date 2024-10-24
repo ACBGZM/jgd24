@@ -36,10 +36,4 @@ public class ServantSpiderState : ScriptableObject, IState
         this.animator = state.animator;
         this.stateMachine = state.stateMachine;
     }
-
-    public virtual void PrintState()
-    {
-        Debug.Log(this.animator);
-        Debug.Log(this.stateMachine);
-    }
 }

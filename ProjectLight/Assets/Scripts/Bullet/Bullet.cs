@@ -24,7 +24,7 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    public void SetBulletStat(LauncherStat launcherStat)
+    public void SetBulletStat(BulletLauncherStat launcherStat)
     {
         bulletSpeed = launcherStat.BulletSpeed;
         bulletSize = launcherStat.BulletSize;
