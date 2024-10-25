@@ -10,11 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ee0daaa589f56847b75c6123b59d836, type: 3}
-  m_Name: QuadLaser
+  m_Name: RotateLaser
   m_EditorClassIdentifier: 
-  skillID: 1
-  skillName: QuadLaser
-  launcherPrefab: {fileID: 7141545529058785104, guid: 8924491708d116a4289c5fbb81c8aa86, type: 3}
+  launcherPrefab: {fileID: 5859106848589360480, guid: 1407b62a2c52aa744b408450c3203a40, type: 3}
   launcherStats:
   - {fileID: 11400000, guid: f51f409a7004bf648ba156dcc246eeb0, type: 2}
+  - {fileID: 11400000, guid: ef617ff02ba9e2043a28bd9ee74158e0, type: 2}
+  - {fileID: 11400000, guid: 2cc2f694052878246a1f81c46032873b, type: 2}
+  - {fileID: 11400000, guid: f5b37687066a6ab46856f5596645b643, type: 2}
   aimToPlayer: 0
+  originalPos: {x: 0, y: 0}
+  playerPos: {x: -4.67, y: -3.04}

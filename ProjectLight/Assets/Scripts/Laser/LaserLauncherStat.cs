@@ -27,4 +27,13 @@ public class LaserLauncherStat : ScriptableObject
     [SerializeField]
     private float rotateTime = 0;
     public float RotateTime => rotateTime;
+
+    [SerializeField]
+    private bool aimToPlayer = false;
+    public bool AimToPlayer { get; set; }
+
+    public void SetInitLaunchAngle(float angle)
+    {
+        initLaunchAngle = angle;
+    }
 }

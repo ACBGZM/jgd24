@@ -86,4 +86,20 @@ public class OctopusStateMachine : StateMachine
     {
         return randomTpPoints[Random.Range(0, randomTpPoints.Count)];
     }
+
+    public void LaserCast(LaserSkill laserSkill)
+    {
+        if(laserSkill.GetType() == typeof(LaserSkill))
+        {
+            laserSkill.UpdatePlayerPos(GetPlayerPosition());
+            laserSkill.Cast();
+        }
+        else if (laserSkill.GetType() == typeof(Octopus_RowLaser))
+        {
+            Octopus_RowLaser rowLaser = (Octopus_RowLaser)laserSkill;
+            rowLaser.UpdatePlayerPos(GetPlayerPosition());
+            rowLaser.Cast();
+        }
+        
+    }
 }

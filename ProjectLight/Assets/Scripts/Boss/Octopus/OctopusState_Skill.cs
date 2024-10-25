@@ -27,11 +27,13 @@ public class OctopusState_Skill : OctopusState
             {
                 Debug.Log("LaserSkill");
                 LaserSkill laserSkill = (LaserSkill)skill;
-                foreach (LaserLauncherStat launcherStat in laserSkill.launcherStats)
-                {
-                    GameObject launcher = Instantiate(laserSkill.launcherPrefab, stateMachine.transform.position, Quaternion.identity);
-                    launcher.GetComponent<LaserLauncher>().Init(launcherStat);
-                }
+                stateMachine.LaserCast(laserSkill);
+            }
+            if (skill.GetType() == typeof(Octopus_RowLaser))
+            {
+                Debug.Log("RowLaser");
+                Octopus_RowLaser rowLaser = (Octopus_RowLaser)skill;
+                stateMachine.LaserCast(rowLaser);
             }
         }
     }
@@ -43,7 +45,7 @@ public class OctopusState_Skill : OctopusState
 
         if(timer >= 1)
         {
-            stateMachine.GoToNextState();
+            // stateMachine.GoToNextState();
         }
     }
 

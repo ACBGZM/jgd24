@@ -9,9 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89be8ed7c18be2a47a5cab3fc29f09af, type: 3}
-  m_Name: OctopusState_Skill
+  m_Script: {fileID: 11500000, guid: 4072e8127e7b0c74880a6536a9754e64, type: 3}
+  m_Name: RowLaserStat
   m_EditorClassIdentifier: 
-  skillList:
-  - {fileID: 11400000, guid: ec829137430a767439461e023b54e261, type: 2}
-  skill: {fileID: 11400000, guid: ec829137430a767439461e023b54e261, type: 2}
+  laserPrefab: {fileID: 0}
+  laserWidth: 0.1
+  laserLifeTime: 20
+  instantiateDistanceOffset: 0
+  initLaunchAngle: 0
+  rotateAngle: 0
+  rotateTime: 0
+  aimToPlayer: 1
