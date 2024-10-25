@@ -12,12 +12,18 @@ public class LaserSkill : Skill
     public Vector2 originalPos;
     public Vector2 playerPos;
 
+    public float duration;
+
     public void Init(Vector2 originalPos, Vector2 playerPos)
     {
         this.originalPos = originalPos;
         this.playerPos = playerPos;
     }
 
+    public void UpdateOriginalPos(Vector2 originalPos)
+    {
+        this.originalPos = originalPos;
+    }
     public void UpdatePlayerPos(Vector2 playerPos)
     {
         this.playerPos = playerPos;
@@ -28,11 +34,11 @@ public class LaserSkill : Skill
         foreach (LaserLauncherStat launcherStat in launcherStats)
         {
             Vector2 unitVector = aimToPlayer
-            ? originalPos - playerPos
+            ? playerPos - originalPos
             : Vector2.up;
             Vector2 startDirection = MathTool.RotateVector2(unitVector, Mathf.Deg2Rad * launcherStat.InitLaunchAngle);
             Vector2 startPosition = originalPos + startDirection * launcherStat.InstantiateDistanceOffset;
-            GameObject launcher = Object.Instantiate(launcherPrefab, startPosition,
+            GameObject launcher = Object.Instantiate(launcherPrefab, originalPos,
                 Quaternion.identity);
             launcherStat.AimToPlayer = aimToPlayer;
             launcher.GetComponent<Laser>().SetLaunchParameter(startPosition, startDirection);

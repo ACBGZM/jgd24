@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe00a75aa2fa904a8db40db62fcd04c, type: 3}
+  m_Name: Octopus_FiveLaser_Phase2
+  m_EditorClassIdentifier: 
+  launcherPrefab: {fileID: 5859106848589360480, guid: 1407b62a2c52aa744b408450c3203a40, type: 3}
+  launcherStats:
+  - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
+  aimToPlayer: 1
+  originalPos: {x: 0, y: 0}
+  playerPos: {x: -2.1, y: 2.79}
+  duration: 5
+  ProtectiveLaserLauncherStat: {fileID: 11400000, guid: def021d8e4cddb945906db0cf38c7317, type: 2}
+  laserOffset: 2

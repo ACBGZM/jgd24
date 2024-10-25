@@ -13,6 +13,7 @@ public class OctopusState_Skill : OctopusState
     ]
     private Skill skill;
 
+    private float skillDuration;
     private float timer = 0;
 
     public override void Enter()
@@ -27,13 +28,22 @@ public class OctopusState_Skill : OctopusState
             {
                 Debug.Log("LaserSkill");
                 LaserSkill laserSkill = (LaserSkill)skill;
+                skillDuration = laserSkill.duration;
                 stateMachine.LaserCast(laserSkill);
             }
             if (skill.GetType() == typeof(Octopus_RowLaser))
             {
                 Debug.Log("RowLaser");
                 Octopus_RowLaser rowLaser = (Octopus_RowLaser)skill;
+                skillDuration = rowLaser.duration;
                 stateMachine.LaserCast(rowLaser);
+            }
+            if (skill.GetType() == typeof(Octopus_FiveLaser_Phase2))
+            {
+                Debug.Log("FiveLaser");
+                Octopus_FiveLaser_Phase2 fiveLaser = (Octopus_FiveLaser_Phase2)skill;
+                skillDuration = fiveLaser.duration;
+                stateMachine.LaserCast(fiveLaser);
             }
         }
     }
@@ -43,9 +53,9 @@ public class OctopusState_Skill : OctopusState
         base.Execute();
         timer += Time.deltaTime;
 
-        if(timer >= 1)
+        if(timer >= skillDuration)
         {
-            // stateMachine.GoToNextState();
+            stateMachine.GoToNextState();
         }
     }
 

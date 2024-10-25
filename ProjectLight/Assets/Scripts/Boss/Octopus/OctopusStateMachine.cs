@@ -91,14 +91,23 @@ public class OctopusStateMachine : StateMachine
     {
         if(laserSkill.GetType() == typeof(LaserSkill))
         {
+            laserSkill.UpdateOriginalPos(transform.position);
             laserSkill.UpdatePlayerPos(GetPlayerPosition());
             laserSkill.Cast();
         }
         else if (laserSkill.GetType() == typeof(Octopus_RowLaser))
         {
             Octopus_RowLaser rowLaser = (Octopus_RowLaser)laserSkill;
+            laserSkill.UpdateOriginalPos(transform.position);
             rowLaser.UpdatePlayerPos(GetPlayerPosition());
             rowLaser.Cast();
+        }
+        else if (laserSkill.GetType() == typeof(Octopus_FiveLaser_Phase2))
+        {
+            Octopus_FiveLaser_Phase2 fiveLaser = (Octopus_FiveLaser_Phase2)laserSkill;
+            laserSkill.UpdateOriginalPos(transform.position);
+            fiveLaser.UpdatePlayerPos(GetPlayerPosition());
+            fiveLaser.Cast();
         }
         
     }

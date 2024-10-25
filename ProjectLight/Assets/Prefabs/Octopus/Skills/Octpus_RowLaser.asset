@@ -15,7 +15,15 @@ MonoBehaviour:
   launcherPrefab: {fileID: 5859106848589360480, guid: 1407b62a2c52aa744b408450c3203a40, type: 3}
   launcherStats:
   - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
-  aimToPlayer: 0
+  - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
+  - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
+  - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
+  - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
+  - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
+  - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
+  - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
+  aimToPlayer: 1
   originalPos: {x: 0, y: 0}
   playerPos: {x: -4.67, y: -3.04}
+  duration: 2
   laserGap: 2
