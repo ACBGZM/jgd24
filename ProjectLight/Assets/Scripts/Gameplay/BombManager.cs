@@ -23,7 +23,7 @@ public class BombManager : MonoBehaviour
                 {
                     GameObject go = new GameObject("BombManager");
                     s_instance = go.AddComponent<BombManager>();
-                    DontDestroyOnLoad(go);
+                    //DontDestroyOnLoad(go);
                 }
             }
         }
@@ -43,7 +43,7 @@ public class BombManager : MonoBehaviour
         else
         {
             s_instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
     }
 

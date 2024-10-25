@@ -16,7 +16,7 @@ public class GameSceneManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     public void LoadSync(string target_scene)
