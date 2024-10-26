@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
     private const float m_planting_progress_line_width = 0.3f;
     private const float m_planting_progress_line_height = 0.8f;
 
-    private const double m_planting_duration = 1.0f; // todo
+    private const double m_planting_duration = 0.6f; // todo
     private double m_planting_start_time;
 
     // animation
