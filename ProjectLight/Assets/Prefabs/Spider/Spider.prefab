@@ -242,12 +242,12 @@ MonoBehaviour:
   canBeDamaged: 1
   idleTime: 2
   moveSpeed: 5
-  targetAreaExternalRadius: 7
-  targetAreaInnerRadius: 5
+  targetAreaExternalRadius: 25
+  targetAreaInnerRadius: 17
   minTargetAngle: 30
   maxTargetAngle: 180
-  rangeX: {x: 0, y: 0}
-  rangeY: {x: 0, y: 0}
+  rangeX: {x: 16.5, y: -16.6}
+  rangeY: {x: 3.88, y: -12.7}
   maxServantAmount: 6
   currentServantAmonut: 0
   animator: {fileID: 0}
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  showMoveRange: 0
+  showMoveRange: 1
   showMoveLimit: 1
   showSnipeDirection: 0
   SnipeSO: {fileID: 11400000, guid: 588d4efe79bddac47a3999da121e5a0e, type: 2}
