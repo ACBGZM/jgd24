@@ -24,7 +24,7 @@ TagManager:
   - Boss
   - Bullet
   - Candle
-  - 
+  - servants
   - 
   - 
   - 
@@ -60,6 +60,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1174141911
+    locked: 0
+  - name: Bomb
+    uniqueID: 3104774319
     locked: 0
   - name: SceneItems
     uniqueID: 32393179

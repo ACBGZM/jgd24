@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55ec2c2f658b14449d5017036bdf407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantOffet: {x: 0, y: -2}
+  plantOffet: {x: 0, y: -0.5}
   m_bomb_prefab: {fileID: 7167747920772202834, guid: b0f2c6327b7b98e49b028bd1136e0dca, type: 3}
 --- !u!4 &52532399
 Transform:
@@ -4110,22 +4110,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
-      propertyPath: maxHealth
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3997669065794731730, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 3997669065794731730, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 3997669065794731730, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.42
-      objectReference: {fileID: 0}
     - target: {fileID: 3997669065794731730, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1
@@ -4166,17 +4150,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3997669065794731730, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5338319636300714571, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: m_Name
       value: Spider
-      objectReference: {fileID: 0}
-    - target: {fileID: 5952619420925449153, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6611,7 +6587,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7.54
+  orthographic size: 12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7716,7 +7692,7 @@ PrefabInstance:
       objectReference: {fileID: 1534856723}
     - target: {fileID: 7674418157888196781, guid: c16719cd90978422fb266f26867c371d, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 7.54
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9176049234634963414, guid: c16719cd90978422fb266f26867c371d, type: 3}
       propertyPath: m_impulse_source
