@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="Wwise_ProjectLight" GUID="{BE2B8595-F6C6-404A-91E6-8B3A155C8053}" Generator="2023.1.7.8574"/>
+	<CacheRoot>../../../../../Wwise_ProjectLight/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Android" GUID="{A77B6657-7F2E-44CC-A48A-D3430978FED6}" BasePlatform="Android" BasePlatformGUID="{A2D401DE-B8B6-4FEB-8142-137C34D507CA}" Path="../../../../../Wwise_ProjectLight/GeneratedSoundBanks/Android"/>
+		<Platform Name="iOS" GUID="{D9106143-F34D-44BC-910E-472E0B13B427}" BasePlatform="iOS" BasePlatformGUID="{ECE03DB4-F948-462D-B2BB-A9173012B1F8}" Path="../../../../../Wwise_ProjectLight/GeneratedSoundBanks/iOS"/>
+		<Platform Name="Windows" GUID="{F0BC9B1A-683A-4A6A-BFFB-C22DD762AF6C}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../../Wwise_ProjectLight/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{A5AE5F9F-676A-48DA-90BA-40518507393C}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{1044B103-F738-19B2-2634-E30383466EF0}</FileHash>
+</ProjectInfo>

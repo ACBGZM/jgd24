@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{01D23E99-1F57-4B2B-91E0-7D98A0113447}" SchemaVersion="119">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{01D23E99-1F57-4B2B-91E0-7D98A0113447}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{01D23E99-1F57-4B2B-91E0-7D98A0113447}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Test" ID="{69DF0ADA-14B4-4DEC-A7BD-69775C1D874B}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_little_spider_footsteps" ID="{296A0625-B363-46A0-ADDE-46472D5FB916}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_little_spider_footsteps" ID="{296A0625-B363-46A0-ADDE-46472D5FB916}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_little_spider_footsteps" ID="{296A0625-B363-46A0-ADDE-46472D5FB916}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_little_spider_footsteps" ID="{296A0625-B363-46A0-ADDE-46472D5FB916}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="forest" ID="{4FB4BC96-31D2-4489-9C5B-1C7660397169}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

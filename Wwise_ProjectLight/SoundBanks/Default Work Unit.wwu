@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{4BEDC613-427D-47D0-9AEE-B5E7C7DB8AE0}" SchemaVersion="119">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{4BEDC613-427D-47D0-9AEE-B5E7C7DB8AE0}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{4BEDC613-427D-47D0-9AEE-B5E7C7DB8AE0}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="SFX" ID="{8206F5CB-D557-4FFA-88E8-CF9FF20466E1}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_big_spider_incubation" ID="{1961917A-AFF7-4049-B85B-90140B8BB36A}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_box_break" ID="{F8466BB6-5334-4363-A6F1-AFF6EFD739B5}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Footsteps" ID="{4AE22809-DA0C-45E5-AC4B-0AEDA160730C}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_little_spider_footsteps" ID="{296A0625-B363-46A0-ADDE-46472D5FB916}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_candle_burning" ID="{3357F2CA-163F-4724-9C9F-550DFF619DCB}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_ui_button" ID="{2D0F962C-4C13-47C5-B123-71F928E3E830}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_bomb_place_01" ID="{F4F69E4E-4539-487F-9A4B-5C27589875CC}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Player_Footsteps" ID="{1C9A2FF8-E1E9-49B3-9702-1519C50C2974}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_little_spider_incubation" ID="{C01DE6B5-A085-4A72-B108-9E73B1A3F689}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_little_spider_footsteps_01" ID="{4D83CAD8-CA75-4ACD-907D-F0C731F14C15}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_bomb_place" ID="{1C9E99C2-4109-4B62-8B21-EF47E880F366}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_octopus_teleport" ID="{3AE98776-77AD-4B84-8B90-9987215D548D}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_big_spider_shooting" ID="{37A547AF-E672-4BF3-B7AB-52262D6134EB}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_bomb_explosion" ID="{F9537402-43EB-4CB3-9ED1-74EBC690DD20}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_character_attacked" ID="{9973F6D9-9B4A-4DF4-B36A-CD6881E5595E}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_little_spider_falling" ID="{A84E2F66-BABB-4E19-A188-140C7E465628}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Second_candle" ID="{062BA78E-3526-4E45-8DDE-DFD13C96EC6B}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_big_spider_footsteps" ID="{8CF07B1A-1CCA-4F85-9988-C5695708D840}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Music" ID="{5C157A11-321A-4578-8848-932FDD6C341D}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Arrival" ID="{1C3015A5-82EE-41C5-8237-5A1D6DE6ADA5}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Sunrise" ID="{7C595FDD-97E9-4703-8895-AEF511EA15C8}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Spider_of_Hole" ID="{3106C8EE-D277-4B3E-A863-5D23A7BE53D1}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Octopus_under_the_sea" ID="{1F5FA676-8505-4F87-AC55-2219A054EFC7}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

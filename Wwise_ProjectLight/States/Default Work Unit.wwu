@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{959BDA4D-899D-48D2-B12C-7D1ED62E00E6}" SchemaVersion="119">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{959BDA4D-899D-48D2-B12C-7D1ED62E00E6}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{959BDA4D-899D-48D2-B12C-7D1ED62E00E6}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="bomb_explosion" ID="{969D7180-65D3-44CB-B020-BEF5BE730974}">
+					<ChildrenList>
+						<State Name="None" ID="{1D9684C3-C8F5-4607-B20A-DD3E19EDC460}"/>
+						<State Name="forest" ID="{4FB4BC96-31D2-4489-9C5B-1C7660397169}"/>
+						<State Name="sea" ID="{643B48BA-3DFA-451C-8734-39BFB0C0661F}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

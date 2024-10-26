@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 848821b8422de5449711b68b60fb57de
     GuidInternal: 
-    m_lastTime: -8584721955026520498
+    m_lastTime: -8584719090792531620
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 5d94fd6fb1961044871b979c5bc366b0
     GuidInternal: 
-    m_lastTime: -8584721955027053869
+    m_lastTime: -8584719090792556654
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 13c6ed4b7d42d0479aeeb5e7c7db8ae0
     GuidInternal: 
-    m_lastTime: -8584721955027086371
-    List: []
+    m_lastTime: -8584719032236932448
+    List:
+    - name: Main
+      guid: cbf5068257d5fa4f88e8cf9ff20466e1
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 13c6ed4b7d42d0479aeeb5e7c7db8ae0
+      - ElementName: Main
+        ObjectType: 7
+        guid: cbf5068257d5fa4f88e8cf9ff20466e1
+      Path: SoundBanks\Default Work Unit\Main
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +94,76 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 1cfd5635b6ed334e9f0772a686333081
     GuidInternal: 
-    m_lastTime: -8584721955026802884
-    List: []
+    m_lastTime: -8584717540455862917
+    List:
+    - name: Play_bomb_explosion
+      guid: 37ad29192ad1ff48b2c091fc06078308
+      id: 4166525010
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1cfd5635b6ed334e9f0772a686333081
+      - ElementName: Play_bomb_explosion
+        ObjectType: 3
+        guid: 37ad29192ad1ff48b2c091fc06078308
+      Path: Events\Default Work Unit\Play_bomb_explosion
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
+    - name: Play_bomb_place
+      guid: c2999e1c0941624b8b21ef47e880f366
+      id: 3175281290
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1cfd5635b6ed334e9f0772a686333081
+      - ElementName: Play_bomb_place
+        ObjectType: 3
+        guid: c2999e1c0941624b8b21ef47e880f366
+      Path: Events\Default Work Unit\Play_bomb_place
+      maxAttenuation: 0
+      maxDuration: 0.25
+      minDuration: 0.25
+    - name: Play_Footsteps
+      guid: 0928e24a0cdae545ac4b0aeda160730c
+      id: 3854155799
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1cfd5635b6ed334e9f0772a686333081
+      - ElementName: Play_Footsteps
+        ObjectType: 3
+        guid: 0928e24a0cdae545ac4b0aeda160730c
+      Path: Events\Default Work Unit\Play_Footsteps
+      maxAttenuation: 0
+      maxDuration: 0.25290486
+      minDuration: 0.2471285
+    - name: Play_ui_button
+      guid: 2c960f2d134cc547b12371f928e3e830
+      id: 43599987
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1cfd5635b6ed334e9f0772a686333081
+      - ElementName: Play_ui_button
+        ObjectType: 3
+        guid: 2c960f2d134cc547b12371f928e3e830
+      Path: Events\Default Work Unit\Play_ui_button
+      maxAttenuation: 0
+      maxDuration: 0.12498866
+      minDuration: 0.12498866
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -94,7 +176,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 1619ee3c7c15fd478d948d30b04b5191
     GuidInternal: 
-    m_lastTime: -8584721955026990369
+    m_lastTime: -8584719090792561652
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -108,8 +190,74 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 4dda9b959d89d248b12c7d1ed62e00e6
     GuidInternal: 
-    m_lastTime: -8584721955026959529
-    List: []
+    m_lastTime: -8584717540455777629
+    List:
+    - name: bomb_explosion
+      guid: 80719d96d365cb44b020bef5be730974
+      id: 621635301
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4dda9b959d89d248b12c7d1ed62e00e6
+      - ElementName: bomb_explosion
+        ObjectType: 9
+        guid: 80719d96d365cb44b020bef5be730974
+      Path: States\Default Work Unit\bomb_explosion
+      values:
+      - name: forest
+        guid: 96bcb44fd23189449c5b1c7660397169
+        id: 491961918
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 4dda9b959d89d248b12c7d1ed62e00e6
+        - ElementName: bomb_explosion
+          ObjectType: 9
+          guid: 80719d96d365cb44b020bef5be730974
+        - ElementName: forest
+          ObjectType: 8
+          guid: 96bcb44fd23189449c5b1c7660397169
+      - name: None
+        guid: c384961df5c80746b20add3e19edc460
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 4dda9b959d89d248b12c7d1ed62e00e6
+        - ElementName: bomb_explosion
+          ObjectType: 9
+          guid: 80719d96d365cb44b020bef5be730974
+        - ElementName: None
+          ObjectType: 8
+          guid: c384961df5c80746b20add3e19edc460
+      - name: sea
+        guid: ba483b64fa3d1c45873439bfb0c0661f
+        id: 376462290
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 4dda9b959d89d248b12c7d1ed62e00e6
+        - ElementName: bomb_explosion
+          ObjectType: 9
+          guid: 80719d96d365cb44b020bef5be730974
+        - ElementName: sea
+          ObjectType: 8
+          guid: ba483b64fa3d1c45873439bfb0c0661f
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -122,7 +270,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 27df77c5b3736742a71b677bb8f42926
     GuidInternal: 
-    m_lastTime: -8584721955026762434
+    m_lastTime: -8584719090792541654
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -136,10 +284,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 3a22e44cd8f7f248a41a8e386ac3167f
     GuidInternal: 
-    m_lastTime: -8584721955026580756
+    m_lastTime: -8584719090792541654
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 03000000040000000500000006000000070000000a0000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
