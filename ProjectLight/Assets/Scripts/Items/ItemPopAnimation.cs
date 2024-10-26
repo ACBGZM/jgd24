@@ -114,6 +114,7 @@ public class ItemPopAnimation : MonoBehaviour
         anim_x = new AnimationCurve(kx);
         anim_y = new AnimationCurve(ky);
 
+#if UNITY_EDITOR
         // 自动钳制切线
         for (int j = 1; j < kx.Length - 1; j++)
         {
@@ -138,6 +139,7 @@ public class ItemPopAnimation : MonoBehaviour
                 AnimationUtility.TangentMode.ClampedAuto
             );
         }
+#endif
     }
 
     private double[] SolveQuadraticFunction(Vector2 point_1, Vector2 point_2, Vector2 point_3)
