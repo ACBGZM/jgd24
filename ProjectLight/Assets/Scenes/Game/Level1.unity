@@ -392,10 +392,10 @@ MonoBehaviour:
   itemPrefab: {fileID: 3205158364899642757, guid: 6a023645ddf434a179906a8f0d31ef63, type: 3}
   player: {fileID: 1534856718}
   timer: 0
-  minDuration: 5
-  maxDuration: 8
-  minLength: 3.89
-  maxLength: 8.26
+  minDuration: 15
+  maxDuration: 18
+  minLength: 4.24
+  maxLength: 9.12
   layerMasks:
   - Wall
   - Box
@@ -2585,6 +2585,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2123856020}
     - target: {fileID: 445419414756858238, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 445419414756858238, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 445419414756858238, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.75000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 445419414756858238, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.195
       objectReference: {fileID: 0}
@@ -2623,6 +2635,10 @@ PrefabInstance:
     - target: {fileID: 445419414756858238, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445419414756858238, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 942027811654469703, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: bombDamageRate
@@ -2868,7 +2884,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.1664753, y: -1.9353437, z: 0.026073068}
   m_LocalScale: {x: 4.05, y: 4.102904, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1177471097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3791,6 +3807,18 @@ PrefabInstance:
       value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3997669065794731730, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997669065794731730, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997669065794731730, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997669065794731730, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1
       objectReference: {fileID: 0}
@@ -3829,6 +3857,10 @@ PrefabInstance:
     - target: {fileID: 3997669065794731730, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997669065794731730, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5338319636300714571, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: m_Name
@@ -5515,8 +5547,8 @@ Transform:
   m_GameObject: {fileID: 1787401210}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.4311438, y: -5.4860063, z: -2.680698}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.3, y: -9.3, z: -2.680698}
+  m_LocalScale: {x: 1.5770999, y: 2.0571392, z: 1.502}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 210843723}
@@ -5702,7 +5734,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 10.27609
+  orthographic size: 7.54
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6385,6 +6417,10 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 1534856723}
+    - target: {fileID: 7674418157888196781, guid: c16719cd90978422fb266f26867c371d, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 7.54
+      objectReference: {fileID: 0}
     - target: {fileID: 9176049234634963414, guid: c16719cd90978422fb266f26867c371d, type: 3}
       propertyPath: m_impulse_source
       value: 
