@@ -24,10 +24,22 @@ public class OctopusStateMachine : StateMachine
     public Transform currentPosition;
     public List<Transform> randomTpPoints = new List<Transform>();
 
+    [Header("Palsy状态参数")]
+    [SerializeField
+#if UNITY_EDITOR
+    , Label("瘫痪时间")
+#endif
+    ]
+    private float palsyTime = 2f;
+    public float PalsyTime => palsyTime;
+
     [Header("状态机参数")]
     public Animator animator;
     public Rigidbody2D rb;
-    public List<OctopusState> states;
+    public List<OctopusState> states_Phase1;
+    public List<OctopusState> states_Phase2;
+    public OctopusState palsyState;
+    public bool Phase2;
 
     public LinkedList<OctopusState> stateList = new LinkedList<OctopusState>();
     public LinkedListNode<OctopusState> nextState;
@@ -39,7 +51,9 @@ public class OctopusStateMachine : StateMachine
         currentPosition = tpPoints[0];
         transform.position = currentPosition.position;
 
-        foreach (OctopusState state in states)
+        Phase2 = false;
+        palsyState.Init(animator, this);
+        foreach (OctopusState state in states_Phase1)
         {
             state.Init(animator, this);
             stateList.AddLast(state);
@@ -108,7 +122,40 @@ public class OctopusStateMachine : StateMachine
             laserSkill.UpdateOriginalPos(transform.position);
             fiveLaser.UpdatePlayerPos(GetPlayerPosition());
             fiveLaser.Cast();
+        }   
+    }
+
+
+    public void ChangePhase()
+    {
+        if(!Phase2)
+        {
+            Phase2 = true;
+            stateList.Clear();
+            foreach (OctopusState state in states_Phase2)
+            {
+                state.Init(animator, this);
+                stateList.AddLast(state);
+            }
+            nextState = stateList.First;
+            SwitchOn(nextState.Value);
         }
-        
+        else
+        {
+            Phase2 = false;
+            stateList.Clear();
+            foreach (OctopusState state in states_Phase1)
+            {
+                state.Init(animator, this);
+                stateList.AddLast(state);
+            }
+            nextState = stateList.First;
+            SwitchOn(nextState.Value);
+        }
+    }
+
+    public void Palsy()
+    {
+        ChangeState(palsyState);
     }
 }
