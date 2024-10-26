@@ -35,8 +35,12 @@ public class ItemPopAnimation : MonoBehaviour
 
     [HideInInspector]
     public Vector2 dropPoint; //掉落位置
+
     [HideInInspector]
     public float popHeight = 0;
+
+    private float existTime;
+    private float createTime;
 
     void Start()
     {
@@ -50,68 +54,27 @@ public class ItemPopAnimation : MonoBehaviour
         {
             if (dropPoint != null)
             {
-                Vector2 point_1 = new Vector2(0, 0);
-                Vector2 point_2 = new Vector2(0.5f * dropPoint.x, 0.5f * dropPoint.y + popHeight);
-                Vector2 point_3 = new Vector2(dropPoint.x, dropPoint.y);
-
-                Double[] QFuctionParam = SolveQuadraticFunction(point_1, point_2, point_3); // param:a,b,c
-                keyPoints = CreateKeyPoints(
-                    QFuctionParam,
-                    point_1,
-                    point_2,
-                    point_3,
-                    upFrames,
-                    downFrames
-                ); //List([x_i],[y_i])
-
-                int frameCount = upFrames + downFrames + 1;
-                kx = new Keyframe[frameCount];
-                ky = new Keyframe[frameCount];
-
-                for (var i = 0; i < kx.Length; i++)
-                {
-                    kx[i] = new Keyframe(i / MoveSpeed, keyPoints[0][i]);
-                    ky[i] = new Keyframe(i / MoveSpeed, keyPoints[1][i]);
-                }
-
-                anim_x = new AnimationCurve(kx);
-                anim_y = new AnimationCurve(ky);
-
-                // 自动钳制切线
-                for (int j = 1; j < kx.Length - 1; j++)
-                {
-                    AnimationUtility.SetKeyLeftTangentMode(
-                        anim_x,
-                        j,
-                        AnimationUtility.TangentMode.ClampedAuto
-                    );
-                    AnimationUtility.SetKeyRightTangentMode(
-                        anim_x,
-                        j,
-                        AnimationUtility.TangentMode.ClampedAuto
-                    );
-                    AnimationUtility.SetKeyLeftTangentMode(
-                        anim_y,
-                        j,
-                        AnimationUtility.TangentMode.ClampedAuto
-                    );
-                    AnimationUtility.SetKeyRightTangentMode(
-                        anim_y,
-                        j,
-                        AnimationUtility.TangentMode.ClampedAuto
-                    );
-                }
-
+                CreateAnimCurve();
+                createTime = Time.time;
                 status = 1;
             }
         }
         if (status == 1)
-        {
+        {   
+            existTime = Time.time - createTime;
             transform.localPosition = new Vector3(
                 anim_x.Evaluate(Time.time),
                 anim_y.Evaluate(Time.time),
                 0
             );
+
+            // Debug
+            Debug.Log(
+                "生成LocalPosition:" + anim_x.Evaluate(existTime) + anim_y.Evaluate(existTime)
+            );
+            Debug.Log(existTime);
+            Debug.Log("帧数：" + anim_x.length);
+           
 
             if (transform.localPosition.x == keyPoints[0][upFrames + downFrames])
             {
@@ -123,6 +86,54 @@ public class ItemPopAnimation : MonoBehaviour
             // 旋转
             animator.SetTrigger("InRotate");
             status = 3;
+        }
+    }
+
+    private void CreateAnimCurve()
+    {
+        Vector2 point_1 = new Vector2(0, 0);
+        Vector2 point_2 = new Vector2(0.5f * dropPoint.x, 0.5f * dropPoint.y + popHeight);
+        Vector2 point_3 = new Vector2(dropPoint.x, dropPoint.y);
+
+        Double[] QFuctionParam = SolveQuadraticFunction(point_1, point_2, point_3); // param:a,b,c
+        keyPoints = CreateKeyPoints(QFuctionParam, point_1, point_2, point_3, upFrames, downFrames); //List([x_i],[y_i])
+
+        int frameCount = upFrames + downFrames + 1;
+        kx = new Keyframe[frameCount];
+        ky = new Keyframe[frameCount];
+
+        for (var i = 0; i < kx.Length; i++)
+        {
+            kx[i] = new Keyframe(i / MoveSpeed, keyPoints[0][i]);
+            ky[i] = new Keyframe(i / MoveSpeed, keyPoints[1][i]);
+        }
+
+        anim_x = new AnimationCurve(kx);
+        anim_y = new AnimationCurve(ky);
+
+        // 自动钳制切线
+        for (int j = 1; j < kx.Length - 1; j++)
+        {
+            AnimationUtility.SetKeyLeftTangentMode(
+                anim_x,
+                j,
+                AnimationUtility.TangentMode.ClampedAuto
+            );
+            AnimationUtility.SetKeyRightTangentMode(
+                anim_x,
+                j,
+                AnimationUtility.TangentMode.ClampedAuto
+            );
+            AnimationUtility.SetKeyLeftTangentMode(
+                anim_y,
+                j,
+                AnimationUtility.TangentMode.ClampedAuto
+            );
+            AnimationUtility.SetKeyRightTangentMode(
+                anim_y,
+                j,
+                AnimationUtility.TangentMode.ClampedAuto
+            );
         }
     }
 

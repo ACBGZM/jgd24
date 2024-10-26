@@ -10,14 +10,14 @@ public class DropItem : MonoBehaviour
     public int itemID = 0; // 道具ID
 
     // private bool isCollected = false; // 被拾取状态
-    private SpriteRenderer m_sprite;
+    // private SpriteRenderer m_sprite;
 
-    public void InitItem(int id)
-    {
-        itemID = id;
-        m_sprite = GetComponent<SpriteRenderer>();
-        // todo: 更换不同item贴图
-    }
+    // public void InitItem(int id)
+    // {
+    //     itemID = id;
+    //     m_sprite = GetComponent<SpriteRenderer>();
+    //     // todo: 更换不同item贴图
+    // }
 
     public void OnTriggerEnter2D(Collider2D other)
     {   

@@ -9,7 +9,7 @@ public class Box : MonoBehaviour, BombDamage
      [SerializeField] public bool renewable = false; 
 
     // 掉落物Prefab
-    public GameObject dropItemPrefab;
+    // public GameObject dropItemPrefab;
 
     // 破坏动画
     public GameObject boxExplodeAnimPrefab;
@@ -94,37 +94,39 @@ public class Box : MonoBehaviour, BombDamage
         // 从Controller加载掉落物概率表? {boxID:{ item1: 0.8, item2:0.1, none:0.1 } } 
         // 根据概率表计算DropItem ID
         
-        float randNum = Random.Range(0f, 1f);
-        int ItemID = 1;
+        // float randNum = Random.Range(0f, 1f);
+        // int ItemID = 1;
         
-        GameObject newDropItem =  Instantiate(dropItemPrefab, transform.position, Quaternion.identity);
-        DropItem newDropItemScript = newDropItem.GetComponent<DropItem>();
-        newDropItemScript.InitItem(ItemID);
+        // GameObject newDropItem =  Instantiate(dropItemPrefab, transform.position, Quaternion.identity);
+        // DropItem newDropItemScript = newDropItem.GetComponent<DropItem>();
+        // newDropItemScript.InitItem(ItemID);
+        DropArea createScript = GetComponent<DropArea>();
+        createScript.OnCreateDropItem();
         
-        if(renewable)
-        {
-            newDropItem.transform.SetParent(transform);
-        }
+        // if(renewable)
+        // {
+        //     newDropItem.transform.SetParent(transform);
+        // }
     }
 
 
     public virtual void BoxRespawn()
     {   
-    Debug.Log("Parent BoxRespawn");
+        // Debug.Log("Parent BoxRespawn");
        BoxInit();
     }
     
     public void BoxInit()
     {
          // 销毁全部子物体
-        Transform[] children = GetComponentsInChildren<Transform>();
-        foreach (Transform child in children)
-        {
-            if (child!= transform)
-            {
-                Destroy(child.gameObject);
-            }
-        }
+        // Transform[] children = GetComponentsInChildren<Transform>();
+        // foreach (Transform child in children)
+        // {
+        //     if (child!= transform)
+        //     {
+        //         Destroy(child.gameObject);
+        //     }
+        // }
 
         m_sprite.sprite = spriteList[0]; // 更改贴图
         m_collider.enabled = true; // 开启碰撞检测

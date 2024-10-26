@@ -25,10 +25,10 @@ public class DropArea : MonoBehaviour
     void Start()
     {
         center = transform.position;
-        CreateDropItem();
+        // OnCreateDropItem();
     }
 
-    public void CreateDropItem()
+    public void OnCreateDropItem()
     {
         GameObject newDropItem = Instantiate(
             dropPrefab,
@@ -36,12 +36,14 @@ public class DropArea : MonoBehaviour
             Quaternion.identity,
             this.transform
         );
-        Vector2 dropPostion =
-            CreateDropPosition() - new Vector2(transform.position.x, transform.position.y);
-        // dropPostion.Invers
+        Vector2 dropPostion = CreateDropPosition()- new Vector2(transform.localScale.x, transform.localScale.y);
 
-        newDropItem.GetComponent<ItemPopAnimation>().dropPoint = dropPostion ;
-        newDropItem.GetComponent<ItemPopAnimation>().popHeight = Random.Range(minPopHeight, maxPopHeight);
+
+        newDropItem.GetComponent<ItemPopAnimation>().dropPoint = dropPostion;
+        newDropItem.GetComponent<ItemPopAnimation>().popHeight = Random.Range(
+            minPopHeight,
+            maxPopHeight
+        );
     }
 
     public Vector2 CreateDropPosition()
@@ -51,8 +53,7 @@ public class DropArea : MonoBehaviour
 
         Vector2 dropPoint =
             new Vector2(Mathf.Cos(dropAngle * Mathf.Deg2Rad), Mathf.Sin(dropAngle * Mathf.Deg2Rad))
-            * dropRadius;
-        // + center;
+            * dropRadius ; 
         return dropPoint;
     }
 
@@ -78,14 +79,18 @@ public class DropArea : MonoBehaviour
                 new Vector2(
                     Mathf.Cos(curAngle * Mathf.Deg2Rad),
                     Mathf.Sin(curAngle * Mathf.Deg2Rad)
-                ) * inRadius * transform.localScale
+                )
+                    * inRadius
+                    * transform.localScale
                 + center;
 
             curOutPoint =
                 new Vector2(
                     Mathf.Cos(curAngle * Mathf.Deg2Rad),
                     Mathf.Sin(curAngle * Mathf.Deg2Rad)
-                ) * outRadius * transform.localScale
+                )
+                    * outRadius
+                    * transform.localScale
                 + center;
 
             if (i == 0)
