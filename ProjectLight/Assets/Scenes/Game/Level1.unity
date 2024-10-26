@@ -1752,6 +1752,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8081931532508780888, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2648,6 +2652,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8081931532508780888, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2692,7 +2700,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.56924176, g: 0.6349379, b: 0.9811321, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.02
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000b5c11662cf5d9fdb5d6db966d7fbfb459b5ede1f2b001022db47ee01
@@ -3204,6 +3212,10 @@ PrefabInstance:
     - target: {fileID: 8081931532508780888, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_Name
       value: Candle (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081931532508780888, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3942,6 +3954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candle (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8081931532508780888, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4112,11 +4128,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3997669065794731730, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1
+      value: -6.87
       objectReference: {fileID: 0}
     - target: {fileID: 3997669065794731730, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3704074
+      value: 3.39
       objectReference: {fileID: 0}
     - target: {fileID: 3997669065794731730, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4150,9 +4166,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5164766384180658428, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5164766384180658428, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 5164766384180658428, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.0142582385
+      objectReference: {fileID: 0}
+    - target: {fileID: 5164766384180658428, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: m_Intensity
+      value: 3.23
+      objectReference: {fileID: 0}
     - target: {fileID: 5338319636300714571, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: m_Name
       value: Spider
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553325191425575503, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553325191425575503, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9589411
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553325191425575503, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9835294
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553325191425575503, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.741
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553325191425575503, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4502,6 +4554,10 @@ PrefabInstance:
     - target: {fileID: 8081931532508780888, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_Name
       value: Candle (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081931532508780888, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4888,6 +4944,10 @@ PrefabInstance:
     - target: {fileID: 8081931532508780888, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_Name
       value: Candle (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081931532508780888, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7210,7 +7270,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 571473963
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 6d8229e35582b194d8a665f5c88ed88a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
