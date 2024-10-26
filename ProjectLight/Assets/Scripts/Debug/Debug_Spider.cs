@@ -17,6 +17,11 @@ public class Debug_Spider : MonoBehaviour
 #endif
     public bool showMoveRange = true;
 
+    #if UNITY_EDITOR
+[Label("移动范围限制"), ReadOnlyIfFalse("showMoveLimit")]
+    #endif
+    public bool showMoveLimit = true;
+
     #endregion
 
     #region 狙击参数
@@ -138,6 +143,22 @@ public class Debug_Spider : MonoBehaviour
                     direction = MathTool.RotateVector2(direction, Mathf.Deg2Rad * launcher.InitLaunchAngle);
                     Gizmos.DrawLine(spiderPos, spiderPos + direction * OctoShotLineLength);
                 }
+            }
+            if (showMoveLimit)
+            {
+                float minX = stateMachine.rangeX.x;
+                float maxX = stateMachine.rangeX.y;
+                float minY = stateMachine.rangeY.x;
+                float maxY = stateMachine.rangeY.y;
+                Vector2 p1 = new Vector2(minX, minY);
+                Vector2 p2 = new Vector2(minX, maxY);
+                Vector2 p3 = new Vector2(maxX, minY);
+                Vector2 p4 = new Vector2(maxX, maxY);
+                Gizmos.color = Color.blue;
+                Gizmos.DrawLine(p1, p2);
+                Gizmos.DrawLine(p1, p3);
+                Gizmos.DrawLine(p2, p4);
+                Gizmos.DrawLine(p3, p4);
             }
         }
     }
