@@ -22,26 +22,26 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 21300000, guid: cf1a53bd8923748c4bd5ac4e69b99148, type: 3}
-    - time: 0.11111111
+    - time: 0.125
       value: {fileID: 21300000, guid: 0583bd7feba6a474a97439c905dd9fb6, type: 3}
-    - time: 0.22222222
+    - time: 0.25
       value: {fileID: 21300000, guid: e6936cfeb7b4b40f4b7849b7d60f8543, type: 3}
-    - time: 0.33333334
+    - time: 0.375
       value: {fileID: 21300000, guid: 96f86ecf6c9d747029ae2b60c2e841dd, type: 3}
-    - time: 0.44444445
+    - time: 0.5
       value: {fileID: 21300000, guid: f63d2583531ad4acfa1b29d525ababf3, type: 3}
-    - time: 0.5555556
+    - time: 0.625
       value: {fileID: 21300000, guid: e343d6cb9d3d9405db9a616b2f1ac205, type: 3}
-    - time: 0.6666667
+    - time: 0.75
       value: {fileID: 21300000, guid: f56fbee5621dc405db809622785f4134, type: 3}
-    - time: 0.7777778
+    - time: 0.875
       value: {fileID: 21300000, guid: cf565bf6151544824bfc95c2070b269a, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 9
+  m_SampleRate: 8
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -71,7 +71,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8888889
+    m_StopTime: 1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -90,4 +90,32 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.125
+    functionName: PlayMoveAudio
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.375
+    functionName: PlayMoveAudio
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.625
+    functionName: PlayMoveAudio
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.875
+    functionName: PlayMoveAudio
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

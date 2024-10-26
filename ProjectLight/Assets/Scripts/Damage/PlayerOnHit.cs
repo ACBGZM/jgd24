@@ -131,6 +131,7 @@ public class PlayerOnHit : MonoBehaviour, BombDamage, LaserDamage, BossDamage, B
 
         m_animator.SetTrigger("Hit");
         m_on_hit_action?.Invoke();
-        
+
+        WwiseAudioManager.GetInstance().PostEvent("player_on_hit", gameObject);
     }
 }

@@ -57,13 +57,17 @@ public class Candle : MonoBehaviour,BombDamage
 
     private void SwitchLight(bool status)
     {   
+        if(status !=  lightStatus)
+        {
+            WwiseAudioManager.GetInstance().PostEvent("candel_switch_light", gameObject);
+        }
+
         lightStatus = status;
         if(m_candleLight != null)
         {
             m_candleLight.enabled = status;
         }
-        m_sprite.sprite = status?lightSprite:darkSprite;
-
+        m_sprite.sprite = status ? lightSprite : darkSprite;
     }
 
 

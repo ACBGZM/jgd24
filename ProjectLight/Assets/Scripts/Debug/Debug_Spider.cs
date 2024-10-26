@@ -28,8 +28,8 @@ public class Debug_Spider : MonoBehaviour
 
 #if UNITY_EDITOR 
     [Label("狙击SO"), ReadOnlyIfFalse("showSnipeDirection")]
-    public BulletSkill SnipeSO;
 #endif
+    public BulletSkill SnipeSO;
 
 #if UNITY_EDITOR
     [Label("狙击方向线颜色"), ReadOnlyIfFalse("showSnipeDirection")]
@@ -52,8 +52,8 @@ public class Debug_Spider : MonoBehaviour
 
 #if UNITY_EDITOR 
     [Label("四周射击SO"), ReadOnlyIfFalse("showOctoShotDirection")]
-    public BulletSkill OctoShotSO;
 #endif
+    public BulletSkill OctoShotSO;
 
 #if UNITY_EDITOR
     [Label("四周射击方向线颜色"), ReadOnlyIfFalse("showOctoShotDirection")]

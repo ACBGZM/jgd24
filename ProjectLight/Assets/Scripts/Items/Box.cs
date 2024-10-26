@@ -65,7 +65,8 @@ public class Box : MonoBehaviour, BombDamage
     public void BoxDestored()
     {   
         Debug.Log("Box毁坏");
-        
+
+        WwiseAudioManager.GetInstance().PostEvent("box_break", gameObject);
 
         // Box被完全破坏
         if(renewable)
