@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "StateMachine/OctopusState/Palsy", fileName = "OctopusState_Palsy")]
 public class OctopusState_Palsy : OctopusState
 {
     [SerializeField

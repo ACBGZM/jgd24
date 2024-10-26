@@ -154,6 +154,12 @@ public class OctopusStateMachine : StateMachine
         }
     }
 
+    public void Transport(OctopusState_Transport state)
+    {
+        currentPosition = state.nextPosition;
+        transform.position = state.nextPosition.position;
+    }
+
     public void Palsy()
     {
         ChangeState(palsyState);
