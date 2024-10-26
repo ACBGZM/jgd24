@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba80cea9db7e5046aabb019dc2e5108, type: 3}
+  m_Name: 969D7180-65D3-44CB-B020-BEF5BE730974
+  m_EditorClassIdentifier: 
+  objectName: bomb_explosion
+  id: 621635301
+  guid: 969D7180-65D3-44CB-B020-BEF5BE730974

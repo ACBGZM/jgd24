@@ -37,4 +37,8 @@ public class PlayerAnimationController : MonoBehaviour
         return m_animator.GetCurrentAnimatorStateInfo(0);
     }
 
+    public void PlayMoveAudio()
+    {
+        WwiseAudioManager.GetInstance().PostEvent("player_move", gameObject);
+    }
 }

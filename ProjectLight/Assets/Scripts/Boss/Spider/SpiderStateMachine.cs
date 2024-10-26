@@ -145,7 +145,23 @@ public class SpiderStateMachine : StateMachine
 
     public void BulletCast(BulletSkill bulletSkill)
     {
+        WwiseAudioManager.GetInstance().PostEvent("spider_shoot", gameObject);
+
         bulletSkill.UpdatePlayerPos(GetPlayerPosition());
         bulletSkill.Cast();
+    }
+
+    public void PlayWalkAudio()
+    {
+        WwiseAudioManager.GetInstance().PostEvent("spider_walk", gameObject);
+    }
+
+    public void PlayIncubateAudio()
+    {
+        WwiseAudioManager.GetInstance().PostEvent("spider_incubate", gameObject);
+    }
+    public void PlayShootAudio()
+    {
+        WwiseAudioManager.GetInstance().PostEvent("spider_shoot", gameObject);
     }
 }

@@ -54,6 +54,8 @@ public class BombManager : MonoBehaviour
             GameObject bomb = GameObject.Instantiate(m_bomb_prefab, transform.position + new Vector3(plantOffet.x, plantOffet.y, 0), transform.rotation);
             bomb.transform.SetParent(null);
             m_bombs.Add(bomb.GetComponent<Bomb>());
+
+            WwiseAudioManager.GetInstance().PostEvent("bomb_plant", gameObject);
         }
     }
 
@@ -63,6 +65,8 @@ public class BombManager : MonoBehaviour
         {
             StartCoroutine(Explode());
             GameplayEventManager.TriggerEvent("OnDetonateAllBombs");
+
+            WwiseAudioManager.GetInstance().PostEvent("bomb_detonate", gameObject);
         }
     }
 

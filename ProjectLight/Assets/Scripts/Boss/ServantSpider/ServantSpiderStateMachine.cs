@@ -127,4 +127,19 @@ public class ServantSpiderStateMachine : StateMachine
     {
         return GameObject.FindGameObjectWithTag("Player").transform.position;
     }
+
+    public void PlayServantSpiderWalkAudio()
+    {
+        WwiseAudioManager.GetInstance().PostEvent("servant_spider_walk", gameObject);
+    }
+
+    public void PlayServantSpiderFallAudio()
+    {
+        WwiseAudioManager.GetInstance().PostEvent("servant_spider_fall", gameObject);
+    }
+
+    public void PlayServantSpiderIncubateAudio()
+    {
+        WwiseAudioManager.GetInstance().PostEvent("servant_spider_incubate", gameObject);
+    }
 }

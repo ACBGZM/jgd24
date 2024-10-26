@@ -34,4 +34,14 @@ public class UILogic : MonoBehaviour
     {
         Time.timeScale = 1;
     }
+
+    public void PlayOnClickAudio()
+    {
+        WwiseAudioManager.GetInstance().PostEvent("ui_button_click");
+    }
+
+    public void StopBGM()
+    {
+        WwiseAudioManager.GetInstance().StopEvent("bgm");
+    }
 }
