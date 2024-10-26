@@ -70,6 +70,9 @@ public class SpiderStateMachine : StateMachine
     private float maxTargetAngle;
     public float MaxTargetAngle => maxTargetAngle;
 
+    public Vector2 rangeX;
+    public Vector2 rangeY;
+
     [Header("随从参数")]
     [SerializeField
 #if UNITY_EDITOR
