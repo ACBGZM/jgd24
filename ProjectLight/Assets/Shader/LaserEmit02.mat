@@ -37,11 +37,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors: []
+    - _LaserSpeed: 3
+    - _LaserThickness: 2
+    m_Colors:
+    - _Color1: {r: 30.631231, g: 0, b: 0, a: 0}
+    - _Color2: {r: 6.48692, g: 6.5418363, b: 3.301776, a: 0.4745098}
   m_BuildTextureStacks: []
---- !u!114 &4740144870244474048
+--- !u!114 &8941864223207776681
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

@@ -11,25 +11,31 @@ public class Laser : MonoBehaviour
     // Test
     public float testAngle;
 
-    private LineRenderer lineRenderer;
-    public GameObject LaserLinePrefab;
+    // Laser Param    
+    public float laserLifeTime = 5;
 
-    // Laser Param
-    private int pointCount;
-    private Vector2 currentPosion;
+    [Header("逻辑参数")]
+    // 最大反射次数
+    public int maxReflectTimes = 1;
 
+    // 碰撞逻辑
     public string[] layerMasks;
     private LayerMask layerMask;
 
-    private bool laserStatus = true;
+    // 激光状态
+    private bool laserStatus = true; // 激光未造成伤害状态
+    private int laserStage = 0; // 激光阶段: Aim, Emit
 
-    public int MAX_LENGTH = 1000; // todo : private
-    public float OFFSET = 0.0001f; // todo : private
+    // KeyPoint
+    private int pointCount;
+    private Vector2 currentPosion;
+    private List<Vector2> keyPoints;
 
-    public float lineWidth = 0.1f;
+    // 其他设置
+    private int MAX_LENGTH = 10000; // todo : private
+    private float OFFSET = 0.0001f; // todo : private
 
-    public float laserLifeTime = 5;
-
+    // 
     public float initLaunchAngle = 0;
     public float initLaunchDistanceOffet = 0;
     public float rotateTime = 0;
@@ -38,8 +44,20 @@ public class Laser : MonoBehaviour
     private float currentRotateAngle = 0;
     private float rotateTimer = 0;
 
+    
 
+    [Header("渲染参数")]
+    // private LineRenderer lineRenderer;
+    public GameObject LaserLinePrefab;
+    public GameObject laserRender;
+    public float lineWidth = 0.1f;
+    [Tooltip("激光外观")]
     public List<Material> meterialList; // 0: Aim ; 1: Emit
+   
+   
+
+   
+
 
 
     // 判定
@@ -48,10 +66,11 @@ public class Laser : MonoBehaviour
     private void Awake()
     {   
         // LaserLineRenderer 基础属性配置
-        lineRenderer = Instantiate(LaserLinePrefab).GetComponent<LineRenderer>();
-        lineRenderer.startWidth = lineWidth;
-        lineRenderer.endWidth = lineWidth;
-        lineRenderer.material = meterialList[0];
+        // lineRenderer = Instantiate(LaserLinePrefab).GetComponent<LineRenderer>();
+        // lineRenderer.startWidth = lineWidth;
+        // lineRenderer.endWidth = lineWidth;
+        // lineRenderer.material = meterialList[0];
+
 
         // 碰撞关系配置
         layerMask = LayerMask.GetMask(layerMasks);
@@ -62,6 +81,8 @@ public class Laser : MonoBehaviour
     void Start()
     {
         // lineRenderer = Instantiate(LaserLineRenderer).GetComponent<LineRenderer>();
+        keyPoints = new List<Vector2>();
+        laserRender = Instantiate(LaserLinePrefab,Vector3.zero,Quaternion.identity); 
     }
 
     void Update()
@@ -100,6 +121,8 @@ public class Laser : MonoBehaviour
         LaserRay(StartPosition, startDirection);
     }
 
+
+
     Vector2 AngleToUnitVector2D(float angleInDegrees)
     {
         float radians = angleInDegrees * Mathf.Deg2Rad;
@@ -109,11 +132,14 @@ public class Laser : MonoBehaviour
     public void LaserRay(Vector2 startPosition, Vector2 rayDirection)
     {
         // Init lineRenderer
-        pointCount = 1;
-        lineRenderer.positionCount = 1;
+        
+        // lineRenderer.positionCount = 1;
+        // lineRenderer.SetPosition(0, startPosition);
         laserStatus = true;
-
-        lineRenderer.SetPosition(0, startPosition);
+        keyPoints.Add(startPosition);    
+        pointCount = 1;   
+        
+         
 
         // Raycast Hit
         RaycastHit2D hit = Physics2D.Raycast(
@@ -123,14 +149,16 @@ public class Laser : MonoBehaviour
             layerMask
         );
 
-        while (hit.collider != null && laserStatus)
+        while (hit.collider != null && laserStatus && pointCount<=maxReflectTimes+1)
         {
             currentPosion = hit.point;
 
             hitObject = hit.collider.gameObject;
 
-            lineRenderer.positionCount += 1;
-            lineRenderer.SetPosition(pointCount++, hit.point);
+            // lineRenderer.positionCount += 1;
+            // lineRenderer.SetPosition(pointCount++, hit.point);
+            pointCount += 1 ;
+            keyPoints.Add(hit.point);
 
             if (hitObject.tag == "Mirror")
             {
@@ -158,11 +186,20 @@ public class Laser : MonoBehaviour
             }
         }
 
-        if (laserStatus)
-        {
-            lineRenderer.positionCount += 1;
-            lineRenderer.SetPosition(++pointCount, (currentPosion + rayDirection) * 1000);
-        }
+        // if (laserStatus)
+        // {
+            // lineRenderer.positionCount += 1;
+            // pointCount += 1 ;
+            // lineRenderer.SetPosition(++pointCount, (currentPosion + rayDirection) * 1000);
+        // }
+    }
+
+    public void DrawLaser()
+    {   
+        
+        laserRender.GetComponent<LaserRender>().DrawLines(keyPoints,meterialList[laserStage],laserStatus,lineWidth);
+        // keyPoints
+
     }
 
     public void HitRole(string hitTag, RaycastHit2D hit)
