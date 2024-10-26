@@ -3632,10 +3632,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64dc1f00d70a642df93dbf81cbddb5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealthSlider: {fileID: 689003491}
-  bossHealthSlider: {fileID: 841026078}
   player: {fileID: 1534856718}
   boss: {fileID: 930069478}
+  playerHealthSlider: {fileID: 689003491}
+  bossHealthSlider: {fileID: 841026078}
+  globalLight: {fileID: 630309233}
+  lightIntensity: 0.02
+  stageTwoHealthThreshold: 0.4
 --- !u!4 &908174153
 Transform:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
-  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Virtual Acoustics
       ObjectType: 5
@@ -21,13 +21,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 848821b8422de5449711b68b60fb57de
-    ParentPath: Virtual Acoustics\Default Work Unit
+    ParentPath: Virtual Acoustics/Default Work Unit
     guid: 848821b8422de5449711b68b60fb57de
     GuidInternal: 
-    m_lastTime: -8584716623308195098
+    m_lastTime: -8584716413373327468
     List: []
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
       ObjectType: 5
@@ -35,10 +35,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 5d94fd6fb1961044871b979c5bc366b0
-    ParentPath: Master-Mixer Hierarchy\Default Work Unit
+    ParentPath: Master-Mixer Hierarchy/Default Work Unit
     guid: 5d94fd6fb1961044871b979c5bc366b0
     GuidInternal: 
-    m_lastTime: -8584716623317280632
+    m_lastTime: -8584716413385634870
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -53,9 +53,9 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
   BankWwu:
-  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: SoundBanks
       ObjectType: 5
@@ -63,10 +63,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 13c6ed4b7d42d0479aeeb5e7c7db8ae0
-    ParentPath: SoundBanks\Default Work Unit
+    ParentPath: SoundBanks/Default Work Unit
     guid: 13c6ed4b7d42d0479aeeb5e7c7db8ae0
     GuidInternal: 
-    m_lastTime: -8584716623308215103
+    m_lastTime: -8584716413373344651
     List:
     - name: Music
       guid: 117a155c1a3278458848932fdd6c341d
@@ -81,7 +81,7 @@ MonoBehaviour:
       - ElementName: Music
         ObjectType: 7
         guid: 117a155c1a3278458848932fdd6c341d
-      Path: SoundBanks\Default Work Unit\Music
+      Path: SoundBanks/Default Work Unit/Music
     - name: SFX
       guid: cbf5068257d5fa4f88e8cf9ff20466e1
       id: 393239870
@@ -95,9 +95,9 @@ MonoBehaviour:
       - ElementName: SFX
         ObjectType: 7
         guid: cbf5068257d5fa4f88e8cf9ff20466e1
-      Path: SoundBanks\Default Work Unit\SFX
+      Path: SoundBanks/Default Work Unit/SFX
   EventWwu:
-  - PhysicalPath: Events\Default Work Unit.wwu
+  - PhysicalPath: Events/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -105,10 +105,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 1cfd5635b6ed334e9f0772a686333081
-    ParentPath: Events\Default Work Unit
+    ParentPath: Events/Default Work Unit
     guid: 1cfd5635b6ed334e9f0772a686333081
     GuidInternal: 
-    m_lastTime: -8584716623319014894
+    m_lastTime: -8584716413387543481
     List:
     - name: Play_Arrival
       guid: a515301cee82c54182375a1d6de6ada5
@@ -123,7 +123,7 @@ MonoBehaviour:
       - ElementName: Play_Arrival
         ObjectType: 3
         guid: a515301cee82c54182375a1d6de6ada5
-      Path: Events\Default Work Unit\Play_Arrival
+      Path: Events/Default Work Unit/Play_Arrival
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -140,10 +140,10 @@ MonoBehaviour:
       - ElementName: Play_big_spider_footsteps
         ObjectType: 3
         guid: 1a7bf08cca1c854f9988c5695708d840
-      Path: Events\Default Work Unit\Play_big_spider_footsteps
+      Path: Events/Default Work Unit/Play_big_spider_footsteps
       maxAttenuation: 0
-      maxDuration: 0.31249434
-      minDuration: 0.31249434
+      maxDuration: -1
+      minDuration: -1
     - name: Play_big_spider_incubation
       guid: 7a916119f7af4940b85b90140b8bb36a
       id: 3738137027
@@ -157,10 +157,10 @@ MonoBehaviour:
       - ElementName: Play_big_spider_incubation
         ObjectType: 3
         guid: 7a916119f7af4940b85b90140b8bb36a
-      Path: Events\Default Work Unit\Play_big_spider_incubation
+      Path: Events/Default Work Unit/Play_big_spider_incubation
       maxAttenuation: 0
-      maxDuration: 2
-      minDuration: 2
+      maxDuration: -1
+      minDuration: -1
     - name: Play_big_spider_shooting
       guid: af47a53772e6f34bb7ab52262d6134eb
       id: 3867217528
@@ -174,10 +174,10 @@ MonoBehaviour:
       - ElementName: Play_big_spider_shooting
         ObjectType: 3
         guid: af47a53772e6f34bb7ab52262d6134eb
-      Path: Events\Default Work Unit\Play_big_spider_shooting
+      Path: Events/Default Work Unit/Play_big_spider_shooting
       maxAttenuation: 0
-      maxDuration: 0.5
-      minDuration: 0.5
+      maxDuration: -1
+      minDuration: -1
     - name: Play_bomb_explosion
       guid: 027453f9eb43b34c9ed174ebc690dd20
       id: 4166525010
@@ -191,10 +191,10 @@ MonoBehaviour:
       - ElementName: Play_bomb_explosion
         ObjectType: 3
         guid: 027453f9eb43b34c9ed174ebc690dd20
-      Path: Events\Default Work Unit\Play_bomb_explosion
+      Path: Events/Default Work Unit/Play_bomb_explosion
       maxAttenuation: 0
-      maxDuration: 1
-      minDuration: 1
+      maxDuration: -1
+      minDuration: -1
     - name: Play_bomb_place
       guid: c2999e1c0941624b8b21ef47e880f366
       id: 3175281290
@@ -208,10 +208,10 @@ MonoBehaviour:
       - ElementName: Play_bomb_place
         ObjectType: 3
         guid: c2999e1c0941624b8b21ef47e880f366
-      Path: Events\Default Work Unit\Play_bomb_place
+      Path: Events/Default Work Unit/Play_bomb_place
       maxAttenuation: 0
-      maxDuration: 0.25
-      minDuration: 0.25
+      maxDuration: -1
+      minDuration: -1
     - name: Play_bomb_place_01
       guid: 4e9ef6f439457f489a4b5c27589875cc
       id: 2558917896
@@ -225,10 +225,10 @@ MonoBehaviour:
       - ElementName: Play_bomb_place_01
         ObjectType: 3
         guid: 4e9ef6f439457f489a4b5c27589875cc
-      Path: Events\Default Work Unit\Play_bomb_place_01
+      Path: Events/Default Work Unit/Play_bomb_place_01
       maxAttenuation: 0
-      maxDuration: 0.25
-      minDuration: 0.25
+      maxDuration: -1
+      minDuration: -1
     - name: Play_box_break
       guid: b66b46f834536343a6f1aff6efd739b5
       id: 3331416737
@@ -242,10 +242,10 @@ MonoBehaviour:
       - ElementName: Play_box_break
         ObjectType: 3
         guid: b66b46f834536343a6f1aff6efd739b5
-      Path: Events\Default Work Unit\Play_box_break
+      Path: Events/Default Work Unit/Play_box_break
       maxAttenuation: 0
-      maxDuration: 0.6249887
-      minDuration: 0.6249887
+      maxDuration: -1
+      minDuration: -1
     - name: Play_candle_burning
       guid: caf257333f1624479c9f550dff619dcb
       id: 4168788445
@@ -259,10 +259,10 @@ MonoBehaviour:
       - ElementName: Play_candle_burning
         ObjectType: 3
         guid: caf257333f1624479c9f550dff619dcb
-      Path: Events\Default Work Unit\Play_candle_burning
+      Path: Events/Default Work Unit/Play_candle_burning
       maxAttenuation: 0
-      maxDuration: 8
-      minDuration: 8
+      maxDuration: -1
+      minDuration: -1
     - name: Play_character_attacked
       guid: d9f673994a9bf44db36acd6881e5595e
       id: 106681101
@@ -276,10 +276,10 @@ MonoBehaviour:
       - ElementName: Play_character_attacked
         ObjectType: 3
         guid: d9f673994a9bf44db36acd6881e5595e
-      Path: Events\Default Work Unit\Play_character_attacked
+      Path: Events/Default Work Unit/Play_character_attacked
       maxAttenuation: 0
-      maxDuration: 0.25
-      minDuration: 0.25
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Footsteps
       guid: 0928e24a0cdae545ac4b0aeda160730c
       id: 3854155799
@@ -293,10 +293,10 @@ MonoBehaviour:
       - ElementName: Play_Footsteps
         ObjectType: 3
         guid: 0928e24a0cdae545ac4b0aeda160730c
-      Path: Events\Default Work Unit\Play_Footsteps
+      Path: Events/Default Work Unit/Play_Footsteps
       maxAttenuation: 0
-      maxDuration: 0.25290486
-      minDuration: 0.2471285
+      maxDuration: -1
+      minDuration: -1
     - name: Play_little_spider_falling
       guid: 662f4ea8bbba194ea188140c7e465628
       id: 3878302902
@@ -310,10 +310,10 @@ MonoBehaviour:
       - ElementName: Play_little_spider_falling
         ObjectType: 3
         guid: 662f4ea8bbba194ea188140c7e465628
-      Path: Events\Default Work Unit\Play_little_spider_falling
+      Path: Events/Default Work Unit/Play_little_spider_falling
       maxAttenuation: 0
-      maxDuration: 1.4668907
-      minDuration: 1.0800475
+      maxDuration: -1
+      minDuration: -1
     - name: Play_little_spider_footsteps
       guid: 25066a2963b3a046adde46472d5fb916
       id: 1741564502
@@ -327,10 +327,10 @@ MonoBehaviour:
       - ElementName: Play_little_spider_footsteps
         ObjectType: 3
         guid: 25066a2963b3a046adde46472d5fb916
-      Path: Events\Default Work Unit\Play_little_spider_footsteps
+      Path: Events/Default Work Unit/Play_little_spider_footsteps
       maxAttenuation: 0
-      maxDuration: 0.09654409
-      minDuration: 0.09102027
+      maxDuration: -1
+      minDuration: -1
     - name: Play_little_spider_footsteps_01
       guid: d8ca834d75cacd4a907df0c731f14c15
       id: 535372708
@@ -344,10 +344,10 @@ MonoBehaviour:
       - ElementName: Play_little_spider_footsteps_01
         ObjectType: 3
         guid: d8ca834d75cacd4a907df0c731f14c15
-      Path: Events\Default Work Unit\Play_little_spider_footsteps_01
+      Path: Events/Default Work Unit/Play_little_spider_footsteps_01
       maxAttenuation: 0
-      maxDuration: 0.09654409
-      minDuration: 0.09102027
+      maxDuration: -1
+      minDuration: -1
     - name: Play_little_spider_incubation
       guid: b5e61dc085a0724ab1089e73b1a3f689
       id: 3020140973
@@ -361,10 +361,10 @@ MonoBehaviour:
       - ElementName: Play_little_spider_incubation
         ObjectType: 3
         guid: b5e61dc085a0724ab1089e73b1a3f689
-      Path: Events\Default Work Unit\Play_little_spider_incubation
+      Path: Events/Default Work Unit/Play_little_spider_incubation
       maxAttenuation: 0
-      maxDuration: 1.4983071
-      minDuration: 1.4983071
+      maxDuration: -1
+      minDuration: -1
     - name: Play_octopus_teleport
       guid: 7687e93aad77844b8b909987215d548d
       id: 1241574133
@@ -378,10 +378,10 @@ MonoBehaviour:
       - ElementName: Play_octopus_teleport
         ObjectType: 3
         guid: 7687e93aad77844b8b909987215d548d
-      Path: Events\Default Work Unit\Play_octopus_teleport
+      Path: Events/Default Work Unit/Play_octopus_teleport
       maxAttenuation: 0
-      maxDuration: 1
-      minDuration: 1
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Octopus_under_the_sea
       guid: 76a65f1f0585874fac552219a054efc7
       id: 2585982154
@@ -395,7 +395,7 @@ MonoBehaviour:
       - ElementName: Play_Octopus_under_the_sea
         ObjectType: 3
         guid: 76a65f1f0585874fac552219a054efc7
-      Path: Events\Default Work Unit\Play_Octopus_under_the_sea
+      Path: Events/Default Work Unit/Play_Octopus_under_the_sea
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -412,10 +412,10 @@ MonoBehaviour:
       - ElementName: Play_Player_Footsteps
         ObjectType: 3
         guid: f82f9a1ce9e1b34997021519c50c2974
-      Path: Events\Default Work Unit\Play_Player_Footsteps
+      Path: Events/Default Work Unit/Play_Player_Footsteps
       maxAttenuation: 0
-      maxDuration: 0.25290486
-      minDuration: 0.2471285
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Second_candle
       guid: 8ea72b062635454e8ddedfd13c96ec6b
       id: 1741580086
@@ -429,10 +429,10 @@ MonoBehaviour:
       - ElementName: Play_Second_candle
         ObjectType: 3
         guid: 8ea72b062635454e8ddedfd13c96ec6b
-      Path: Events\Default Work Unit\Play_Second_candle
+      Path: Events/Default Work Unit/Play_Second_candle
       maxAttenuation: 0
-      maxDuration: 7.700257
-      minDuration: 7.700257
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Spider_of_Hole
       guid: eec8063177d23e4ba8635d23a7be53d1
       id: 4244968688
@@ -446,7 +446,7 @@ MonoBehaviour:
       - ElementName: Play_Spider_of_Hole
         ObjectType: 3
         guid: eec8063177d23e4ba8635d23a7be53d1
-      Path: Events\Default Work Unit\Play_Spider_of_Hole
+      Path: Events/Default Work Unit/Play_Spider_of_Hole
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -463,7 +463,7 @@ MonoBehaviour:
       - ElementName: Play_Sunrise
         ObjectType: 3
         guid: dd5f597ce99703478895aef511ea15c8
-      Path: Events\Default Work Unit\Play_Sunrise
+      Path: Events/Default Work Unit/Play_Sunrise
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -480,12 +480,12 @@ MonoBehaviour:
       - ElementName: Play_ui_button
         ObjectType: 3
         guid: 2c960f2d134cc547b12371f928e3e830
-      Path: Events\Default Work Unit\Play_ui_button
+      Path: Events/Default Work Unit/Play_ui_button
       maxAttenuation: 0
-      maxDuration: 0.12498866
-      minDuration: 0.12498866
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
-  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Game Parameters
       ObjectType: 5
@@ -493,13 +493,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 1619ee3c7c15fd478d948d30b04b5191
-    ParentPath: Game Parameters\Default Work Unit
+    ParentPath: Game Parameters/Default Work Unit
     guid: 1619ee3c7c15fd478d948d30b04b5191
     GuidInternal: 
-    m_lastTime: -8584716623319014894
+    m_lastTime: -8584716413387539160
     List: []
   StateWwu:
-  - PhysicalPath: States\Default Work Unit.wwu
+  - PhysicalPath: States/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: States
       ObjectType: 5
@@ -507,10 +507,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 4dda9b959d89d248b12c7d1ed62e00e6
-    ParentPath: States\Default Work Unit
+    ParentPath: States/Default Work Unit
     guid: 4dda9b959d89d248b12c7d1ed62e00e6
     GuidInternal: 
-    m_lastTime: -8584716623308205101
+    m_lastTime: -8584716413373336238
     List:
     - name: bomb_explosion
       guid: 80719d96d365cb44b020bef5be730974
@@ -525,7 +525,7 @@ MonoBehaviour:
       - ElementName: bomb_explosion
         ObjectType: 9
         guid: 80719d96d365cb44b020bef5be730974
-      Path: States\Default Work Unit\bomb_explosion
+      Path: States/Default Work Unit/bomb_explosion
       values:
       - name: forest
         guid: 96bcb44fd23189449c5b1c7660397169
@@ -579,7 +579,7 @@ MonoBehaviour:
       ValueIcons: []
       valuesInternal: []
   SwitchWwu:
-  - PhysicalPath: Switches\Default Work Unit.wwu
+  - PhysicalPath: Switches/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Switches
       ObjectType: 5
@@ -587,13 +587,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 27df77c5b3736742a71b677bb8f42926
-    ParentPath: Switches\Default Work Unit
+    ParentPath: Switches/Default Work Unit
     guid: 27df77c5b3736742a71b677bb8f42926
     GuidInternal: 
-    m_lastTime: -8584716623308205101
+    m_lastTime: -8584716413373332962
     List: []
   TriggerWwu:
-  - PhysicalPath: Triggers\Default Work Unit.wwu
+  - PhysicalPath: Triggers/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Triggers
       ObjectType: 5
@@ -601,10 +601,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 3a22e44cd8f7f248a41a8e386ac3167f
-    ParentPath: Triggers\Default Work Unit
+    ParentPath: Triggers/Default Work Unit
     guid: 3a22e44cd8f7f248a41a8e386ac3167f
     GuidInternal: 
-    m_lastTime: -8584716623308195098
+    m_lastTime: -8584716413373330314
     List: []
   ExpandedFileSystemItemIds: 0200000003000000040000000500000006000000070000000a0000000b0000000c0000001c0000001d0000001e0000002200000023000000
   ExpandedWaapiItemIds: 0200000003000000040000000500000006000000070000000a0000000b0000000c00000023000000
