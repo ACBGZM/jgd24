@@ -45,7 +45,6 @@ public class Laser : MonoBehaviour
     private float rotateTimer = 0;
 
     
-
     [Header("渲染参数")]
     // private LineRenderer lineRenderer;
     public GameObject LaserLinePrefab;
@@ -54,11 +53,6 @@ public class Laser : MonoBehaviour
     [Tooltip("激光外观")]
     public List<Material> meterialList; // 0: Aim ; 1: Emit
    
-   
-
-   
-
-
 
     // 判定
     private GameObject hitObject;

@@ -30,7 +30,6 @@ public class LaserRender : MonoBehaviour
     public void DrawLines(List<Vector2> keyPoints,Material material,bool laserStatus,float lineWidth)
     {      
         // Draw Segment
-
         line_1.GetComponent<LaserLineSegment>().DrawLineSegment(keyPoints[0],keyPoints[1]);
         if(keyPoints.Count == 2)
         {
@@ -40,12 +39,15 @@ public class LaserRender : MonoBehaviour
         {
             line_1.GetComponent<LaserLineSegment>().DrawLineSegment(keyPoints[1],keyPoints[2]);
         }
+
+
         // Draw VFX
 
         if(keyPoints.Count == 3)
         {
             // 画中点
         }
+        
 
     }
 
