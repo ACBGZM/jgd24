@@ -226,13 +226,13 @@ TextureImporter:
       name: "\u65B9\u6846_6"
       rect:
         serializedVersion: 2
-        x: 904
-        y: 1.333313
-        width: 904.6667
-        height: 904.6667
+        x: 776
+        y: 0
+        width: 905
+        height: 905
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 82, y: 0, z: 11, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
