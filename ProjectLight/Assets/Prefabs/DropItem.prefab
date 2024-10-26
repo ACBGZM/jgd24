@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3825195364136249887}
   - component: {fileID: 1841858877107776148}
   - component: {fileID: 8931120683323892866}
+  - component: {fileID: 5046604763348910691}
   m_Layer: 0
   m_Name: DropItem
   m_TagString: Untagged
@@ -95,9 +96,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3205158364899642757}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 58158b58d59dd4086a3dd64582b764ab, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4457987020e59438ab5a3d629b254e86, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -156,3 +157,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 0
+--- !u!114 &5046604763348910691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3205158364899642757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e886bf4d94454f0592a080bb8096d1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upFrames: 2
+  downFrames: 6
+  MoveSpeed: 20
+  anim_x:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  anim_y:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  dropPoint: {x: 0, y: 0}
+  popHeight: 0
