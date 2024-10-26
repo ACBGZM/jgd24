@@ -6,7 +6,9 @@ public class Box : MonoBehaviour, BombDamage
 {
 
     // Box是否可重生
-     [SerializeField] public bool renewable = false; 
+        [Header("重生设置")]
+     [SerializeField] private bool renewable = false; 
+     [SerializeField] private float respawnDelayTime = 5.0f; 
 
     // 掉落物Prefab
     // public GameObject dropItemPrefab;
@@ -68,20 +70,21 @@ public class Box : MonoBehaviour, BombDamage
         // Box被完全破坏
         if(renewable)
         {   
-            Debug.Log("renewable");
+            // Debug.Log("renewable");
             // 被破坏动画
             GameObject newBoxExplodeAim =  Instantiate(boxExplodeAnimPrefab, transform.position, Quaternion.identity);
 
             // 可重生Box
             m_sprite.sprite = spriteList[1]; // 更改贴图
             m_collider.enabled = false; // 暂停碰撞检测
+            // m_collider.isTrigger = true;
             
             CreateDropItem();
-            Invoke("BoxRespawn", 5f); // 重生倒计时
+            Invoke("BoxRespawn", respawnDelayTime); // 重生倒计时
        }
        else
         {   
-            Debug.Log("not renewable");
+            // Debug.Log("not renewable");
             GameObject newBoxExplodeAim =  Instantiate(boxExplodeAnimPrefab, transform.position, Quaternion.identity);
             CreateDropItem();
             Destroy(gameObject);
@@ -112,8 +115,17 @@ public class Box : MonoBehaviour, BombDamage
 
     public virtual void BoxRespawn()
     {   
-        // Debug.Log("Parent BoxRespawn");
-       BoxInit();
+        //碰撞检测
+        bool respawnStatus = GetComponentInChildren<BoxRespawnDetection>().canRespawn;
+        if(respawnStatus)
+        {
+            BoxInit();
+        }
+        else
+        {
+            Invoke("BoxRespawn", 0.5f);
+        }
+        
     }
     
     public void BoxInit()
@@ -130,6 +142,7 @@ public class Box : MonoBehaviour, BombDamage
 
         m_sprite.sprite = spriteList[0]; // 更改贴图
         m_collider.enabled = true; // 开启碰撞检测
+        //  m_collider.isTrigger = false;
     }
 
 

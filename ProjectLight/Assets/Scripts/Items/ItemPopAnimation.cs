@@ -63,17 +63,20 @@ public class ItemPopAnimation : MonoBehaviour
         {   
             existTime = Time.time - createTime;
             transform.localPosition = new Vector3(
-                anim_x.Evaluate(Time.time),
-                anim_y.Evaluate(Time.time),
+                anim_x.Evaluate(existTime),
+                anim_y.Evaluate(existTime),
                 0
             );
 
-            // Debug
-            Debug.Log(
-                "生成LocalPosition:" + anim_x.Evaluate(existTime) + anim_y.Evaluate(existTime)
-            );
-            Debug.Log(existTime);
-            Debug.Log("帧数：" + anim_x.length);
+            // // Debug
+            // Debug.Log(
+            //     "生成LocalPosition:" + anim_x.Evaluate(existTime) +"  "+ anim_y.Evaluate(existTime)
+            // );
+            // Debug.Log(existTime);
+            // Debug.Log("帧数：" + anim_x.length);
+            // Debug.Log(transform.localPosition);
+            // Debug.Log(keyPoints[0][upFrames + downFrames]);
+            // Debug.Log(keyPoints[1][upFrames + downFrames]);
            
 
             if (transform.localPosition.x == keyPoints[0][upFrames + downFrames])
