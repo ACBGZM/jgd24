@@ -187,6 +187,15 @@ public class PlayerController : MonoBehaviour
                     + (new Vector2(movement_input.x, movement_input.y)) * speed * Time.deltaTime
             );
 
+            if (m_input_movement.x > 0)
+            {
+                transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+            }
+            else if (m_input_movement.x < 0)
+            {
+                transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+            }
+
             if (m_status != PlayerStatus.planting_a_bomb)
             {
                 m_status = PlayerStatus.moving;
