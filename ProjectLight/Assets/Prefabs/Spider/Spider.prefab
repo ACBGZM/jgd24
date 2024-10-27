@@ -148,12 +148,13 @@ GameObject:
   - component: {fileID: 5824706029707694627}
   - component: {fileID: 8090122043248374448}
   - component: {fileID: 1123213704893091941}
+  - component: {fileID: 312758075539861286}
   - component: {fileID: 8171021780488424934}
   - component: {fileID: 6321515746929434457}
   - component: {fileID: 6537470218143919507}
   m_Layer: 11
   m_Name: Spider
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -246,8 +247,8 @@ MonoBehaviour:
   targetAreaInnerRadius: 13
   minTargetAngle: 30
   maxTargetAngle: 180
-  rangeX: {x: 16.5, y: -16.6}
-  rangeY: {x: 3.88, y: -12.7}
+  rangeX: {x: -16.5, y: 16.5}
+  rangeY: {x: -12.7, y: 3.8}
   maxServantAmount: 6
   currentServantAmonut: 0
   animator: {fileID: 0}
@@ -258,6 +259,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 711b0a89425084c7b8fd7fadabc67b51, type: 2}
   - {fileID: 11400000, guid: 96ee094defe621749928b85a8b8c16ce, type: 2}
   - {fileID: 11400000, guid: 26e8f5a46e5e5d44e95adb106dc9b00c, type: 2}
+  spiderState_ChangingPhase: {fileID: 11400000, guid: 8d8899421d0cbec4a958977e575dbc45, type: 2}
 --- !u!50 &8090122043248374448
 Rigidbody2D:
   serializedVersion: 4
@@ -297,11 +299,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3dad3afc2ee94dd3bc98c16a6c3a3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
-  health: 300
-  bombDamageRate: 20
+  maxHealth: 1000
+  health: 1000
+  bombDamageRate: 10
+  shieldBombDamageRate: 0.1
   laserDamageRate: 1
+  shieldLaserDamageRate: 0.1
   laserDamageProtectTime: 0.1
+  m_ui_logic: {fileID: 0}
+--- !u!114 &312758075539861286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338319636300714571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3db6e911da9f4cf099a45aefaab0044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_damage: 20
 --- !u!70 &8171021780488424934
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -349,6 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8c61fc85a51404aa2725cc9b9a5f65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateMachine: {fileID: 5824706029707694627}
   currentState: 0
   showMoveRange: 1
   showMoveLimit: 1
