@@ -48,6 +48,11 @@ public class AnimationTool
 
     public static async UniTask AwaitAnimAsync(Animator animator, Action callback = null, int layer = 0)
     {
+        if(animator == null)
+        {
+            return;
+        }
+
         var animInfo = animator.GetCurrentAnimatorStateInfo(layer);
         var nameHash = animInfo.fullPathHash;
 

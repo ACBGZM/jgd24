@@ -2610,6 +2610,10 @@ PrefabInstance:
       value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: m_ui_logic
+      value: 
+      objectReference: {fileID: 2123856020}
+    - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: bombDamageRate
       value: 10
       objectReference: {fileID: 0}
@@ -5593,6 +5597,14 @@ PrefabInstance:
     - target: {fileID: 2877392674798423375, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
       propertyPath: m_SortingOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499372737630893902, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 52532400}
+    - target: {fileID: 3499372737630893902, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LoadSync
       objectReference: {fileID: 0}
     - target: {fileID: 5371652443657906939, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
       propertyPath: m_SortingOrder

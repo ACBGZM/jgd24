@@ -18,6 +18,10 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
             {
                 Debug.Log("Death");
                 // TODO: 广播Death事件
+                if (CompareTag("Boss"))
+                {
+                    m_ui_logic?.GameOver(true);
+                }
             }
             else
             {
@@ -38,7 +42,7 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
     private float laserDamageProtectTime = 0.1f;
     private float currentLaserTime;
 
-
+    [SerializeField] private UILogic m_ui_logic;
 
     void Start()
     {   
