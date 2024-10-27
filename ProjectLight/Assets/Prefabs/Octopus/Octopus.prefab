@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8056756829468572487}
   - component: {fileID: 5899786945232979625}
   - component: {fileID: 6584523332008544699}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Octopus
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -121,7 +121,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ccc34a3bf5c8797429b404e82986238c, type: 2}
   - {fileID: 11400000, guid: 9cd1cffde731ebe4dae1d3b6feb16a33, type: 2}
   palsyState: {fileID: 11400000, guid: bd2ea71530c610443901cd0f4bee1403, type: 2}
+  deadState: {fileID: 11400000, guid: cefd6929af6b96448bfe2e3b4144b28a, type: 2}
   Phase2: 0
+  canBeDamaged: 0
 --- !u!95 &8331900696005160218
 Animator:
   serializedVersion: 5
