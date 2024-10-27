@@ -736,17 +736,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &841026078 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3701683822189586499, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
-  m_PrefabInstance: {fileID: 3545741548516905249}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1177471096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,6 +1800,22 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 1534856723}
+    - target: {fileID: 7789325635916403728, guid: 41706768c7d76bf4d94d7422f2c68d19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.131145
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789325635916403728, guid: 41706768c7d76bf4d94d7422f2c68d19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.38600683
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727695074288996427, guid: 41706768c7d76bf4d94d7422f2c68d19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.131145
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727695074288996427, guid: 41706768c7d76bf4d94d7422f2c68d19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.38600683
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1961,6 +1966,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 52532400}
+    - target: {fileID: 2210861544899216573, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2210861544899216573, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499372737630893902, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 52532400}
+    - target: {fileID: 3499372737630893902, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LoadSync
+      objectReference: {fileID: 0}
     - target: {fileID: 7587740854781632185, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
       propertyPath: m_Name
       value: UI
@@ -1997,7 +2018,7 @@ PrefabInstance:
     - target: {fileID: 5748163621848462966, guid: 2329bce2f4251804883b08bf96c82946, type: 3}
       propertyPath: bossHealthSlider
       value: 
-      objectReference: {fileID: 841026078}
+      objectReference: {fileID: 0}
     - target: {fileID: 5748163621848462966, guid: 2329bce2f4251804883b08bf96c82946, type: 3}
       propertyPath: playerHealthSlider
       value: 

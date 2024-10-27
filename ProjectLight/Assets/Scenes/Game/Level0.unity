@@ -6610,6 +6610,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3499372737630893902, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 52532400}
+    - target: {fileID: 3499372737630893902, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LoadSync
+      objectReference: {fileID: 0}
     - target: {fileID: 7587740854781632185, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
       propertyPath: m_Name
       value: UI

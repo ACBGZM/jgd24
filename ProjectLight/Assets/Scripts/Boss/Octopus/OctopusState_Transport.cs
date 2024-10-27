@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "OctopusState_Transport", menuName = "StateMachine/OctopusState/Transport")]
 public class OctopusState_Transport : OctopusState
 {
-    private Transform nextPosition;
+    public Transform nextPosition;
 
     private float timer;
     public override void Enter()
@@ -13,20 +13,16 @@ public class OctopusState_Transport : OctopusState
         stateMachine.UpdateRandomPosition();
         nextPosition = stateMachine.GetRandomPosition();
 
-        stateMachine.transform.position = nextPosition.position;
-        stateMachine.currentPosition = nextPosition;
+        animator.Play("Octopus_Transport");
+        AnimationTool.AwaitCurrentAnimWhenEnd(animator, () =>
+        {
+            stateMachine.GoToNextState();
+        });
     }
 
     public override void Execute()
     {
         base.Execute();
-
-        timer += Time.deltaTime;
-
-        if(timer >= 3)
-        {
-            stateMachine.GoToNextState();
-        }
     }
 
     public override void Exit()
