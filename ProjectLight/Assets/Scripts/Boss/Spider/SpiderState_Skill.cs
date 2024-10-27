@@ -60,6 +60,24 @@ public class SpiderState_Skill : SpiderState
                     Vector2 targetVector = new Vector2(Mathf.Cos(targetAngle), Mathf.Sin(targetAngle));
                     float targetDistance = UnityEngine.Random.Range(summonSkill.MinSummonRadius, summonSkill.MaxSummonRadius);
                     Vector2 summonPosition = (Vector2)stateMachine.transform.position + targetVector * targetDistance;
+                    
+                    if(summonPosition.x < stateMachine.rangeX.x)
+                    {
+                        summonPosition.x = stateMachine.rangeX.x;
+                    }
+                    if(summonPosition.x > stateMachine.rangeX.y)
+                    {
+                        summonPosition.x = stateMachine.rangeX.y;
+                    }
+                    if(summonPosition.y < stateMachine.rangeY.x)
+                    {
+                        summonPosition.y = stateMachine.rangeY.x;
+                    }
+                    if(summonPosition.y > stateMachine.rangeY.y)
+                    {
+                        summonPosition.y = stateMachine.rangeY.y;
+                    }
+
                     Instantiate(summonSkill.summonPrefab, summonPosition, Quaternion.identity);
                     stateMachine.currentServantAmonut ++;
                 }

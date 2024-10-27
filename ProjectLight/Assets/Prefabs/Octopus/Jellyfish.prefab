@@ -124,7 +124,7 @@ MonoBehaviour:
   warningLinePrefab: {fileID: 7555322725350063570, guid: fe5c04cf7fa779a48930ac03c79a6ce2, type: 3}
   warningLineLength: 100
   warningLineWidth: 0.1
-  warningTime: 1
+  warningTime: 2
   warningLineMaterial: {fileID: 2100000, guid: 0f5d3f538ba163a48a060d9834b99226, type: 2}
   LaserLauncherPrefab: {fileID: 7141545529058785104, guid: 8924491708d116a4289c5fbb81c8aa86, type: 3}
   LaserDirection: {x: 0, y: 1}

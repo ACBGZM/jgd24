@@ -2665,6 +2665,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 5824706029707694627, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: rangeX.x
+      value: -16.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824706029707694627, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: rangeX.y
+      value: 16.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824706029707694627, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: rangeY.x
+      value: -12.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824706029707694627, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: rangeY.y
+      value: 3.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
