@@ -23,7 +23,11 @@ public class HealthManager : MonoBehaviour
     private void OnEnable()
     {   
         playerHealthSlider.maxValue = player.GetComponent<PlayerOnHit>().maxHealth;
+        playerHealthSlider.value = player.GetComponent<PlayerOnHit>().maxHealth;
+
         bossHealthSlider.maxValue = boss.GetComponent<BossOnHit>().maxHealth;
+        bossHealthSlider.value = boss.GetComponent<BossOnHit>().maxHealth;
+
         HealthChangeEvent.OnHealthChanged += ResponseHealthChanged;
     }
 

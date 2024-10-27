@@ -71,6 +71,7 @@ public class PlayerOnHit : MonoBehaviour, BombDamage, LaserDamage, BossDamage, B
     private void Start()
     {
         m_animator = GetComponentInChildren<Animator>();
+        Health = maxHealth;
        
     }
 
