@@ -50,7 +50,7 @@ public class Candle : MonoBehaviour,BombDamage
 
     public void OnBombHit(int damage)
     {
-        restlightTime = 5.0f;
+        restlightTime = lightTime;
         SwitchLight(true);
     }
 
