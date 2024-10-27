@@ -18,6 +18,6 @@ MonoBehaviour:
   playerPos: {x: -7.57, y: -1.39}
   duration: 5
   laserGap: 1
-  instantiateDistanceOffset: 2.5
+  instantiateDistanceOffset: 3.5
   jellyfishPrefab: {fileID: 2701857695971936254, guid: 650a3d4271c66fb46b82756c5b5de192, type: 3}
   stateMachine: {fileID: 0}
