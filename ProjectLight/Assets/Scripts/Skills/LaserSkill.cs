@@ -5,9 +5,7 @@ using UnityEngine.PlayerLoop;
 [CreateAssetMenu(fileName = "New Laser Skill", menuName = "Skill/Laser Skill")]
 public class LaserSkill : Skill
 {
-    public GameObject launcherPrefab;
-    public List<LaserLauncherStat> launcherStats;
-
+    public GameObject jellyfishPrefab;
     public bool aimToPlayer = false;
     public Vector2 originalPos;
     public Vector2 playerPos;
@@ -31,18 +29,6 @@ public class LaserSkill : Skill
 
     public void Cast()
     {
-        foreach (LaserLauncherStat launcherStat in launcherStats)
-        {
-            Vector2 unitVector = aimToPlayer
-            ? playerPos - originalPos
-            : Vector2.up;
-            Vector2 startDirection = MathTool.RotateVector2(unitVector, Mathf.Deg2Rad * launcherStat.InitLaunchAngle);
-            Vector2 startPosition = originalPos + startDirection * launcherStat.InstantiateDistanceOffset;
-            GameObject launcher = Object.Instantiate(launcherPrefab, originalPos,
-                Quaternion.identity);
-            launcherStat.AimToPlayer = aimToPlayer;
-            launcher.GetComponent<Laser>().SetLaunchParameter(startPosition, startDirection);
-            launcher.GetComponent<Laser>().SetLaserStat(launcherStat);
-        }
+        
     }
 }

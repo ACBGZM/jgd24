@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af6039b8b84cc2468d780de3bff8a3e, type: 3}
+  m_Name: Octopus_FiveLaser
+  m_EditorClassIdentifier: 
+  jellyfishPrefab: {fileID: 0}
+  aimToPlayer: 0
+  originalPos: {x: 0, y: 0}
+  playerPos: {x: 0, y: 0}
+  duration: 10
+  onShot: {fileID: 11400000, guid: 815f46c2eed1e0b47a1b369c760e0c5a, type: 2}
+  protectiveLaser: {fileID: 11400000, guid: 96212aa00ce412f45aedb37d011a651e, type: 2}

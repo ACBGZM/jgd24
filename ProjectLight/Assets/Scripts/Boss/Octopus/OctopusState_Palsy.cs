@@ -11,19 +11,26 @@ public class OctopusState_Palsy : OctopusState
     private float timer = 0;
     public float Timer => timer;
 
+    private bool timerStart = false;
+
     public override void Enter()
     {
         base.Enter();
-        timer = 0;
+        timerStart = false;
+        animator.Play("Octopus_Idle2Palsy");
+        AnimationTool.AwaitCurrentAnimWhenEnd(animator, () =>
+        {
+            timerStart = true;
+            animator.Play("Octopus_Palsy");
+            AnimationTool.AwaitCurrentAnimWhenEnd(animator, () =>
+            {
+                animator.Play("Octopus_Palsy2Idle");
+            });
+        });
     }
 
     public override void Execute()
     {
         base.Execute();
-        timer += Time.deltaTime;
-        if (timer >= stateMachine.PalsyTime)
-        {
-            stateMachine.GoToNextState();
-        }
     }
 }

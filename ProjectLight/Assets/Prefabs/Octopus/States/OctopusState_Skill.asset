@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: OctopusState_Skill
   m_EditorClassIdentifier: 
   skillList:
-  - {fileID: 11400000, guid: 96212aa00ce412f45aedb37d011a651e, type: 2}
-  skill: {fileID: 11400000, guid: 96212aa00ce412f45aedb37d011a651e, type: 2}
+  - {fileID: 11400000, guid: 43ab7757dae2e80468fb60004d8c0432, type: 2}
+  skill: {fileID: 11400000, guid: 43ab7757dae2e80468fb60004d8c0432, type: 2}

@@ -51,13 +51,21 @@ public class AnimationTool
         var animInfo = animator.GetCurrentAnimatorStateInfo(layer);
         var nameHash = animInfo.fullPathHash;
 
+        
         await UniTask.WaitUntil(() =>
         {
+            if(animator == null)
+            {
+                return true;
+            }
             var info = animator.GetCurrentAnimatorStateInfo(layer);
             return nameHash != info.fullPathHash;
         });
-
+        
+        if(animator != null)
+        {   
         callback?.Invoke();
+        }
     }
     
     public static void AwaitNextAnim(Animator animator, Action callback, int layer = 0)
@@ -89,15 +97,15 @@ public class AnimationTool
     
     public static async UniTask AwaitAnimEndAsync(Animator animator, Action callback = null, float time = 0, int layer = 0)
     {
-        while (animator.GetCurrentAnimatorStateInfo(layer).normalizedTime < (0.95f - time) || animator.IsInTransition(layer))
+        while (animator != null && (animator.GetCurrentAnimatorStateInfo(layer).normalizedTime < (0.95f - time) || animator.IsInTransition(layer)))
         {
             // 在动画未结束或者在过渡中时继续等待
             await UniTask.Yield();
         }
 
-        callback?.Invoke();
+        if(animator != null)
+        {
+            callback?.Invoke();
+        }
     }
-    
-    
-    
 }

@@ -12,18 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03822ea6c70a84b4c8a20a968ea088af, type: 3}
   m_Name: Octpus_RowLaser
   m_EditorClassIdentifier: 
-  launcherPrefab: {fileID: 5859106848589360480, guid: 1407b62a2c52aa744b408450c3203a40, type: 3}
-  launcherStats:
-  - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
-  - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
-  - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
-  - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
-  - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
-  - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
-  - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
-  - {fileID: 11400000, guid: 059663213e27ee44f97143e3ea4286b7, type: 2}
+  jellyfishPrefab: {fileID: 2701857695971936254, guid: 650a3d4271c66fb46b82756c5b5de192, type: 3}
   aimToPlayer: 1
   originalPos: {x: 0, y: 0}
-  playerPos: {x: -4.67, y: -3.04}
-  duration: 2
-  laserGap: 2
+  playerPos: {x: -7.57, y: -1.39}
+  duration: 5
+  laserGap: 1
+  instantiateDistanceOffset: 2.5
+  jellyfishPrefab: {fileID: 2701857695971936254, guid: 650a3d4271c66fb46b82756c5b5de192, type: 3}
+  stateMachine: {fileID: 0}

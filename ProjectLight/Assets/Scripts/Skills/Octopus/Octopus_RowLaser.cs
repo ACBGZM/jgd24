@@ -4,9 +4,40 @@ using UnityEngine;
 public class Octopus_RowLaser : LaserSkill
 {
     public float laserGap;
+    public float instantiateDistanceOffset;
+    public GameObject jellyfishPrefab;
+    public OctopusStateMachine stateMachine;
+
+    public void Init(OctopusStateMachine stateMachine)
+    {
+        this.stateMachine = stateMachine;
+    }
 
     public void Cast()
     {
+        Vector2 laserDirection = aimToPlayer
+            ? (playerPos - originalPos).normalized
+            : Vector2.up;
+        Vector2 laserStartPosition = originalPos + laserDirection * instantiateDistanceOffset;
+        Vector3 verticalVector = Vector3.Cross(laserDirection, Vector3.forward).normalized;
+
+        GameObject jellyfish1 = Object.Instantiate(jellyfishPrefab, laserStartPosition, Quaternion.identity);
+        jellyfish1.GetComponent<Jellyfish>().LaserDirection = laserDirection;
+        stateMachine.jellyfishes.Add(jellyfish1.GetComponent<Jellyfish>());
+        GameObject jellyfish2 = Object.Instantiate(jellyfishPrefab, laserStartPosition + (Vector2)verticalVector * laserGap, Quaternion.identity);
+        jellyfish2.GetComponent<Jellyfish>().LaserDirection = laserDirection;
+        stateMachine.jellyfishes.Add(jellyfish2.GetComponent<Jellyfish>());
+        GameObject jellyfish3 = Object.Instantiate(jellyfishPrefab, laserStartPosition + (Vector2)verticalVector * laserGap * 2, Quaternion.identity);
+        jellyfish3.GetComponent<Jellyfish>().LaserDirection = laserDirection;
+        stateMachine.jellyfishes.Add(jellyfish3.GetComponent<Jellyfish>());
+        GameObject jellyfish4 = Object.Instantiate(jellyfishPrefab, laserStartPosition + (Vector2)verticalVector * laserGap * -1, Quaternion.identity);
+        jellyfish4.GetComponent<Jellyfish>().LaserDirection = laserDirection;
+        stateMachine.jellyfishes.Add(jellyfish4.GetComponent<Jellyfish>());
+        GameObject jellyfish5 = Object.Instantiate(jellyfishPrefab, laserStartPosition + (Vector2)verticalVector * laserGap * -2, Quaternion.identity);
+        jellyfish5.GetComponent<Jellyfish>().LaserDirection = laserDirection;
+        stateMachine.jellyfishes.Add(jellyfish5.GetComponent<Jellyfish>());
+
+        /*
         foreach (LaserLauncherStat launcherStat in launcherStats)
         {
             Vector2 unitVector = aimToPlayer
@@ -40,5 +71,6 @@ public class Octopus_RowLaser : LaserSkill
             launcher5.GetComponent<Laser>().SetLaunchParameter(startPosition + (Vector2)verticalVector * laserGap * -2, startDirection);
             launcher5.GetComponent<Laser>().SetLaserStat(launcherStat);
         }
+        */
     }
 }

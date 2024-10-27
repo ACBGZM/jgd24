@@ -9,16 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ee0daaa589f56847b75c6123b59d836, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ec6163ffca555b48a2216e3e10a6774, type: 3}
   m_Name: Octopus_RotateLaser
   m_EditorClassIdentifier: 
-  launcherPrefab: {fileID: 5859106848589360480, guid: 1407b62a2c52aa744b408450c3203a40, type: 3}
-  launcherStats:
-  - {fileID: 11400000, guid: f51f409a7004bf648ba156dcc246eeb0, type: 2}
-  - {fileID: 11400000, guid: ef617ff02ba9e2043a28bd9ee74158e0, type: 2}
-  - {fileID: 11400000, guid: 2cc2f694052878246a1f81c46032873b, type: 2}
-  - {fileID: 11400000, guid: f5b37687066a6ab46856f5596645b643, type: 2}
+  jellyfishPrefab: {fileID: 2701857695971936254, guid: 650a3d4271c66fb46b82756c5b5de192, type: 3}
   aimToPlayer: 0
   originalPos: {x: -5, y: 0}
-  playerPos: {x: -4.67, y: -3.04}
-  duration: 4
+  playerPos: {x: -4.28, y: -0.4}
+  duration: 5
+  rotateTime: 3
+  rotateAngle: 90
+  instantiateDistanceOffset: 2.66
+  stateMachine: {fileID: 0}

@@ -24,6 +24,9 @@ public class OctopusStateMachine : StateMachine
     public Transform currentPosition;
     public List<Transform> randomTpPoints = new List<Transform>();
 
+    [Header("Skill状态参数")]
+    public List<Jellyfish> jellyfishes;
+
     [Header("Palsy状态参数")]
     [SerializeField
 #if UNITY_EDITOR
@@ -37,7 +40,6 @@ public class OctopusStateMachine : StateMachine
     public Animator animator;
     public Rigidbody2D rb;
     public List<OctopusState> states_Phase1;
-    public List<OctopusState> states_Phase2;
     public OctopusState palsyState;
     public bool Phase2;
 
@@ -50,6 +52,7 @@ public class OctopusStateMachine : StateMachine
         rb = GetComponent<Rigidbody2D>();
         currentPosition = tpPoints[0];
         transform.position = currentPosition.position;
+        jellyfishes.Clear();
 
         Phase2 = false;
         palsyState.Init(animator, this);
@@ -112,45 +115,30 @@ public class OctopusStateMachine : StateMachine
         else if (laserSkill.GetType() == typeof(Octopus_RowLaser))
         {
             Octopus_RowLaser rowLaser = (Octopus_RowLaser)laserSkill;
-            laserSkill.UpdateOriginalPos(transform.position);
+            rowLaser.UpdateOriginalPos(transform.position);
             rowLaser.UpdatePlayerPos(GetPlayerPosition());
             rowLaser.Cast();
         }
-        else if (laserSkill.GetType() == typeof(Octopus_FiveLaser_Phase2))
+        else if (laserSkill.GetType() == typeof(Octopus_FiveLaser_OneShot))
         {
-            Octopus_FiveLaser_Phase2 fiveLaser = (Octopus_FiveLaser_Phase2)laserSkill;
-            laserSkill.UpdateOriginalPos(transform.position);
-            fiveLaser.UpdatePlayerPos(GetPlayerPosition());
-            fiveLaser.Cast();
-        }   
-    }
-
-
-    public void ChangePhase()
-    {
-        if(!Phase2)
-        {
-            Phase2 = true;
-            stateList.Clear();
-            foreach (OctopusState state in states_Phase2)
-            {
-                state.Init(animator, this);
-                stateList.AddLast(state);
-            }
-            nextState = stateList.First;
-            SwitchOn(nextState.Value);
+            Octopus_FiveLaser_OneShot oneShot = (Octopus_FiveLaser_OneShot)laserSkill;
+            oneShot.UpdateOriginalPos(transform.position);
+            oneShot.UpdatePlayerPos(GetPlayerPosition());
+            oneShot.Cast();
         }
-        else
+        else if (laserSkill.GetType() == typeof(Octopus_FiveLaser_ProtectiveLaser))
         {
-            Phase2 = false;
-            stateList.Clear();
-            foreach (OctopusState state in states_Phase1)
-            {
-                state.Init(animator, this);
-                stateList.AddLast(state);
-            }
-            nextState = stateList.First;
-            SwitchOn(nextState.Value);
+            Octopus_FiveLaser_ProtectiveLaser protectiveLaser = (Octopus_FiveLaser_ProtectiveLaser)laserSkill;
+            protectiveLaser.UpdateOriginalPos(transform.position);
+            protectiveLaser.UpdatePlayerPos(GetPlayerPosition());
+            protectiveLaser.Cast();
+        }
+        else if (laserSkill.GetType() == typeof(Octopus_RotateLaser))
+        {
+            Octopus_RotateLaser rotateLaser = (Octopus_RotateLaser)laserSkill;
+            rotateLaser.UpdateOriginalPos(transform.position);
+            rotateLaser.UpdatePlayerPos(GetPlayerPosition());
+            rotateLaser.Cast();
         }
     }
 
