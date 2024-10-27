@@ -31,7 +31,6 @@ public class BombManager : MonoBehaviour
         return s_instance;
     }
 
-    [SerializeField] private GameObject m_bomb_prefab;
     private List<Bomb> m_bombs = new List<Bomb>();
 
     private void Awake()
@@ -47,11 +46,11 @@ public class BombManager : MonoBehaviour
         }
     }
 
-    public void PlantABomb(Transform transform)
+    public void PlantABomb(Transform transform, PlayerItem item)
     {
-        if (m_bomb_prefab != null)
+        if (item.m_prefab != null)
         {
-            GameObject bomb = GameObject.Instantiate(m_bomb_prefab, transform.position + new Vector3(plantOffet.x, plantOffet.y, 0), transform.rotation);
+            GameObject bomb = GameObject.Instantiate(item.m_prefab, transform.position + new Vector3(plantOffet.x, plantOffet.y, 0), transform.rotation);
             bomb.transform.SetParent(null);
             m_bombs.Add(bomb.GetComponent<Bomb>());
 

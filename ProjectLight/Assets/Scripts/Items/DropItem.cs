@@ -42,6 +42,9 @@ public class DropItem : MonoBehaviour
         // 依据itemID执行拾取效果
         Debug.Log("拾取道具:"+itemID);
 
+        PlayerController player_controller = playerCollider.gameObject.GetComponent<PlayerController>();
+        player_controller.AddItem(itemID);
+
         // if 达到拾取上限 return false
         return true;
     }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 720756849381026532}
   - component: {fileID: 7524952300086428027}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BombLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,9 +92,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5903392969382955094}
   - component: {fileID: 6008462905532872252}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bomb
-  m_TagString: Untagged
+  m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,7 +155,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4720034769381064771}
   - component: {fileID: 3770364899029395962}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

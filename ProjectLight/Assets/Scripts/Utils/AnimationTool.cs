@@ -62,6 +62,10 @@ public class AnimationTool
             return nameHash != info.fullPathHash;
         });
 
+        if (animator == null)
+        {
+            return;
+        }
         callback?.Invoke();
     }
     
