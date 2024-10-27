@@ -242,6 +242,7 @@ MonoBehaviour:
   shieldBombDamageRate: 0
   laserDamageRate: 1
   shieldLaserDamageRate: 0.1
+  bombDamageProtectTime: 0
   laserDamageProtectTime: 0.1
   m_ui_logic: {fileID: 0}
 --- !u!114 &8697487954528283326
