@@ -627,7 +627,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 939950062811460014, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: lightTime
-      value: 12
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3214668658576497335, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1270,7 +1270,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 939950062811460014, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: lightTime
-      value: 12
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3214668658576497335, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1626,7 +1626,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 939950062811460014, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: lightTime
-      value: 12
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3214668658576497335, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2075,7 +2075,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 939950062811460014, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: lightTime
-      value: 12
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3214668658576497335, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2464,7 +2464,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 939950062811460014, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: lightTime
-      value: 12
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3214668658576497335, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2901,7 +2901,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 939950062811460014, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: lightTime
-      value: 12
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3214668658576497335, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5232,7 +5232,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 939950062811460014, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: lightTime
-      value: 12
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3214668658576497335, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_LocalPosition.x
