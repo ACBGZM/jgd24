@@ -7,7 +7,7 @@ public class HealthManager : MonoBehaviour
     //
     public GameObject player;
     public GameObject boss;
-    public GameObject servant;
+    // public GameObject servant;
 
     // 血条
     [Header("血条")]
@@ -42,33 +42,23 @@ public class HealthManager : MonoBehaviour
         else if (sourceObject == boss)
         {
             bossHealthSlider.value = newHealth; //UpdateHealthBar
+            int bossMaxHealth = boss.GetComponent<BossOnHit>().maxHealth;
+            float curHealthRate = (float)newHealth/(float)bossMaxHealth;
 
-            float curHealthRate = Mathf.Clamp(newHealth / boss.GetComponent<BossOnHit>().maxHealth, 0.1f, 1.0f);
+
             if(curHealthRate <= stageTwoHealthThreshold)
-            {
+            {   
                 globalLight.intensity = lightIntensity;
                 // 其他灯光设置
             } 
         }
+        //  else if (sourceObject == servant)
+        // {
+        //     // 小蜘蛛扣血处理 -> 血条
+        //     //  newHealth
 
-         else if (sourceObject == servant)
-        {
-            // 小蜘蛛扣血处理 -> 血条
-            //  newHealth
-
-        }
+        // }
     }
-
-    // public void UpdateHealthBar()
-    // {
-         // 
-    // boss.GetComponent<BossOnHit>().Health;
-    // }
-
-    // public void SwitchGlobalLight()
-    // {
-
-    // }
 
 
 }

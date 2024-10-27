@@ -63,7 +63,7 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
         }
         else
         {
-             monsterCanBeDamaged = GetComponent<ServantSpiderStateMachine>().canBeDamaged;
+            //  monsterCanBeDamaged = GetComponent<ServantSpiderStateMachine>().canBeDamaged;
         }
 
         if(monsterCanBeDamaged)
@@ -110,10 +110,19 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
 
     public void OnHit()
     {   
-        // Debug.Log("TODO: 怪物受击动画");
+        
+        Debug.Log("TODO: 怪物受击动画");
         if (gameObject.CompareTag("Boss"))
         {
         HealthChangeEvent.CallOnHealthChanged(Health,gameObject);
         }
+        if (gameObject.CompareTag("Servant"))
+        {   
+            Debug.Log("小蜘蛛受击");
+            Debug.Log(Health);
+            ServantHealthBar healthBar =  GetComponentInChildren<ServantHealthBar>();
+            healthBar.Change(Health,maxHealth);
+        }
+
     }
 }

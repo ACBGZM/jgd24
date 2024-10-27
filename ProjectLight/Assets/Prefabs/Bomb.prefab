@@ -138,6 +138,7 @@ MonoBehaviour:
   - Player
   - Boss
   - Candle
+  - servants
   m_ray_layer_mask:
     serializedVersion: 2
     m_Bits: 8
