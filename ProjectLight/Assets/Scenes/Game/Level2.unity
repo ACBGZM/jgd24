@@ -1112,15 +1112,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8257994754077778119, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.50201297
       objectReference: {fileID: 0}
     - target: {fileID: 8257994754077778119, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.509434
       objectReference: {fileID: 0}
     - target: {fileID: 8257994754077778119, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.42532933
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257994754077778119, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: m_Intensity
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257994754077778119, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.473
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257994754077778119, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: m_PointLightInnerRadius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257994754077778119, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -61,4 +61,5 @@ MonoBehaviour:
   startPosition: {x: 0, y: 0}
   startDirection: {x: 0, y: 0}
   meterialList:
-  - {fileID: 2100000, guid: 56f6cdd1fe3444214966f92173f67ab5, type: 2}
+  - {fileID: 2100000, guid: deb49da8142c6824ead3ce2d04d049c9, type: 2}
+  - {fileID: 2100000, guid: 0f5d3f538ba163a48a060d9834b99226, type: 2}
