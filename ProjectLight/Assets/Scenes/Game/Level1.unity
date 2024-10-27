@@ -2149,11 +2149,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: health
-      value: 1500
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: maxHealth
-      value: 1500
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: m_ui_logic

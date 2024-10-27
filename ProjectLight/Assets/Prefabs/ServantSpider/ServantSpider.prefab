@@ -256,10 +256,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeDamaged: 1
-  cocoonTime: 6
+  cocoonTime: 9
   idleTime: 1
-  chaseDistance: 10
-  moveSpeed: 4
+  chaseDistance: 7.08
+  moveSpeed: 3.46
   chaseTime: 5
   maxChaseDistance: 4
   attackRadius: 1
@@ -272,7 +272,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a57a6a1ee80c24bcfa54089fc5afe332, type: 2}
   - {fileID: 11400000, guid: d809ebf6a9b854c0485df54c07542f9b, type: 2}
   - {fileID: 11400000, guid: f6416ba1b6197b94d855de92944afc7f, type: 2}
-  deadState: {fileID: 0}
   AvailableStates: []
 --- !u!114 &127312849995523611
 MonoBehaviour:
