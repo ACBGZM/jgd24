@@ -2149,11 +2149,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: health
-      value: 1200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: maxHealth
-      value: 1200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: m_ui_logic
@@ -2165,7 +2165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: shieldBombDamageRate
-      value: 0.01
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: bombDamageProtectTime
@@ -2234,6 +2234,10 @@ PrefabInstance:
     - target: {fileID: 5824706029707694627, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: rangeY.y
       value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824706029707694627, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: moveSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5824706029707694627, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: spiderState_ChangingPhase
@@ -4812,7 +4816,7 @@ PrefabInstance:
       objectReference: {fileID: 689003491}
     - target: {fileID: 5748163621848462966, guid: 2329bce2f4251804883b08bf96c82946, type: 3}
       propertyPath: stageTwoHealthThreshold
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6188725320198240955, guid: 2329bce2f4251804883b08bf96c82946, type: 3}
       propertyPath: m_LocalPosition.x

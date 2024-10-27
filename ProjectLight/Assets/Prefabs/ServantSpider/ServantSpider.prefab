@@ -259,10 +259,10 @@ MonoBehaviour:
   cocoonTime: 7
   idleTime: 1
   chaseDistance: 7
-  moveSpeed: 3.5
+  moveSpeed: 3
   chaseTime: 5
   maxChaseDistance: 4
-  attackRadius: 1
+  attackRadius: 0.8
   animator: {fileID: 0}
   rb: {fileID: 0}
   sr: {fileID: 0}
@@ -458,6 +458,10 @@ PrefabInstance:
     - target: {fileID: 2197994182569668118, guid: b157eb6a987ab7f40a812855ba0efac0, type: 3}
       propertyPath: m_Name
       value: ServantHealthBarCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197994182569668118, guid: b157eb6a987ab7f40a812855ba0efac0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2567471827925257132, guid: b157eb6a987ab7f40a812855ba0efac0, type: 3}
       propertyPath: m_Pivot.x
