@@ -113,14 +113,14 @@ public class PlayerController : MonoBehaviour
         m_planting_progress_line.sortingLayerName =  "Player";
         m_planting_progress_line.sortingOrder = 30;
 
-
-
         m_animation_controller = GetComponentInChildren<PlayerAnimationController>();
         Debug.Log(m_animation_controller);
         m_animation_controller.SetResetHitAction(ResetOnHitStatus);
 
         m_player_on_hit = GetComponent<PlayerOnHit>();
         m_player_on_hit.SetOnHitAction(SetOnHitStatus);
+
+        m_player_on_hit.OnDead += Dead;
     }
 
     private bool m_is_on_hit_last_frame = false;
@@ -294,5 +294,10 @@ public class PlayerController : MonoBehaviour
         m_player_input.Disable();
         m_plant_a_bomb_action.Disable();
         m_detonate_all_bombs_action.Disable();
+    }
+
+    private void Dead()
+    {
+        m_ui_logic.GameOver(false);
     }
 }

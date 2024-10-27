@@ -1283,6 +1283,7 @@ MonoBehaviour:
   - {fileID: 473532533}
   m_disable_panel:
   - {fileID: 587806732}
+  m_game_over_panel: {fileID: 0}
 --- !u!4 &686905569
 Transform:
   m_ObjectHideFlags: 0
@@ -2034,7 +2035,7 @@ MonoBehaviour:
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 656d6cebb39a3d245b1d4c7715630e03, type: 2}
   m_level_audio_bank:
   - m_name: bgm
     m_event:
