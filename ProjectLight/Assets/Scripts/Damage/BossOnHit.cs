@@ -71,7 +71,14 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
         bool monsterCanBeDamaged = true;
         if (gameObject.CompareTag("Boss"))
         {
-            monsterCanBeDamaged = GetComponent<SpiderStateMachine>().canBeDamaged;
+            if(GetComponent<SpiderStateMachine>() != null)
+            {
+                monsterCanBeDamaged = GetComponent<SpiderStateMachine>().canBeDamaged;
+            }
+            else if(GetComponent<OctopusStateMachine>() != null)
+            {
+                monsterCanBeDamaged = GetComponent<OctopusStateMachine>().canBeDamaged;
+            }
         }
         else
         {
@@ -80,7 +87,7 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
 
         if(monsterCanBeDamaged)
         {
-             Health -= (int)(damage * bombDamageRate);
+            Health -= (int)(damage * bombDamageRate);
         }
         else{
             Health -= (int)(damage * shieldBombDamageRate);
@@ -103,7 +110,15 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
         bool monsterCanBeDamaged = true;
         if (gameObject.CompareTag("Boss"))
         {
-            monsterCanBeDamaged = GetComponent<SpiderStateMachine>().canBeDamaged;
+            if(GetComponent<SpiderStateMachine>() != null)
+            {
+                monsterCanBeDamaged = GetComponent<SpiderStateMachine>().canBeDamaged;
+            }
+            else if(GetComponent<OctopusStateMachine>() != null)
+            {
+                Debug.Log("八爪鱼受到伤害");
+                monsterCanBeDamaged = GetComponent<OctopusStateMachine>().canBeDamaged;
+            }
         }
         else
         {
@@ -125,8 +140,6 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
 
     public void OnHit()
     {   
-        
-      
 
         Debug.Log("TODO: 怪物受击动画");
         if (gameObject.CompareTag("Boss"))
@@ -150,8 +163,11 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
         }
         else if (GetComponentInParent<ServantSpiderStateMachine>() != null)
         {
-            Debug.Log("Servant Dead");
             GetComponentInParent<ServantSpiderStateMachine>().Dead();
+        }
+        else if (GetComponent<OctopusStateMachine>() != null)
+        {
+            GetComponent<OctopusStateMachine>().Dead();
         }
         Debug.Log("Dead");
     }

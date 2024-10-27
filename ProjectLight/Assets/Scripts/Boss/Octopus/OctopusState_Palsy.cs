@@ -16,7 +16,7 @@ public class OctopusState_Palsy : OctopusState
     public override void Enter()
     {
         base.Enter();
-        timerStart = false;
+        stateMachine.canBeDamaged = true;
         animator.Play("Octopus_Idle2Palsy");
         AnimationTool.AwaitCurrentAnimWhenEnd(animator, () =>
         {
@@ -32,5 +32,11 @@ public class OctopusState_Palsy : OctopusState
     public override void Execute()
     {
         base.Execute();
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+        stateMachine.canBeDamaged = false;
     }
 }
