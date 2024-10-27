@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Bomb : MonoBehaviour
@@ -52,6 +53,8 @@ public class Bomb : MonoBehaviour
         Vector2 perpendicular_offset = Vector2.Perpendicular(base_direction) * m_ray_spacing;
         Vector2 origin = transform.position;
 
+        HashSet<Collider2D> hitColliders = new HashSet<Collider2D>();
+
         for (int i = 0; i < m_ray_count_per_direction; i++)
         {
             float offset_multiplier = (i - (m_ray_count_per_direction - 1) / 2f);
@@ -61,10 +64,13 @@ public class Bomb : MonoBehaviour
 
             foreach(RaycastHit2D hit in hits)
             {
-                BombDamage damageable = hit.collider?.GetComponent<BombDamage>();
-                if (damageable != null)
+                if (hitColliders.Add(hit.collider))
                 {
-                    damageable.OnBombHit(m_damage);
+                    BombDamage damageable = hit.collider?.GetComponent<BombDamage>();
+                    if (damageable != null)
+                    {
+                        damageable.OnBombHit(m_damage);
+                    }
                 }
             }
 
