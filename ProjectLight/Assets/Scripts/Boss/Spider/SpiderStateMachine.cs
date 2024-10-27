@@ -7,7 +7,8 @@ public enum SpiderStateType
 {
     Idle,
     Move,
-    Skill
+    Skill,
+    ChangingPhase
 }
 
 public class SpiderStateMachine : StateMachine
@@ -90,6 +91,7 @@ public class SpiderStateMachine : StateMachine
     public Animator animator;
     public Rigidbody2D rb;
     public List<SpiderState> states;
+    public SpiderState spiderState_ChangingPhase;
 
     public LinkedList<SpiderState> stateList = new LinkedList<SpiderState>();
     public LinkedListNode<SpiderState> nextState;
@@ -102,6 +104,8 @@ public class SpiderStateMachine : StateMachine
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         currentServantAmonut = 0;
+
+        spiderState_ChangingPhase.Init(animator, this);
 
         foreach (SpiderState state in states)
         {
@@ -152,6 +156,12 @@ public class SpiderStateMachine : StateMachine
 
         bulletSkill.UpdatePlayerPos(GetPlayerPosition());
         bulletSkill.Cast();
+    }
+
+    public void ChangePhase()
+    {
+        // WwiseAudioManager.GetInstance().PostEvent("spider_roar", gameObject);
+        ChangeState(spiderState_ChangingPhase);
     }
 
     public void PlayWalkAudio()
