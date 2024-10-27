@@ -54,10 +54,10 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
       
     }
 
-    void FixUpdate()
+    void FixedUpdate()
     {
-        currentLaserTime -= Time.deltaTime;
-        currentBombTime -= Time.deltaTime;
+        currentLaserTime -= Time.fixedDeltaTime;
+        currentBombTime -= Time.fixedDeltaTime;
     }
 
     public void OnBombHit(int damage)
@@ -77,6 +77,7 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
             }
             else if(GetComponent<OctopusStateMachine>() != null)
             {
+                Debug.Log("OctopusStateMachine");
                 monsterCanBeDamaged = GetComponent<OctopusStateMachine>().canBeDamaged;
             }
         }
@@ -105,8 +106,6 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
             return;
         }
 
-
-
         bool monsterCanBeDamaged = true;
         if (gameObject.CompareTag("Boss"))
         {
@@ -116,7 +115,6 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
             }
             else if(GetComponent<OctopusStateMachine>() != null)
             {
-                Debug.Log("八爪鱼受到伤害");
                 monsterCanBeDamaged = GetComponent<OctopusStateMachine>().canBeDamaged;
             }
         }
