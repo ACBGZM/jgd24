@@ -404,7 +404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1671531524099906219, guid: 6ea46edf2ca6342fe84285f9b93e9081, type: 3}
       propertyPath: m_SortingLayer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1671531524099906219, guid: 6ea46edf2ca6342fe84285f9b93e9081, type: 3}
       propertyPath: m_SortingLayerID
@@ -848,7 +848,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000b5c11662cf5d9fdb5d6db966d7fbfb459b5ede1f2b001022db47ee01
+  m_ApplyToSortingLayers: 00000000b5c11662cf5d9fdb5d6db966d7fbfb459b5ede1f2b001022db47ee01af180fb9
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -907,11 +907,11 @@ PrefabInstance:
       objectReference: {fileID: 2123856020}
     - target: {fileID: 218095345358881656, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_items.Array.data[0].m_count
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 218095345358881656, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_items.Array.data[1].m_count
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 445419414756858238, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1469,6 +1469,14 @@ PrefabInstance:
       propertyPath: tpPoints.Array.data[3]
       value: 
       objectReference: {fileID: 24278939}
+    - target: {fileID: 8056756829468572487, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      propertyPath: shieldBombDamageRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056756829468572487, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      propertyPath: shieldLaserDamageRate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2054,7 +2062,7 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.485, y: 0.695, z: 0}
+    m_Extent: {x: 0.535, y: 0.745, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2918,7 +2926,7 @@ MonoBehaviour:
   m_Intensity: 30
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000b5c11662cf5d9fdb9b5ede1f5d6db966d7fbfb45db47ee012b001022
+  m_ApplyToSortingLayers: 00000000b5c11662cf5d9fdb9b5ede1f5d6db966d7fbfb45db47ee012b001022af180fb9
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -3287,6 +3295,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1534856718}
+    - target: {fileID: 2332574821150399791, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
+      propertyPath: maxDuration
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332574821150399791, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
+      propertyPath: minDuration
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5426815043660612768, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
       propertyPath: m_loading
       value: 

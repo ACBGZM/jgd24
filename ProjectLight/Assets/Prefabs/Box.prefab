@@ -210,6 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renewable: 1
+  respawnDelayTime: 15
   boxExplodeAnimPrefab: {fileID: 661661869279156837, guid: 23da71e8ea92b46308be2fb117e5234e, type: 3}
   spriteList:
   - {fileID: 21300000, guid: eb27b2505b92340b5b3049c5d8c4af9b, type: 3}
