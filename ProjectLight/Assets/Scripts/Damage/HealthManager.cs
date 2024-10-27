@@ -38,6 +38,11 @@ public class HealthManager : MonoBehaviour
         bossHealthSlider.maxValue = boss.GetComponent<BossOnHit>().maxHealth;
         bossHealthSlider.value = boss.GetComponent<BossOnHit>().maxHealth;
 
+        if(boss.GetComponent<SpiderStateMachine>() != null)
+        {
+            boss.GetComponent<SpiderStateMachine>().healthManager = this;
+        }
+
         HealthChangeEvent.OnHealthChanged += ResponseHealthChanged;
     }
     
