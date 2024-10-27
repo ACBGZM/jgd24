@@ -2128,11 +2128,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: health
-      value: 500
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: maxHealth
-      value: 500
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: m_ui_logic
@@ -2141,6 +2141,10 @@ PrefabInstance:
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: bombDamageRate
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: shieldBombDamageRate
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: bombDamageProtectTime
@@ -5146,11 +5150,11 @@ PrefabInstance:
       objectReference: {fileID: 1534856718}
     - target: {fileID: 2332574821150399791, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
       propertyPath: maxDuration
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2332574821150399791, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
       propertyPath: minDuration
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5426815043660612768, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
       propertyPath: m_loading
