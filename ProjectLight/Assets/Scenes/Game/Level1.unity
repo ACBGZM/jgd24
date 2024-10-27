@@ -614,7 +614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1534856723}
-  followRatio: 0.2
+  followRatio: 0.05
   m_enable_x: 1
   m_enable_y: 1
 --- !u!1001 &306469019

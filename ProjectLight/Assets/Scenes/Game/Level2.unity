@@ -2013,7 +2013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1534856723}
-  followRatio: 0.2
+  followRatio: 0.05
   m_enable_x: 1
   m_enable_y: 1
 --- !u!1 &1517214179
@@ -3250,6 +3250,10 @@ PrefabInstance:
     - target: {fileID: 7789325635916403728, guid: 41706768c7d76bf4d94d7422f2c68d19, type: 3}
       propertyPath: m_LocalPosition.y
       value: -10.986007
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909218549941960152, guid: 41706768c7d76bf4d94d7422f2c68d19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.2
       objectReference: {fileID: 0}
     - target: {fileID: 8727695074288996427, guid: 41706768c7d76bf4d94d7422f2c68d19, type: 3}
       propertyPath: m_LocalPosition.x
