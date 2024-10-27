@@ -26,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4689883816095989506}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.04916428, w: 0.9987907}
-  m_LocalPosition: {x: -0.61, y: -0.955, z: 0}
-  m_LocalScale: {x: 0.76133806, y: 0.70422536, z: 0.70422536}
+  m_LocalRotation: {x: -0, y: -0, z: 0.016605742, w: 0.99986213}
+  m_LocalPosition: {x: -0.919, y: -0.866, z: 0}
+  m_LocalScale: {x: 0.7720729, y: 0.7141549, z: 0.7141549}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3997669065794731730}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5.636}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.903}
 --- !u!212 &8610845037269308722
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -98,15 +98,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
-  m_LightType: 3
+  m_LightType: 2
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.06982756, a: 1}
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000b5c11662cf5d9fdb9b5ede1f5d6db966d7fbfb45af180fb9db47ee012b001022
-  m_LightCookieSprite: {fileID: 0}
+  m_LightCookieSprite: {fileID: 21300000, guid: 8db76f45c50ac80499fe60ecdba7710b, type: 3}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0, y: -0.00000011920929, z: 0}
-    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.865, y: 0.32, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
