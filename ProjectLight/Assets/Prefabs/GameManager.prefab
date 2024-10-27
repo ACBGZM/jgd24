@@ -47,8 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55ec2c2f658b14449d5017036bdf407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantOffet: {x: 0, y: -0.5}
-  m_bomb_prefab: {fileID: 7167747920772202834, guid: b0f2c6327b7b98e49b028bd1136e0dca, type: 3}
+  plantOffet: {x: 0, y: -1.5}
 --- !u!114 &5426815043660612768
 MonoBehaviour:
   m_ObjectHideFlags: 0
