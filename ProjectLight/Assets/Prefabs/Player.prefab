@@ -93,8 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430e6d60ed3354c68921c7436bd7b6ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  health: 100
+  maxHealth: 200
+  health: 200
   bombDamageRate: 5
   laserDamageRate: 1
   bossDamageRate: 1
@@ -283,7 +283,7 @@ Transform:
   m_GameObject: {fileID: 9145808221636470152}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -304,9 +304,9 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.425
-  m_Color: {r: 0.9622642, g: 0.55943567, b: 0.107119896, a: 1}
-  m_Intensity: 2.64
+  m_FalloffIntensity: 0.473
+  m_Color: {r: 0.42532933, g: 0.509434, b: 0.50201297, a: 1}
+  m_Intensity: 3.2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000b5c11662cf5d9fdb9b5ede1f5d6db966d7fbfb45db47ee012b001022
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 6
+  m_PointLightOuterRadius: 5
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
