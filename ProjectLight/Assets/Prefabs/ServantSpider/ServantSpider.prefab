@@ -259,7 +259,7 @@ MonoBehaviour:
   cocoonTime: 7
   idleTime: 1
   chaseDistance: 7
-  moveSpeed: 3.5
+  moveSpeed: 3
   chaseTime: 5
   maxChaseDistance: 4
   attackRadius: 1
