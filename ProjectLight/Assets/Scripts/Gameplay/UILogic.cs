@@ -9,7 +9,8 @@ public class UILogic : MonoBehaviour
 
     [SerializeField] private List<GameObject> m_disable_panel;
 
-    [SerializeField] private GameObject m_game_over_panel;
+    [SerializeField] private GameObject m_lose_panel;
+    [SerializeField] private GameObject m_win_panel;
 
     [SerializeField] private TMP_Text m_player_item_text;
     [SerializeField] private Image m_player_item_sprite;
@@ -61,8 +62,14 @@ public class UILogic : MonoBehaviour
 
         PauseGame();
 
-        m_game_over_panel.GetComponentInChildren<TMP_Text>().text = win ? "You Won!" : "You Lose!";
-        m_game_over_panel.SetActive(true);
+        if (win)
+        {
+            m_win_panel.SetActive(true);
+        }
+        else
+        {
+            m_lose_panel.SetActive(true);
+        }
     }
 
     public void UpdateCurrentItem(PlayerItem item)
