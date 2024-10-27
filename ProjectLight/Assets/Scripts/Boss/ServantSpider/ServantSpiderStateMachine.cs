@@ -74,7 +74,6 @@ public class ServantSpiderStateMachine : StateMachine
 
     [SerializeField]
     private List<ServantSpiderState> states;
-    public ServantSpiderState_Dead deadState;
 
     public List<ServantSpiderState> AvailableStates;
 
@@ -116,9 +115,14 @@ public class ServantSpiderStateMachine : StateMachine
                 stateTable.Add(state.GetType(), newState);
                 AvailableStates.Add(newState);
             }
+            else if (state.GetType() == typeof(ServantSpiderState_Dead))
+            {
+                ServantSpiderState_Dead newState = ScriptableObject.CreateInstance<ServantSpiderState_Dead>();
+                newState.Init((ServantSpiderState_Dead)state);
+                stateTable.Add(state.GetType(), newState);
+                AvailableStates.Add(newState);
+            }
         }
-
-        deadState.Init(animator, this);
     }
 
     void Start()
@@ -128,7 +132,7 @@ public class ServantSpiderStateMachine : StateMachine
 
     public void Dead()
     {
-        ChangeState(deadState);
+        ChangeState(stateTable[typeof(ServantSpiderState_Dead)]);
     }
 
     public Vector2 GetPlayerPosition()
