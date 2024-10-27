@@ -16,12 +16,8 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
             health = value;
             if (health <= 0)
             {
-                Debug.Log("Death");
+                Dead();
                 // TODO: 广播Death事件
-                if (CompareTag("Boss"))
-                {
-                    m_ui_logic?.GameOver(true);
-                }
             }
             else
             {
@@ -75,7 +71,14 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
         bool monsterCanBeDamaged = true;
         if (gameObject.CompareTag("Boss"))
         {
-            monsterCanBeDamaged = GetComponent<SpiderStateMachine>().canBeDamaged;
+            if(GetComponent<SpiderStateMachine>() != null)
+            {
+                monsterCanBeDamaged = GetComponent<SpiderStateMachine>().canBeDamaged;
+            }
+            else if(GetComponent<OctopusStateMachine>() != null)
+            {
+                monsterCanBeDamaged = GetComponent<OctopusStateMachine>().canBeDamaged;
+            }
         }
         else
         {
@@ -84,7 +87,7 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
 
         if(monsterCanBeDamaged)
         {
-             Health -= (int)(damage * bombDamageRate);
+            Health -= (int)(damage * bombDamageRate);
         }
         else{
             Health -= (int)(damage * shieldBombDamageRate);
@@ -107,7 +110,15 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
         bool monsterCanBeDamaged = true;
         if (gameObject.CompareTag("Boss"))
         {
-            monsterCanBeDamaged = GetComponent<SpiderStateMachine>().canBeDamaged;
+            if(GetComponent<SpiderStateMachine>() != null)
+            {
+                monsterCanBeDamaged = GetComponent<SpiderStateMachine>().canBeDamaged;
+            }
+            else if(GetComponent<OctopusStateMachine>() != null)
+            {
+                Debug.Log("八爪鱼受到伤害");
+                monsterCanBeDamaged = GetComponent<OctopusStateMachine>().canBeDamaged;
+            }
         }
         else
         {
@@ -129,8 +140,6 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
 
     public void OnHit()
     {   
-        
-      
 
         Debug.Log("TODO: 怪物受击动画");
         if (gameObject.CompareTag("Boss"))
@@ -141,11 +150,30 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
         {   
             Debug.Log("小蜘蛛受击");
             Debug.Log(Health);
-            ServantHealthBar healthBar =  GetComponentInChildren<ServantHealthBar>();
+            ServantHealthBar healthBar = GetComponentInChildren<ServantHealthBar>();
             healthBar.Change(Health,maxHealth);
         }
+    }
 
-       
+    public void Dead()
+    {
+        if(GetComponent<SpiderStateMachine>() != null)
+        {
+            GetComponent<SpiderStateMachine>().Dead();
+        }
+        else if (GetComponentInParent<ServantSpiderStateMachine>() != null)
+        {
+            GetComponentInParent<ServantSpiderStateMachine>().Dead();
+        }
+        else if (GetComponent<OctopusStateMachine>() != null)
+        {
+            GetComponent<OctopusStateMachine>().Dead();
+        }
+        Debug.Log("Dead");
+    }
 
+    public void GameOver(bool win)
+    {
+        m_ui_logic.GameOver(win);
     }
 }

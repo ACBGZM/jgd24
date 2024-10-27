@@ -404,7 +404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1671531524099906219, guid: 6ea46edf2ca6342fe84285f9b93e9081, type: 3}
       propertyPath: m_SortingLayer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1671531524099906219, guid: 6ea46edf2ca6342fe84285f9b93e9081, type: 3}
       propertyPath: m_SortingLayerID
@@ -848,7 +848,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000b5c11662cf5d9fdb5d6db966d7fbfb459b5ede1f2b001022db47ee01
+  m_ApplyToSortingLayers: 00000000b5c11662cf5d9fdb5d6db966d7fbfb459b5ede1f2b001022db47ee01af180fb9
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -907,11 +907,11 @@ PrefabInstance:
       objectReference: {fileID: 2123856020}
     - target: {fileID: 218095345358881656, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_items.Array.data[0].m_count
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 218095345358881656, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_items.Array.data[1].m_count
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 445419414756858238, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1413,6 +1413,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Octopus
       objectReference: {fileID: 0}
+    - target: {fileID: 590564588003445654, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3260172847456519247, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.45
@@ -1469,6 +1473,14 @@ PrefabInstance:
       propertyPath: tpPoints.Array.data[3]
       value: 
       objectReference: {fileID: 24278939}
+    - target: {fileID: 8056756829468572487, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      propertyPath: shieldBombDamageRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056756829468572487, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      propertyPath: shieldLaserDamageRate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1913,6 +1925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1489127581}
   - component: {fileID: 1489127582}
+  - component: {fileID: 1489127583}
   m_Layer: 0
   m_Name: "\u524D\u666F"
   m_TagString: Untagged
@@ -1987,6 +2000,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1489127583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489127580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79a3887e75004c44887fe588b45effb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1534856723}
+  followRatio: 0.2
+  m_enable_x: 1
+  m_enable_y: 1
 --- !u!1 &1517214179
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,7 +2083,7 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.485, y: 0.695, z: 0}
+    m_Extent: {x: 0.535, y: 0.745, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2918,7 +2947,7 @@ MonoBehaviour:
   m_Intensity: 30
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000b5c11662cf5d9fdb9b5ede1f5d6db966d7fbfb45db47ee012b001022
+  m_ApplyToSortingLayers: 00000000b5c11662cf5d9fdb9b5ede1f5d6db966d7fbfb45db47ee012b001022af180fb9
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -3287,6 +3316,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1534856718}
+    - target: {fileID: 2332574821150399791, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
+      propertyPath: maxDuration
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332574821150399791, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
+      propertyPath: minDuration
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5426815043660612768, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
       propertyPath: m_loading
       value: 

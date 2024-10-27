@@ -1283,7 +1283,10 @@ MonoBehaviour:
   - {fileID: 473532533}
   m_disable_panel:
   - {fileID: 587806732}
-  m_game_over_panel: {fileID: 0}
+  m_lose_panel: {fileID: 0}
+  m_win_panel: {fileID: 0}
+  m_player_item_text: {fileID: 0}
+  m_player_item_sprite: {fileID: 0}
 --- !u!4 &686905569
 Transform:
   m_ObjectHideFlags: 0
@@ -2136,7 +2139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3570136649650377694, guid: f6642ff22e48fad4680486a1dca15b66, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level1
+      value: Level0
       objectReference: {fileID: 0}
     - target: {fileID: 3570136649650377694, guid: f6642ff22e48fad4680486a1dca15b66, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName

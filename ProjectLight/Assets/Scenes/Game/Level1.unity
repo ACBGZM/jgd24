@@ -574,6 +574,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 247474304}
+  - component: {fileID: 247474305}
   m_Layer: 0
   m_Name: "\u524D\u666F"
   m_TagString: Untagged
@@ -600,6 +601,22 @@ Transform:
   - {fileID: 923451591}
   m_Father: {fileID: 1201978778}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &247474305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247474303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79a3887e75004c44887fe588b45effb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1534856723}
+  followRatio: 0.2
+  m_enable_x: 1
+  m_enable_y: 1
 --- !u!1001 &306469019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -608,6 +625,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1535574773}
     m_Modifications:
+    - target: {fileID: 939950062811460014, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
+      propertyPath: lightTime
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3214668658576497335, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.75
@@ -1247,6 +1268,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1535574773}
     m_Modifications:
+    - target: {fileID: 939950062811460014, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
+      propertyPath: lightTime
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3214668658576497335, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.26001
@@ -1354,7 +1379,7 @@ MonoBehaviour:
   m_Intensity: 0.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000b5c11662cf5d9fdb5d6db966d7fbfb459b5ede1f2b001022db47ee01af180fb9192b7780
+  m_ApplyToSortingLayers: 00000000b5c11662cf5d9fdb5d6db966d7fbfb459b5ede1f2b001022db47ee01af180fb9
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1477,7 +1502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 942027811654469703, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: bombDamageRate
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 942027811654469703, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: bossDamageProtectTime
@@ -1599,6 +1624,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1535574773}
     m_Modifications:
+    - target: {fileID: 939950062811460014, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
+      propertyPath: lightTime
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3214668658576497335, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.10998535
@@ -2044,6 +2073,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1535574773}
     m_Modifications:
+    - target: {fileID: 939950062811460014, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
+      propertyPath: lightTime
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3214668658576497335, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.10998535
@@ -2116,11 +2149,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: health
-      value: 1000
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: maxHealth
-      value: 1000
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: m_ui_logic
@@ -2129,6 +2162,10 @@ PrefabInstance:
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: bombDamageRate
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: shieldBombDamageRate
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: bombDamageProtectTime
@@ -2425,6 +2462,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1535574773}
     m_Modifications:
+    - target: {fileID: 939950062811460014, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
+      propertyPath: lightTime
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3214668658576497335, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.84
@@ -2858,6 +2899,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1535574773}
     m_Modifications:
+    - target: {fileID: 939950062811460014, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
+      propertyPath: lightTime
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3214668658576497335, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.34
@@ -5138,11 +5183,11 @@ PrefabInstance:
       objectReference: {fileID: 1534856718}
     - target: {fileID: 2332574821150399791, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
       propertyPath: maxDuration
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2332574821150399791, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
       propertyPath: minDuration
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5426815043660612768, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
       propertyPath: m_loading
@@ -5185,6 +5230,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1535574773}
     m_Modifications:
+    - target: {fileID: 939950062811460014, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
+      propertyPath: lightTime
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3214668658576497335, guid: 393bb88301d104d97a972c575ae0518b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.28

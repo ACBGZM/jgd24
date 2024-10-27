@@ -41,7 +41,9 @@ public class OctopusStateMachine : StateMachine
     public Rigidbody2D rb;
     public List<OctopusState> states_Phase1;
     public OctopusState palsyState;
+    public OctopusState_Dead deadState;
     public bool Phase2;
+    public bool canBeDamaged = false;
 
     public LinkedList<OctopusState> stateList = new LinkedList<OctopusState>();
     public LinkedListNode<OctopusState> nextState;
@@ -56,6 +58,7 @@ public class OctopusStateMachine : StateMachine
 
         Phase2 = false;
         palsyState.Init(animator, this);
+        deadState.Init(animator, this);
         foreach (OctopusState state in states_Phase1)
         {
             state.Init(animator, this);
@@ -151,5 +154,10 @@ public class OctopusStateMachine : StateMachine
     public void Palsy()
     {
         ChangeState(palsyState);
+    }
+
+    public void Dead()
+    {
+        ChangeState(deadState);
     }
 }
