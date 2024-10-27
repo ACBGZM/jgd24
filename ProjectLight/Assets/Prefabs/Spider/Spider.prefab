@@ -239,8 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc8f2ee3fe0d4f84a9de7057d810d60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWeak: 0
-  canBeDamaged: 1
+  canBeDamaged: 0
   idleTime: 2
   moveSpeed: 5
   targetAreaExternalRadius: 17
@@ -261,6 +260,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 26e8f5a46e5e5d44e95adb106dc9b00c, type: 2}
   spiderState_ChangingPhase: {fileID: 11400000, guid: 8d8899421d0cbec4a958977e575dbc45, type: 2}
   spiderState_Dead: {fileID: 11400000, guid: 0022f7f3fec6e74458d441756bf871dc, type: 2}
+  healthManager: {fileID: 0}
 --- !u!50 &8090122043248374448
 Rigidbody2D:
   serializedVersion: 4
@@ -300,12 +300,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3dad3afc2ee94dd3bc98c16a6c3a3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
-  health: 1000
+  maxHealth: 1200
+  health: 1200
   bombDamageRate: 10
   shieldBombDamageRate: 0.1
   laserDamageRate: 1
   shieldLaserDamageRate: 0.1
+  bombDamageProtectTime: 0
   laserDamageProtectTime: 0.1
   m_ui_logic: {fileID: 0}
 --- !u!114 &312758075539861286

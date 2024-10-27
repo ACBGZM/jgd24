@@ -14,12 +14,6 @@ public enum SpiderStateType
 public class SpiderStateMachine : StateMachine
 {
     [Header("Boss属性")]
-
-#if UNITY_EDITOR
-    [Label("处于弱点状态")]
-#endif
-    public bool isWeak = false;
-
 #if UNITY_EDITOR
     [Label("可以被伤害")]
 #endif
