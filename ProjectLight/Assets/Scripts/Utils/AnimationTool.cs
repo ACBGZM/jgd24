@@ -58,6 +58,11 @@ public class AnimationTool
 
         await UniTask.WaitUntil(() =>
         {
+            if (animator == null)
+            {
+                return false;
+            }
+
             var info = animator.GetCurrentAnimatorStateInfo(layer);
             return nameHash != info.fullPathHash;
         });
