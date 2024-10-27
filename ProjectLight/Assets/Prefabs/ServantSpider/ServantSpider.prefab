@@ -88,6 +88,7 @@ MonoBehaviour:
   shieldBombDamageRate: 0
   laserDamageRate: 1
   shieldLaserDamageRate: 0.1
+  bombDamageProtectTime: 0.5
   laserDamageProtectTime: 0.1
   m_ui_logic: {fileID: 0}
 --- !u!114 &7520128547945286370
@@ -256,7 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeDamaged: 1
   cocoonTime: 6
-  idleTime: 3
+  idleTime: 1
   chaseDistance: 10
   moveSpeed: 4
   chaseTime: 5
