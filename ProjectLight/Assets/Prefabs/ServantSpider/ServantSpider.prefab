@@ -82,9 +82,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3dad3afc2ee94dd3bc98c16a6c3a3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 6
-  health: 6
-  bombDamageRate: 1
+  maxHealth: 100
+  health: 100
+  bombDamageRate: 10
   shieldBombDamageRate: 0
   laserDamageRate: 1
   shieldLaserDamageRate: 0.1
