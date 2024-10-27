@@ -907,11 +907,11 @@ PrefabInstance:
       objectReference: {fileID: 2123856020}
     - target: {fileID: 218095345358881656, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_items.Array.data[0].m_count
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 218095345358881656, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_items.Array.data[1].m_count
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 445419414756858238, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1473,18 +1473,6 @@ PrefabInstance:
       propertyPath: tpPoints.Array.data[3]
       value: 
       objectReference: {fileID: 24278939}
-    - target: {fileID: 8056756829468572487, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
-      propertyPath: shieldBombDamageRate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8056756829468572487, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
-      propertyPath: shieldLaserDamageRate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8056756829468572487, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
-      propertyPath: laserDamageProtectTime
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2486,63 +2474,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1929071531
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6200082283741903013, guid: 53d0f637b1f25714ca61299c3eb73cba, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.0428123
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200082283741903013, guid: 53d0f637b1f25714ca61299c3eb73cba, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -10.172589
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200082283741903013, guid: 53d0f637b1f25714ca61299c3eb73cba, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200082283741903013, guid: 53d0f637b1f25714ca61299c3eb73cba, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200082283741903013, guid: 53d0f637b1f25714ca61299c3eb73cba, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200082283741903013, guid: 53d0f637b1f25714ca61299c3eb73cba, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200082283741903013, guid: 53d0f637b1f25714ca61299c3eb73cba, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200082283741903013, guid: 53d0f637b1f25714ca61299c3eb73cba, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200082283741903013, guid: 53d0f637b1f25714ca61299c3eb73cba, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200082283741903013, guid: 53d0f637b1f25714ca61299c3eb73cba, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7834417015699658684, guid: 53d0f637b1f25714ca61299c3eb73cba, type: 3}
-      propertyPath: m_Name
-      value: MirrorBomb
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 53d0f637b1f25714ca61299c3eb73cba, type: 3}
 --- !u!1001 &1942282573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3804,4 +3735,3 @@ SceneRoots:
   - {fileID: 1312254752}
   - {fileID: 366034207}
   - {fileID: 890634279}
-  - {fileID: 1929071531}
