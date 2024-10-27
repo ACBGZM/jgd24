@@ -4,17 +4,27 @@ using UnityEngine;
 public class Octopus_FiveLaser_ProtectiveLaser : LaserSkill
 {
     public float laserOffset;
+    public OctopusStateMachine stateMachine;
+
+    public void Init(StateMachine stateMachine)
+    {
+        this.stateMachine = (OctopusStateMachine)stateMachine;
+    }
 
     public void Cast()
     {
         GameObject protectiveJellyfish1 = GameObject.Instantiate(jellyfishPrefab, playerPos + new Vector2(1, 1).normalized * laserOffset, Quaternion.identity);
         protectiveJellyfish1.GetComponent<Jellyfish>().LaserDirection = Vector2.down;
+        stateMachine.jellyfishes.Add(protectiveJellyfish1.GetComponent<Jellyfish>());
         GameObject protectiveJellyfish2 = GameObject.Instantiate(jellyfishPrefab, playerPos + new Vector2(-1, 1).normalized * laserOffset, Quaternion.identity);
         protectiveJellyfish2.GetComponent<Jellyfish>().LaserDirection = Vector2.right;
+        stateMachine.jellyfishes.Add(protectiveJellyfish2.GetComponent<Jellyfish>());
         GameObject protectiveJellyfish3 = GameObject.Instantiate(jellyfishPrefab, playerPos + new Vector2(1, -1).normalized * laserOffset, Quaternion.identity);
         protectiveJellyfish3.GetComponent<Jellyfish>().LaserDirection = Vector2.left;
+        stateMachine.jellyfishes.Add(protectiveJellyfish3.GetComponent<Jellyfish>());
         GameObject protectiveJellyfish4 = GameObject.Instantiate(jellyfishPrefab, playerPos + new Vector2(-1, -1).normalized * laserOffset, Quaternion.identity);
         protectiveJellyfish4.GetComponent<Jellyfish>().LaserDirection = Vector2.up;
+        stateMachine.jellyfishes.Add(protectiveJellyfish4.GetComponent<Jellyfish>());
         
         /*
         GameObject protectiveLauncher1 = Object.Instantiate(launcherPrefab, playerPos + new Vector2(1, 1).normalized * laserOffset, Quaternion.identity);

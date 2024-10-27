@@ -9,5 +9,6 @@ public class Octopus_FiveLaser : LaserSkill
     public void Init(StateMachine stateMachine)
     {
         onShot.Init(stateMachine);
+        protectiveLaser.Init(stateMachine);
     }
 }
