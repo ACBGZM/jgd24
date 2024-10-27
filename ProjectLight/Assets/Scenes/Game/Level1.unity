@@ -2165,7 +2165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: shieldBombDamageRate
-      value: 0.01
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: bombDamageProtectTime
