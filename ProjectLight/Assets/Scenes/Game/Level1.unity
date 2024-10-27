@@ -5120,6 +5120,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1534856718}
+    - target: {fileID: 2332574821150399791, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
+      propertyPath: maxDuration
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332574821150399791, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
+      propertyPath: minDuration
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5426815043660612768, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
       propertyPath: m_loading
       value: 

@@ -240,11 +240,11 @@ public class PlayerController : MonoBehaviour
 
             if (m_input_movement.x > 0)
             {
-                transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
             else if (m_input_movement.x < 0)
             {
-                transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
 
             if (m_status != PlayerStatus.planting_a_bomb)

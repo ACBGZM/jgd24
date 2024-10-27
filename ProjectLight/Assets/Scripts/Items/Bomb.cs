@@ -57,12 +57,15 @@ public class Bomb : MonoBehaviour
             float offset_multiplier = (i - (m_ray_count_per_direction - 1) / 2f);
             Vector2 ray_origin = origin + offset_multiplier * perpendicular_offset;
 
-            RaycastHit2D hit = Physics2D.Raycast(ray_origin, base_direction, m_explosion_range, m_ray_layer_mask);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(ray_origin, base_direction, m_explosion_range, m_ray_layer_mask);
 
-            BombDamage damageable = hit.collider?.GetComponent<BombDamage>();
-            if (damageable != null)
+            foreach(RaycastHit2D hit in hits)
             {
-                damageable.OnBombHit(m_damage);
+                BombDamage damageable = hit.collider?.GetComponent<BombDamage>();
+                if (damageable != null)
+                {
+                    damageable.OnBombHit(m_damage);
+                }
             }
 
             // debug draw
@@ -71,11 +74,6 @@ public class Bomb : MonoBehaviour
             if (i == (m_ray_count_per_direction + 1) / 2 - 1)
             {
                 CreateBeam(ray_origin, base_direction, m_ray_visible_duration);
-            }
-
-            if (hit)
-            {
-                Debug.Log("Ray hit: " + hit.collider.name);
             }
         }
     }
