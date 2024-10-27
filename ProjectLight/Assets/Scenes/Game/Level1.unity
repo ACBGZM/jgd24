@@ -2236,6 +2236,10 @@ PrefabInstance:
       value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 5824706029707694627, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
+      propertyPath: moveSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824706029707694627, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: spiderState_ChangingPhase
       value: 
       objectReference: {fileID: 11400000, guid: 8d8899421d0cbec4a958977e575dbc45, type: 2}

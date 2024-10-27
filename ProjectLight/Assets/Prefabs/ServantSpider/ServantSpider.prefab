@@ -262,7 +262,7 @@ MonoBehaviour:
   moveSpeed: 3
   chaseTime: 5
   maxChaseDistance: 4
-  attackRadius: 1
+  attackRadius: 0.8
   animator: {fileID: 0}
   rb: {fileID: 0}
   sr: {fileID: 0}
