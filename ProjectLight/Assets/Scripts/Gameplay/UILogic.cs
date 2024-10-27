@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UILogic : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class UILogic : MonoBehaviour
     [SerializeField] private List<GameObject> m_disable_panel;
 
     [SerializeField] private GameObject m_game_over_panel;
+
+    [SerializeField] private TMP_Text m_player_item_text;
+    [SerializeField] private Image m_player_item_sprite;
 
     public void ShowPanel(bool enable)
     {
@@ -59,5 +63,11 @@ public class UILogic : MonoBehaviour
 
         m_game_over_panel.GetComponentInChildren<TMP_Text>().text = win ? "You Won!" : "You Lose!";
         m_game_over_panel.SetActive(true);
+    }
+
+    public void UpdateCurrentItem(PlayerItem item)
+    {
+        m_player_item_text.SetText($"x{item.m_count}");
+        m_player_item_sprite.sprite = item.m_ui_sprite;
     }
 }

@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 2032192818704985241}
   m_Layer: 8
   m_Name: MirrorBomb
-  m_TagString: Untagged
+  m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,9 +165,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 50
+  m_SortingLayerID: -1190192977
+  m_SortingLayer: 6
+  m_SortingOrder: 100
   m_Sprite: {fileID: -2108627013, guid: f0aac6d9548dd487c8dc0f4f075fec4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -236,6 +236,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd536ec52cd0d467bb9e25c4a4c2ca95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_damage: 1
+  m_explosion_range: 5
+  m_explosion_width: 0.5
+  m_ray_visible_duration: 1
+  m_ray_count_per_direction: 3
+  m_ray_layer_list: []
+  m_ray_layer_mask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_beam_top_sprite: {fileID: -1413227356, guid: bf4c6e2effcdd4b049ac9a3b18758107, type: 3}
+  m_beam_stretch_sprite: {fileID: 821988665, guid: bf4c6e2effcdd4b049ac9a3b18758107, type: 3}
+  m_unlit_material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   spriteList:
   - {fileID: -2108627013, guid: f0aac6d9548dd487c8dc0f4f075fec4a, type: 3}
   - {fileID: -1369750039, guid: f0aac6d9548dd487c8dc0f4f075fec4a, type: 3}

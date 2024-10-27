@@ -1934,10 +1934,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.85
-  m_fontSizeBase: 34.2
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -1946,7 +1946,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 0.24
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -2428,6 +2428,8 @@ MonoBehaviour:
   - {fileID: 6222448617981977104}
   - {fileID: 6278621777195433137}
   m_game_over_panel: {fileID: 1870690482016754789}
+  m_player_item_text: {fileID: 7409565855415605574}
+  m_player_item_sprite: {fileID: 3332414455722085251}
 --- !u!1 &9061371150621635365
 GameObject:
   m_ObjectHideFlags: 0

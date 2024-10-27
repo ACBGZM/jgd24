@@ -1183,6 +1183,14 @@ PrefabInstance:
       propertyPath: m_ui_logic
       value: 
       objectReference: {fileID: 2123856020}
+    - target: {fileID: 218095345358881656, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: m_items.Array.data[0].m_count
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 218095345358881656, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: m_items.Array.data[1].m_count
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 445419414756858238, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.15

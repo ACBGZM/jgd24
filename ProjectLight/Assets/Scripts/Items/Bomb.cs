@@ -28,7 +28,7 @@ public class Bomb : MonoBehaviour
         m_ray_layer_mask = LayerMask.GetMask(m_ray_layer_list);
     }
 
-    private void Start()
+    protected void Start()
     {
         m_ray_spacing = m_explosion_width / m_ray_count_per_direction;
 
