@@ -60,18 +60,17 @@ public class AnimationTool
         {
             if (animator == null)
             {
-                return false;
+                return true;
             }
 
             var info = animator.GetCurrentAnimatorStateInfo(layer);
             return nameHash != info.fullPathHash;
         });
 
-        if (animator == null)
+        if (animator != null)
         {
-            return;
+            callback?.Invoke();
         }
-        callback?.Invoke();
     }
     
     public static void AwaitNextAnim(Animator animator, Action callback, int layer = 0)

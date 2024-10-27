@@ -271,7 +271,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eb487a2493ab84eeba027d215e398d58, type: 2}
   - {fileID: 11400000, guid: a57a6a1ee80c24bcfa54089fc5afe332, type: 2}
   - {fileID: 11400000, guid: d809ebf6a9b854c0485df54c07542f9b, type: 2}
-  deadState: {fileID: 11400000, guid: f6416ba1b6197b94d855de92944afc7f, type: 2}
+  - {fileID: 11400000, guid: f6416ba1b6197b94d855de92944afc7f, type: 2}
+  deadState: {fileID: 0}
   AvailableStates: []
 --- !u!114 &127312849995523611
 MonoBehaviour:
