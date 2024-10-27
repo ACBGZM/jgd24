@@ -242,8 +242,8 @@ MonoBehaviour:
   canBeDamaged: 1
   idleTime: 2
   moveSpeed: 5
-  targetAreaExternalRadius: 25
-  targetAreaInnerRadius: 17
+  targetAreaExternalRadius: 17
+  targetAreaInnerRadius: 13
   minTargetAngle: 30
   maxTargetAngle: 180
   rangeX: {x: 16.5, y: -16.6}
