@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf6dbcfd28c544018842852916bc1ff, type: 3}
   m_Name: Spider_ServantSummon
   m_EditorClassIdentifier: 
-  skillID: 3
-  skillName: ServantSummon
   summonPrefab: {fileID: 1552626920991258113, guid: 2bc488e89d53147f8a37538781d14d76, type: 3}
-  summonAmount: 3
-  minSummonRadius: 3
-  maxSummonRadius: 5
+  summonAmount: 2
+  minSummonRadius: 2
+  maxSummonRadius: 15

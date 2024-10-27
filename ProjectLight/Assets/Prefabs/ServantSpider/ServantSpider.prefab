@@ -154,9 +154,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeDamaged: 1
-  cocoonTime: 5
+  cocoonTime: 6
   idleTime: 3
-  chaseDistance: 2
+  chaseDistance: 10
   moveSpeed: 4
   chaseTime: 5
   maxChaseDistance: 4
