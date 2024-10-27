@@ -1110,6 +1110,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.37
       objectReference: {fileID: 0}
+    - target: {fileID: 8257994754077778119, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257994754077778119, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257994754077778119, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1739,7 +1751,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -10.02, y: -0.10999966, z: 0}
-  m_LocalScale: {x: 3.42, y: 3.42, z: 3.42}
+  m_LocalScale: {x: 2.73, y: 2.73, z: 2.73}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 890634279}
@@ -2752,7 +2764,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10.98, y: -0.10999966, z: 0}
-  m_LocalScale: {x: 3.42, y: 3.42, z: 3.42}
+  m_LocalScale: {x: 2.73, y: 2.73, z: 2.73}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 890634279}
@@ -2911,7 +2923,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -10.02, y: -11.86, z: 0}
-  m_LocalScale: {x: 3.42, y: 3.42, z: 3.42}
+  m_LocalScale: {x: 2.73, y: 2.73, z: 2.73}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 890634279}
@@ -3237,7 +3249,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10.98, y: -12.37, z: 0}
-  m_LocalScale: {x: 3.42, y: 3.42, z: 3.42}
+  m_LocalScale: {x: 2.73, y: 2.73, z: 2.73}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 890634279}
