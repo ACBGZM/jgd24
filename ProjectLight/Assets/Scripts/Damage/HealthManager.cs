@@ -81,14 +81,18 @@ public class HealthManager : MonoBehaviour
 
 
             if(curHealthRate <= stageTwoHealthThreshold && !isBossSecondStage)
-            {             
-                isBossSecondStage = true;
-                SwitchLight(false);
+            {        
+                if(boss.GetComponent<SpiderStateMachine>() != null)
+                {
+                    isBossSecondStage = true;
+                    // SwitchLight(false);
+                    boss.GetComponent<SpiderStateMachine>().ChangePhase();
+                }
             } 
         }
     }
 
-    private void SwitchLight(bool lightON)
+    public void SwitchLight(bool lightON)
     {
         //  if(globalLight != null)
         //     {   
@@ -106,11 +110,5 @@ public class HealthManager : MonoBehaviour
         }
 
         _adjustLightIntensityCoroutine = StartCoroutine(AdjustLightIntensity());
-
-
     }
-
-
-
-
 }

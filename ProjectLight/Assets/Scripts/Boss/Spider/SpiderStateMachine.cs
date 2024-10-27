@@ -100,6 +100,8 @@ public class SpiderStateMachine : StateMachine
     private SpiderStateType currentStateType;
     public SpiderStateType CurrentStateType => currentStateType;
 
+    public HealthManager healthManager;
+
     void Awake()
     {
         animator = GetComponent<Animator>();
@@ -163,6 +165,11 @@ public class SpiderStateMachine : StateMachine
     public void ChangePhase()
     {
         ChangeState(spiderState_ChangingPhase);
+    }
+
+    public void CloseLight()
+    {
+        healthManager.SwitchLight(false);
     }
 
     public void Dead()
