@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
-
+using System.Collections;
 public class HealthManager : MonoBehaviour
 {   
     //
@@ -17,8 +17,18 @@ public class HealthManager : MonoBehaviour
     //
     [Header("全局光照")]
     public Light2D globalLight;
-    public float lightIntensity=0.02f;
+    
+    public float targetIntensity=0.02f;
+    // private float curIntensity=1.0f;
+    public float lightDimmingTime = 0.2f;
+    private Coroutine _adjustLightIntensityCoroutine;
+    
     public float stageTwoHealthThreshold = 0.4f;
+
+    private bool isBossSecondStage = false;
+
+
+
    
     private void OnEnable()
     {   
@@ -30,10 +40,30 @@ public class HealthManager : MonoBehaviour
 
         HealthChangeEvent.OnHealthChanged += ResponseHealthChanged;
     }
+    
 
     private void OnDisable()
     {
         HealthChangeEvent.OnHealthChanged -= ResponseHealthChanged;
+    }
+
+
+    void Start()
+    {
+        // curIntensity = globalLight.intensity;
+    }
+
+
+    private IEnumerator AdjustLightIntensity()
+    {
+        while(globalLight.intensity - targetIntensity > 0.001f)
+        {
+            globalLight.intensity = Mathf.Lerp(globalLight.intensity,targetIntensity,Time.deltaTime * (1/(lightDimmingTime+0.00001f)));
+            //  (1/(lightDimmingTime+0.0001f)))
+            Debug.Log("光强"+globalLight.intensity);
+            yield return null;
+        }
+        globalLight.intensity =  targetIntensity ;
     }
 
     public void ResponseHealthChanged(int newHealth, GameObject sourceObject)
@@ -50,19 +80,37 @@ public class HealthManager : MonoBehaviour
             float curHealthRate = (float)newHealth/(float)bossMaxHealth;
 
 
-            if(curHealthRate <= stageTwoHealthThreshold)
-            {   
-                globalLight.intensity = lightIntensity;
-                // 其他灯光设置
+            if(curHealthRate <= stageTwoHealthThreshold && !isBossSecondStage)
+            {             
+                isBossSecondStage = true;
+                SwitchLight(false);
             } 
         }
-        //  else if (sourceObject == servant)
-        // {
-        //     // 小蜘蛛扣血处理 -> 血条
-        //     //  newHealth
-
-        // }
     }
+
+    private void SwitchLight(bool lightON)
+    {
+        //  if(globalLight != null)
+        //     {   
+        //         GlobalLightDimming _lightController = globalLight.GetComponent<GlobalLightDimming>();
+        //         _lightController.OnLightDimming();
+        //     }
+        //     // globalLight.intensity = lightIntensity;
+        //     // 其他灯光设置
+
+ 
+    
+        if(_adjustLightIntensityCoroutine != null)
+        {
+            StopCoroutine(_adjustLightIntensityCoroutine);
+        }
+
+        _adjustLightIntensityCoroutine = StartCoroutine(AdjustLightIntensity());
+
+
+    }
+
+
 
 
 }

@@ -1479,6 +1479,10 @@ PrefabInstance:
       propertyPath: bombDamageRate
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 942027811654469703, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: bossDamageProtectTime
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3794023776475354191, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4754,9 +4758,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 841026078}
     - target: {fileID: 5748163621848462966, guid: 2329bce2f4251804883b08bf96c82946, type: 3}
+      propertyPath: lightDimmingTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748163621848462966, guid: 2329bce2f4251804883b08bf96c82946, type: 3}
       propertyPath: playerHealthSlider
       value: 
       objectReference: {fileID: 689003491}
+    - target: {fileID: 5748163621848462966, guid: 2329bce2f4251804883b08bf96c82946, type: 3}
+      propertyPath: stageTwoHealthThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6188725320198240955, guid: 2329bce2f4251804883b08bf96c82946, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.0667756
@@ -4972,6 +4984,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2210861544899216573, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799350868625442051, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2877392674798423375, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
