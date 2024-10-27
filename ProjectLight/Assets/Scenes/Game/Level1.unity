@@ -2149,11 +2149,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: health
-      value: 1200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: maxHealth
-      value: 1200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1123213704893091941, guid: 7102335c196d6ef44bfd02df13194b5a, type: 3}
       propertyPath: m_ui_logic
@@ -4816,7 +4816,7 @@ PrefabInstance:
       objectReference: {fileID: 689003491}
     - target: {fileID: 5748163621848462966, guid: 2329bce2f4251804883b08bf96c82946, type: 3}
       propertyPath: stageTwoHealthThreshold
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6188725320198240955, guid: 2329bce2f4251804883b08bf96c82946, type: 3}
       propertyPath: m_LocalPosition.x
