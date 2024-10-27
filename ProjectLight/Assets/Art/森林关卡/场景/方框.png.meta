@@ -121,13 +121,13 @@ TextureImporter:
       name: "\u65B9\u6846_1"
       rect:
         serializedVersion: 2
-        x: 904
+        x: 902
         y: 1809
-        width: 905
+        width: 902
         height: 905
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 483, y: 0, z: 405, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -226,13 +226,13 @@ TextureImporter:
       name: "\u65B9\u6846_6"
       rect:
         serializedVersion: 2
-        x: 776
+        x: 904
         y: 0
-        width: 905
+        width: 876
         height: 905
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 82, y: 0, z: 11, w: 0}
+      border: {x: 546, y: 399, z: 211, w: 490}
       outline: []
       physicsShape: []
       tessellationDetail: 0
