@@ -18,6 +18,7 @@ public class SpiderStateMachine : StateMachine
     [Label("处于弱点状态")]
 #endif
     public bool isWeak = false;
+    
 
 #if UNITY_EDITOR
     [Label("可以被伤害")]

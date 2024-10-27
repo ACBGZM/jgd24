@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 8171021780488424934}
   - component: {fileID: 6321515746929434457}
   - component: {fileID: 6537470218143919507}
+  - component: {fileID: 1510932367300032461}
   m_Layer: 11
   m_Name: Spider
   m_TagString: Untagged
@@ -300,7 +301,9 @@ MonoBehaviour:
   maxHealth: 300
   health: 300
   bombDamageRate: 20
+  shieldBombDamageRate: 0.1
   laserDamageRate: 1
+  shieldLaserDamageRate: 0.1
   laserDamageProtectTime: 0.1
 --- !u!70 &8171021780488424934
 CapsuleCollider2D:
@@ -381,3 +384,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1510932367300032461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338319636300714571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3db6e911da9f4cf099a45aefaab0044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_damage: 30

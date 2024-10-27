@@ -28,9 +28,11 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
 
      [SerializeField]
     public float bombDamageRate = 1.0f;
+    public float shieldBombDamageRate = 0.1f;
 
     [SerializeField]
     public float laserDamageRate = 1.0f;
+    public float shieldLaserDamageRate = 0.1f;
 
     [SerializeField]
     private float laserDamageProtectTime = 0.1f;
@@ -41,6 +43,9 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
     void Start()
     {   
         currentLaserTime = 0;
+
+        Health = maxHealth;
+        HealthChangeEvent.CallOnHealthChanged(Health,gameObject);
       
     }
 
@@ -50,25 +55,65 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
     }
 
     public void OnBombHit(int damage)
-    {
-        Health -= (int)(damage * bombDamageRate);
+    {   
+        bool monsterCanBeDamaged = true;
+        if (gameObject.CompareTag("Boss"))
+        {
+            monsterCanBeDamaged = GetComponent<SpiderStateMachine>().canBeDamaged;
+        }
+        else
+        {
+             monsterCanBeDamaged = GetComponent<ServantSpiderStateMachine>().canBeDamaged;
+        }
+
+        if(monsterCanBeDamaged)
+        {
+             Health -= (int)(damage * bombDamageRate);
+        }
+        else{
+            Health -= (int)(damage * shieldBombDamageRate);
+        }
         OnHit();
     }
 
     public void OnLaserHit(int damage)
     {
-        if (currentLaserTime <= 0)
+        if (currentLaserTime > 0)
+        {
+            return;
+        }
+
+
+
+        bool monsterCanBeDamaged = true;
+        if (gameObject.CompareTag("Boss"))
+        {
+            monsterCanBeDamaged = GetComponent<SpiderStateMachine>().canBeDamaged;
+        }
+        else
+        {
+             monsterCanBeDamaged = GetComponent<ServantSpiderStateMachine>().canBeDamaged;
+        }
+        
+        if(monsterCanBeDamaged)
         {
              Health -= (int)(damage * laserDamageRate);
-            currentLaserTime = laserDamageProtectTime;
-            OnHit();
         }
+        else{
+            Health -= (int)(damage * shieldLaserDamageRate);
+        }
+
+        currentLaserTime = laserDamageProtectTime;
+        OnHit();
+      
     }
 
     public void OnHit()
     {   
-        Debug.Log("TODO: 怪物受击动画");
+        // Debug.Log("TODO: 怪物受击动画");
+        if (gameObject.CompareTag("Boss"))
+        {
         HealthChangeEvent.CallOnHealthChanged(Health,gameObject);
-        
+        }
     }
 }

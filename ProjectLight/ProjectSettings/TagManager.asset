@@ -9,6 +9,8 @@ TagManager:
   - Bomb
   - Wall
   - Enemy
+  - Boss
+  - Servant
   layers:
   - Default
   - TransparentFX
