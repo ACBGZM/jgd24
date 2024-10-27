@@ -13,6 +13,7 @@ public class OctopusState_Skill : OctopusState
     ]
     private Skill skill;
 
+    private float skillDuration;
     private float timer = 0;
 
     public override void Enter()
@@ -27,11 +28,42 @@ public class OctopusState_Skill : OctopusState
             {
                 Debug.Log("LaserSkill");
                 LaserSkill laserSkill = (LaserSkill)skill;
-                foreach (LaserLauncherStat launcherStat in laserSkill.launcherStats)
+                skillDuration = laserSkill.duration;
+                stateMachine.LaserCast(laserSkill);
+            }
+            if (skill.GetType() == typeof(Octopus_RowLaser))
+            {
+                Debug.Log("RowLaser");
+                Octopus_RowLaser rowLaser = (Octopus_RowLaser)skill;
+                rowLaser.Init(stateMachine);
+                skillDuration = rowLaser.duration;
+                animator.Play("Octopus_RowLaser");
+                AnimationTool.AwaitCurrentAnimWhenEnd(animator, () => { animator.Play("Octopus_Idle"); });
+            }
+            if (skill.GetType() == typeof(Octopus_FiveLaser))
+            {
+                Debug.Log("FiveLaser");
+                Octopus_FiveLaser fiveLaser = (Octopus_FiveLaser)skill;
+                skillDuration = fiveLaser.duration;
+                fiveLaser.Init(stateMachine);
+                if(stateMachine.Phase2)
                 {
-                    GameObject launcher = Instantiate(laserSkill.launcherPrefab, stateMachine.transform.position, Quaternion.identity);
-                    launcher.GetComponent<LaserLauncher>().Init(launcherStat);
+                    animator.Play("Octopus_FiveShot_Phase2");
                 }
+                else 
+                {
+                    animator.Play("Octopus_FiveShot");
+                }
+                AnimationTool.AwaitCurrentAnimWhenEnd(animator, () => { animator.Play("Octopus_Idle"); });
+            }
+            if (skill.GetType() == typeof(Octopus_RotateLaser))
+            {
+                Debug.Log("RotateLaser");
+                Octopus_RotateLaser rotateLaser = (Octopus_RotateLaser)skill;
+                rotateLaser.Init(stateMachine);
+                skillDuration = rotateLaser.duration;
+                animator.Play("Octopus_RotateLaser");
+                AnimationTool.AwaitCurrentAnimWhenEnd(animator, () => { animator.Play("Octopus_Idle"); });
             }
         }
     }
@@ -41,10 +73,22 @@ public class OctopusState_Skill : OctopusState
         base.Execute();
         timer += Time.deltaTime;
 
-        if(timer >= 1)
+        if(timer >= skillDuration)
         {
             stateMachine.GoToNextState();
         }
     }
 
+    public override void Exit()
+    {
+        base.Exit();
+        foreach (Jellyfish jellyfish in stateMachine.jellyfishes)
+        {
+            if(jellyfish != null)
+            {
+                jellyfish.GetComponent<Jellyfish>().Dead();
+            }
+        }
+        stateMachine.jellyfishes.Clear();
+    }
 }

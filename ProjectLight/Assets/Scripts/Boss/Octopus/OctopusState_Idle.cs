@@ -15,6 +15,7 @@ public class OctopusState_Idle : OctopusState
     {
         base.Enter();
         timer = 0;
+        animator.Play("Octopus_Idle");
     }
 
     public override void Execute()

@@ -2,7 +2,8 @@ using System;
 using UnityEngine;
 
 public class PlayerOnHit : MonoBehaviour, BombDamage, LaserDamage, BossDamage, BulletDamage
-{   
+{
+    public Action OnDead;
 
     [SerializeField]
      public int maxHealth = 100;
@@ -18,6 +19,7 @@ public class PlayerOnHit : MonoBehaviour, BombDamage, LaserDamage, BossDamage, B
             {
                 Debug.Log("Death");
                 // TODO: 广播Death事件
+                OnDead?.Invoke();
             }
             else
             {
