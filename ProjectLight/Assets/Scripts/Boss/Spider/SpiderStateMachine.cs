@@ -92,6 +92,7 @@ public class SpiderStateMachine : StateMachine
     public Rigidbody2D rb;
     public List<SpiderState> states;
     public SpiderState spiderState_ChangingPhase;
+    public SpiderState spiderState_Dead;
 
     public LinkedList<SpiderState> stateList = new LinkedList<SpiderState>();
     public LinkedListNode<SpiderState> nextState;
@@ -106,6 +107,7 @@ public class SpiderStateMachine : StateMachine
         currentServantAmonut = 0;
 
         spiderState_ChangingPhase.Init(animator, this);
+        spiderState_Dead.Init(animator, this);
 
         foreach (SpiderState state in states)
         {
@@ -160,8 +162,12 @@ public class SpiderStateMachine : StateMachine
 
     public void ChangePhase()
     {
-        // WwiseAudioManager.GetInstance().PostEvent("spider_roar", gameObject);
         ChangeState(spiderState_ChangingPhase);
+    }
+
+    public void Dead()
+    {
+        ChangeState(spiderState_Dead);
     }
 
     public void PlayWalkAudio()

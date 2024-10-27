@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7520128547945286370}
   m_Layer: 14
   m_Name: CollisionDamageArea
-  m_TagString: Untagged
+  m_TagString: Servant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1770328650472128475}
   m_Father: {fileID: 212454148011934672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &5456482956777716306
@@ -119,7 +120,7 @@ GameObject:
   - component: {fileID: 6963706704141126932}
   m_Layer: 14
   m_Name: ServantSpider
-  m_TagString: Servant
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +140,6 @@ Transform:
   m_Children:
   - {fileID: 6186307034091660334}
   - {fileID: 2376836502292410130}
-  - {fileID: 1770328650472128475}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8248660946953737565
@@ -188,7 +188,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.32, y: 4.32}
+  m_Size: {x: 3.375, y: 3.375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -270,6 +270,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eb487a2493ab84eeba027d215e398d58, type: 2}
   - {fileID: 11400000, guid: a57a6a1ee80c24bcfa54089fc5afe332, type: 2}
   - {fileID: 11400000, guid: d809ebf6a9b854c0485df54c07542f9b, type: 2}
+  deadState: {fileID: 11400000, guid: f6416ba1b6197b94d855de92944afc7f, type: 2}
   AvailableStates: []
 --- !u!114 &127312849995523611
 MonoBehaviour:
@@ -451,7 +452,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 212454148011934672}
+    m_TransformParent: {fileID: 6186307034091660334}
     m_Modifications:
     - target: {fileID: 2197994182569668118, guid: b157eb6a987ab7f40a812855ba0efac0, type: 3}
       propertyPath: m_Name
@@ -507,15 +508,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2567471827925257132, guid: b157eb6a987ab7f40a812855ba0efac0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2567471827925257132, guid: b157eb6a987ab7f40a812855ba0efac0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2567471827925257132, guid: b157eb6a987ab7f40a812855ba0efac0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2567471827925257132, guid: b157eb6a987ab7f40a812855ba0efac0, type: 3}
       propertyPath: m_AnchoredPosition.x

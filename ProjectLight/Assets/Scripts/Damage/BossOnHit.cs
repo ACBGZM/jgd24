@@ -16,12 +16,8 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
             health = value;
             if (health <= 0)
             {
-                Debug.Log("Death");
+                Dead();
                 // TODO: 广播Death事件
-                if (CompareTag("Boss"))
-                {
-                    m_ui_logic?.GameOver(true);
-                }
             }
             else
             {
@@ -124,9 +120,27 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
         {   
             Debug.Log("小蜘蛛受击");
             Debug.Log(Health);
-            ServantHealthBar healthBar =  GetComponentInChildren<ServantHealthBar>();
+            ServantHealthBar healthBar = GetComponentInChildren<ServantHealthBar>();
             healthBar.Change(Health,maxHealth);
         }
+    }
 
+    public void Dead()
+    {
+        if(GetComponent<SpiderStateMachine>() != null)
+        {
+            GetComponent<SpiderStateMachine>().Dead();
+        }
+        else if (GetComponentInParent<ServantSpiderStateMachine>() != null)
+        {
+            Debug.Log("Servant Dead");
+            GetComponentInParent<ServantSpiderStateMachine>().Dead();
+        }
+        Debug.Log("Dead");
+    }
+
+    public void GameOver(bool win)
+    {
+        m_ui_logic.GameOver(win);
     }
 }

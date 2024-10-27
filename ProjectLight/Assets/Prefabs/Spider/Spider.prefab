@@ -260,6 +260,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 96ee094defe621749928b85a8b8c16ce, type: 2}
   - {fileID: 11400000, guid: 26e8f5a46e5e5d44e95adb106dc9b00c, type: 2}
   spiderState_ChangingPhase: {fileID: 11400000, guid: 8d8899421d0cbec4a958977e575dbc45, type: 2}
+  spiderState_Dead: {fileID: 11400000, guid: 0022f7f3fec6e74458d441756bf871dc, type: 2}
 --- !u!50 &8090122043248374448
 Rigidbody2D:
   serializedVersion: 4

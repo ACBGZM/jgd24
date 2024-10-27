@@ -74,6 +74,7 @@ public class ServantSpiderStateMachine : StateMachine
 
     [SerializeField]
     private List<ServantSpiderState> states;
+    public ServantSpiderState_Dead deadState;
 
     public List<ServantSpiderState> AvailableStates;
 
@@ -116,11 +117,18 @@ public class ServantSpiderStateMachine : StateMachine
                 AvailableStates.Add(newState);
             }
         }
+
+        deadState.Init(animator, this);
     }
 
     void Start()
     {
         SwitchOn(stateTable[typeof(ServantSpiderState_Egg)]);
+    }
+
+    public void Dead()
+    {
+        ChangeState(deadState);
     }
 
     public Vector2 GetPlayerPosition()
