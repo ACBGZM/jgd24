@@ -8,6 +8,10 @@ public class ServantSpiderState_Dead : ServantSpiderState
     public override void Enter()
     {
         base.Enter();
+        if (animator == null)
+        {
+            return;
+        }
         animator.Play("ServantSpider_Dead");
         AnimationTool.AwaitCurrentAnimWhenEnd(animator, () => { Destroy(stateMachine.gameObject); });
     }

@@ -82,12 +82,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3dad3afc2ee94dd3bc98c16a6c3a3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 6
-  health: 6
-  bombDamageRate: 1
+  maxHealth: 100
+  health: 100
+  bombDamageRate: 10
   shieldBombDamageRate: 0
   laserDamageRate: 1
   shieldLaserDamageRate: 0.1
+  bombDamageProtectTime: 0.5
   laserDamageProtectTime: 0.1
   m_ui_logic: {fileID: 0}
 --- !u!114 &7520128547945286370
@@ -256,7 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeDamaged: 1
   cocoonTime: 6
-  idleTime: 3
+  idleTime: 1
   chaseDistance: 10
   moveSpeed: 4
   chaseTime: 5
