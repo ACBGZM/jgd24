@@ -83,3 +83,6 @@ UpgradeLog*.htm
 # BBBB TestResource
 ProjectLight/Assets/KrishnaPalacio/*
 ProjectLight/Assets/KrishnaPalacio.meta
+
+# Plugins
+ProjectLight/Assets/Plugins/UniTask*
