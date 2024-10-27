@@ -37,8 +37,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _LaserSpeed: 3
-    - _LaserThickness: 2
+    - _LaserSpeed: 30
+    - _LaserThickness: 30
     m_Colors:
     - _Color1: {r: 3.828904, g: 0, b: 0, a: 0}
     - _Color2: {r: 0.6843954, g: 0.6981132, b: 0.04939479, a: 0.4745098}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7740112493155590419}
   - component: {fileID: 8331900696005160218}
   - component: {fileID: 5899697362340695791}
+  - component: {fileID: 8056756829468572487}
   m_Layer: 0
   m_Name: Octopus
   m_TagString: Boss
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.91, y: 0.91, z: 0.91}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,6 +103,9 @@ MonoBehaviour:
   idleTime: 3
   tpPoints:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentPosition: {fileID: 0}
   randomTpPoints: []
   jellyfishes: []
@@ -161,3 +165,23 @@ MonoBehaviour:
   FiveLaserSO: {fileID: 11400000, guid: cdfcfd6d6a941b64c96dafb659ef1be6, type: 2}
   FiveLaserLineLength: 3
   FiveLaserPhase2: 1
+--- !u!114 &8056756829468572487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590564588003445654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3dad3afc2ee94dd3bc98c16a6c3a3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1000
+  health: 1000
+  bombDamageRate: 1
+  shieldBombDamageRate: 0.1
+  laserDamageRate: 1
+  shieldLaserDamageRate: 0.1
+  laserDamageProtectTime: 0.1
+  m_ui_logic: {fileID: 0}

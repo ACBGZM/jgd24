@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jellyfishPrefab: {fileID: 2701857695971936254, guid: 650a3d4271c66fb46b82756c5b5de192, type: 3}
   aimToPlayer: 1
-  originalPos: {x: 0, y: 0}
-  playerPos: {x: -7.57, y: -1.39}
+  originalPos: {x: 10.98, y: -12.37}
+  playerPos: {x: 0.37669528, y: -11.176688}
   duration: 5
   laserGap: 1
-  instantiateDistanceOffset: 3.5
+  instantiateDistanceOffset: 4
   jellyfishPrefab: {fileID: 2701857695971936254, guid: 650a3d4271c66fb46b82756c5b5de192, type: 3}
   stateMachine: {fileID: 0}
