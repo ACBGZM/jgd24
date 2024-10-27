@@ -44,7 +44,7 @@ public class HealthManager : MonoBehaviour
             // bossHealthSlider.value = boss.GetComponent<BossOnHit>().Health;
             bossHealthSlider.value = newHealth; //UpdateHealthBar
 
-            float curHealthRate = Mathf.Clamp(newHealth / boss.GetComponent<BossOnHit>().Health, 0.1f, 1.0f);
+            float curHealthRate = Mathf.Clamp(newHealth / boss.GetComponent<BossOnHit>().maxHealth, 0.1f, 1.0f);
             if(curHealthRate <= stageTwoHealthThreshold)
             {
                 globalLight.intensity = lightIntensity;
