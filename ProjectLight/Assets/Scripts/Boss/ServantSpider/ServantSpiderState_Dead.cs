@@ -13,6 +13,10 @@ public class ServantSpiderState_Dead : ServantSpiderState
             return;
         }
         animator.Play("ServantSpider_Dead");
-        AnimationTool.AwaitCurrentAnimWhenEnd(animator, () => { Destroy(stateMachine.gameObject); });
+        AnimationTool.AwaitCurrentAnimWhenEnd(animator, () =>
+        {
+            Destroy(stateMachine.gameObject);
+            CustomGameOver.GetInstance()?.OnSpiderDeath(stateMachine.gameObject.GetComponent<ServantSpiderStateMachine>());
+        });
     }
 }
