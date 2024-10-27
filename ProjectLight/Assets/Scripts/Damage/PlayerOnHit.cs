@@ -105,7 +105,7 @@ public class PlayerOnHit : MonoBehaviour, BombDamage, LaserDamage, BossDamage, B
 
     public void OnBossHit(int damage)
     {
-        if (currentBombTime <= 0)
+        if (currentBossTime <= 0)
         {
             Health -= (int)(damage * bossDamageRate);
             currentBossTime = bossDamageProtectTime;

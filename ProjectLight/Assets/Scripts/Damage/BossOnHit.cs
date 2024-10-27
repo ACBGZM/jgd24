@@ -35,6 +35,10 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
     public float shieldLaserDamageRate = 0.1f;
 
     [SerializeField]
+    private float bombDamageProtectTime = 0.5f;
+    private float currentBombTime;
+
+    [SerializeField]
     private float laserDamageProtectTime = 0.1f;
     private float currentLaserTime;
 
@@ -43,6 +47,7 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
     void Start()
     {   
         currentLaserTime = 0;
+        currentBombTime = 0;
 
         Health = maxHealth;
         HealthChangeEvent.CallOnHealthChanged(Health,gameObject);
@@ -52,10 +57,17 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
     void FixUpdate()
     {
         currentLaserTime -= Time.deltaTime;
+        currentBombTime -= Time.deltaTime;
     }
 
     public void OnBombHit(int damage)
-    {   
+    { 
+
+        if (currentBombTime > 0)
+        {
+            return;
+        }
+
         bool monsterCanBeDamaged = true;
         if (gameObject.CompareTag("Boss"))
         {
@@ -73,6 +85,9 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
         else{
             Health -= (int)(damage * shieldBombDamageRate);
         }
+
+        currentBombTime = bombDamageProtectTime;
+
         OnHit();
     }
 
@@ -111,6 +126,8 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
     public void OnHit()
     {   
         
+      
+
         Debug.Log("TODO: 怪物受击动画");
         if (gameObject.CompareTag("Boss"))
         {
