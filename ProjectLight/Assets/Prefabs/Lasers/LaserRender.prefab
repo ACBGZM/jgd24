@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineSegmentPrefab: {fileID: 5901997528144642021, guid: 69f2e940dcc3dee47987d1b500800491, type: 3}
-  startVFX: {fileID: 0}
-  midVFX: {fileID: 0}
-  endVFX: {fileID: 0}
-  hitVFX: {fileID: 0}
+  beamVFXPrefab: {fileID: 6224557636784492249, guid: 196434dbd1fe00141a42557f6c043671, type: 3}
+  lineWidth: 1
+  startVFXScale: {x: 1.2, y: 1.2, z: 1.2}
+  midVFXScale: {x: 0.8, y: 0.8, z: 0.8}
+  endVFXScale: {x: 1.2, y: 1.2, z: 1.2}
   lines: []
