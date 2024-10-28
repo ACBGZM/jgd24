@@ -955,7 +955,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 942027811654469703, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: maxHealth
-      value: 10000
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 942027811654469703, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: bombDamageRate
