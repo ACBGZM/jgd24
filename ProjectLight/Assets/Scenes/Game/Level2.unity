@@ -1667,6 +1667,10 @@ PrefabInstance:
       value: 0.24980849
       objectReference: {fileID: 0}
     - target: {fileID: 7740112493155590419, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      propertyPath: Phase2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7740112493155590419, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
       propertyPath: palsyTime
       value: 8
       objectReference: {fileID: 0}
@@ -1690,10 +1694,21 @@ PrefabInstance:
       propertyPath: m_ui_logic
       value: 
       objectReference: {fileID: 2123856020}
+    - target: {fileID: 8056756829468572487, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      propertyPath: laserDamageRate
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056756829468572487, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      propertyPath: shieldLaserDamageRate
+      value: 0.01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 590564588003445654, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1638951482}
   m_SourcePrefab: {fileID: 100100000, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
 --- !u!4 &1128933460 stripped
 Transform:
@@ -2405,6 +2420,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 590564588003445654, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
   m_PrefabInstance: {fileID: 1128933459}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1638951482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638951474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940712a13834bec46844424c57c41d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shieldLifeTime: 0.1
+  shieldLifeTimer: 0
 --- !u!1 &1674704331
 GameObject:
   m_ObjectHideFlags: 0
@@ -4004,6 +4033,10 @@ PrefabInstance:
     - target: {fileID: 4334105063014320045, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -189
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502703534278490543, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
+      propertyPath: m_Value
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5685566159116277613, guid: c4ee00ef947b7554692b03e2718a2b22, type: 3}
       propertyPath: m_LocalScale.x

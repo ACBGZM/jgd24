@@ -5,6 +5,7 @@ public class Octopus_FiveLaser_ProtectiveLaser : LaserSkill
 {
     public float laserOffset;
     public OctopusStateMachine stateMachine;
+    public GameObject LayserLauncher;
 
     public void Init(StateMachine stateMachine)
     {
@@ -15,15 +16,19 @@ public class Octopus_FiveLaser_ProtectiveLaser : LaserSkill
     {
         GameObject protectiveJellyfish1 = GameObject.Instantiate(jellyfishPrefab, playerPos + new Vector2(1, 1).normalized * laserOffset, Quaternion.identity);
         protectiveJellyfish1.GetComponent<Jellyfish>().LaserDirection = Vector2.down;
+        protectiveJellyfish1.GetComponent<Jellyfish>().LaserLauncherPrefab = LayserLauncher;
         stateMachine.jellyfishes.Add(protectiveJellyfish1.GetComponent<Jellyfish>());
         GameObject protectiveJellyfish2 = GameObject.Instantiate(jellyfishPrefab, playerPos + new Vector2(-1, 1).normalized * laserOffset, Quaternion.identity);
         protectiveJellyfish2.GetComponent<Jellyfish>().LaserDirection = Vector2.right;
+        protectiveJellyfish2.GetComponent<Jellyfish>().LaserLauncherPrefab = LayserLauncher;
         stateMachine.jellyfishes.Add(protectiveJellyfish2.GetComponent<Jellyfish>());
         GameObject protectiveJellyfish3 = GameObject.Instantiate(jellyfishPrefab, playerPos + new Vector2(1, -1).normalized * laserOffset, Quaternion.identity);
         protectiveJellyfish3.GetComponent<Jellyfish>().LaserDirection = Vector2.left;
+        protectiveJellyfish3.GetComponent<Jellyfish>().LaserLauncherPrefab = LayserLauncher;
         stateMachine.jellyfishes.Add(protectiveJellyfish3.GetComponent<Jellyfish>());
         GameObject protectiveJellyfish4 = GameObject.Instantiate(jellyfishPrefab, playerPos + new Vector2(-1, -1).normalized * laserOffset, Quaternion.identity);
         protectiveJellyfish4.GetComponent<Jellyfish>().LaserDirection = Vector2.up;
+        protectiveJellyfish4.GetComponent<Jellyfish>().LaserLauncherPrefab = LayserLauncher;
         stateMachine.jellyfishes.Add(protectiveJellyfish4.GetComponent<Jellyfish>());
         
         /*

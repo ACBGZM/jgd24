@@ -117,7 +117,10 @@ public class BossOnHit : MonoBehaviour, BombDamage, LaserDamage
             {
                 Debug.Log("OctopusStateMachine");
                 monsterCanBeDamaged = GetComponent<OctopusStateMachine>().canBeDamaged;
-                GetComponent<OctopusStateMachine>().Palsy();
+                if(GetComponent<OctopusShield>() != null)
+                {
+                    GetComponent<OctopusShield>().OnLaserHit();
+                }
             }
         }
         else

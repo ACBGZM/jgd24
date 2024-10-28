@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jellyfishPrefab: {fileID: 2701857695971936254, guid: 650a3d4271c66fb46b82756c5b5de192, type: 3}
   aimToPlayer: 1
-  originalPos: {x: -10.02, y: 2.62}
-  playerPos: {x: 5.504424, y: -6.7393456}
+  originalPos: {x: -10.02, y: -9.129999}
+  playerPos: {x: -1.8117529, y: -11.603866}
   duration: 5
   laserOffset: 8
+  stateMachine: {fileID: 0}
+  LayserLauncher: {fileID: 7141545529058785104, guid: 2b56c95c889b4fa48ae86549940cc8a9, type: 3}
