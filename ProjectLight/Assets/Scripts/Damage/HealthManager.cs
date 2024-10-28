@@ -87,11 +87,15 @@ public class HealthManager : MonoBehaviour
 
             if(curHealthRate <= stageTwoHealthThreshold && !isBossSecondStage)
             {        
+                isBossSecondStage = true;
                 if(boss.GetComponent<SpiderStateMachine>() != null)
                 {
-                    isBossSecondStage = true;
                     // SwitchLight(false);
                     boss.GetComponent<SpiderStateMachine>().ChangePhase();
+                }
+                else if(boss.GetComponent<OctopusStateMachine>() != null)
+                {
+                    boss.GetComponent<OctopusStateMachine>().ChangePhase();
                 }
             } 
         }
