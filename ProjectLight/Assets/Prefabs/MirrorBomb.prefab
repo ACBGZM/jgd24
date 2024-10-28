@@ -65,7 +65,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.017687976, y: 0.3962273}
+  m_Offset: {x: -0.0028073788, y: 0.4196506}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,7 +76,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1362467, y: 1.8035845}
+  m_Size: {x: 2.1772375, y: 1.8504311}
   m_EdgeRadius: 0
 --- !u!114 &6319511319235906056
 MonoBehaviour:
@@ -91,7 +91,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTimeScond: 3
-  MirrorBrokenAnimPrefab: {fileID: 661661869279156837, guid: 23da71e8ea92b46308be2fb117e5234e, type: 3}
 --- !u!1 &7834417015699658684
 GameObject:
   m_ObjectHideFlags: 0
