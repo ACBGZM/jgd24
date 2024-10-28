@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{A9D8FFFE-D2E6-874F-2E58-FDD90A69EBA4}">
+		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{B86FBCA0-81BF-C4E5-C9BB-CD2271EEDC7E}">
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<Media>
@@ -288,7 +288,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{CE1763F7-136D-65CD-65BF-D44A81AB6E20}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{130FC8AF-4335-2582-179F-FB48B64D7BA2}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -298,7 +298,9 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<StateGroups>
 				<StateGroup Id="621635301" Name="bomb_explosion">
@@ -310,7 +312,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{65E045D3-9027-CCE5-76DA-CCDDC8EAAD46}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{89548201-22BF-21F5-5F8D-395B1B90856E}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<Media>
@@ -355,5 +357,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{60855ED0-E2F0-777E-7750-53C53FA01297}</FileHash>
+	<FileHash>{3FF27E2C-9F9C-422D-4942-A260C743ECB3}</FileHash>
 </SoundBanksInfo>
