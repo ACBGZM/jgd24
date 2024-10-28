@@ -50,7 +50,7 @@ public class Candle : MonoBehaviour,BombDamage
 
     public void OnBombHit(int damage)
     {
-        restlightTime = 5.0f;
+        restlightTime = lightTime;
         SwitchLight(true);
     }
 
@@ -59,7 +59,7 @@ public class Candle : MonoBehaviour,BombDamage
     {   
         if(status !=  lightStatus)
         {
-            WwiseAudioManager.GetInstance().PostEvent("candel_switch_light", gameObject);
+            WwiseAudioManager.GetInstance().PostEvent("candle_switch_light", gameObject);
         }
 
         lightStatus = status;

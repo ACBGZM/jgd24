@@ -48,16 +48,29 @@ public class AnimationTool
 
     public static async UniTask AwaitAnimAsync(Animator animator, Action callback = null, int layer = 0)
     {
+        if(animator == null)
+        {
+            return;
+        }
+
         var animInfo = animator.GetCurrentAnimatorStateInfo(layer);
         var nameHash = animInfo.fullPathHash;
 
         await UniTask.WaitUntil(() =>
         {
+            if (animator == null)
+            {
+                return true;
+            }
+
             var info = animator.GetCurrentAnimatorStateInfo(layer);
             return nameHash != info.fullPathHash;
         });
 
-        callback?.Invoke();
+        if (animator != null)
+        {
+            callback?.Invoke();
+        }
     }
     
     public static void AwaitNextAnim(Animator animator, Action callback, int layer = 0)

@@ -71,6 +71,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchItem"",
+                    ""type"": ""Button"",
+                    ""id"": ""aa0ea549-fbb5-4b3e-b3ff-e53713fd4cb0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -243,7 +252,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""27c79aa8-f848-44ae-8da2-68db936114af"",
                     ""path"": ""<Keyboard>/j"",
-                    ""interactions"": ""Hold(duration=1,pressPoint=1)"",
+                    ""interactions"": ""Hold(duration=0.6,pressPoint=0.6)"",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""PlantBomb"",
@@ -254,7 +263,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""76288035-ffc7-4290-9f3a-37d5224f35ae"",
                     ""path"": ""<Gamepad>/buttonWest"",
-                    ""interactions"": ""Hold"",
+                    ""interactions"": ""Hold(duration=0.6,pressPoint=0.6)"",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""PlantBomb"",
@@ -265,7 +274,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""18365040-607e-4ad4-9df8-d830f663db44"",
                     ""path"": ""<Joystick>/trigger"",
-                    ""interactions"": ""Hold"",
+                    ""interactions"": ""Hold(duration=0.6,pressPoint=0.6)"",
                     ""processors"": """",
                     ""groups"": ""Joystick"",
                     ""action"": ""PlantBomb"",
@@ -276,7 +285,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""c55d31f0-7c05-4de2-b8af-320f284c7d20"",
                     ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": ""Hold(duration=1,pressPoint=1)"",
+                    ""interactions"": ""Hold(duration=0.6,pressPoint=0.6)"",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""PlantBomb"",
@@ -335,6 +344,39 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""PauseGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""101136ca-3b6e-4a67-8d83-75a6f00eb915"",
+                    ""path"": ""<Joystick>/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""SwitchItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""92881a4b-23cc-4cac-8d97-062dc2f592a5"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""SwitchItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4e562dd4-1bcc-400c-b1e2-2afc1bec0a82"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""SwitchItem"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -927,6 +969,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_GP_PlantBomb = m_GP.FindAction("PlantBomb", throwIfNotFound: true);
         m_GP_DetonateBomb = m_GP.FindAction("DetonateBomb", throwIfNotFound: true);
         m_GP_PauseGame = m_GP.FindAction("PauseGame", throwIfNotFound: true);
+        m_GP_SwitchItem = m_GP.FindAction("SwitchItem", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1005,6 +1048,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_GP_PlantBomb;
     private readonly InputAction m_GP_DetonateBomb;
     private readonly InputAction m_GP_PauseGame;
+    private readonly InputAction m_GP_SwitchItem;
     public struct GPActions
     {
         private @PlayerInput m_Wrapper;
@@ -1014,6 +1058,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @PlantBomb => m_Wrapper.m_GP_PlantBomb;
         public InputAction @DetonateBomb => m_Wrapper.m_GP_DetonateBomb;
         public InputAction @PauseGame => m_Wrapper.m_GP_PauseGame;
+        public InputAction @SwitchItem => m_Wrapper.m_GP_SwitchItem;
         public InputActionMap Get() { return m_Wrapper.m_GP; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1038,6 +1083,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @PauseGame.started += instance.OnPauseGame;
             @PauseGame.performed += instance.OnPauseGame;
             @PauseGame.canceled += instance.OnPauseGame;
+            @SwitchItem.started += instance.OnSwitchItem;
+            @SwitchItem.performed += instance.OnSwitchItem;
+            @SwitchItem.canceled += instance.OnSwitchItem;
         }
 
         private void UnregisterCallbacks(IGPActions instance)
@@ -1057,6 +1105,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @PauseGame.started -= instance.OnPauseGame;
             @PauseGame.performed -= instance.OnPauseGame;
             @PauseGame.canceled -= instance.OnPauseGame;
+            @SwitchItem.started -= instance.OnSwitchItem;
+            @SwitchItem.performed -= instance.OnSwitchItem;
+            @SwitchItem.canceled -= instance.OnSwitchItem;
         }
 
         public void RemoveCallbacks(IGPActions instance)
@@ -1244,6 +1295,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnPlantBomb(InputAction.CallbackContext context);
         void OnDetonateBomb(InputAction.CallbackContext context);
         void OnPauseGame(InputAction.CallbackContext context);
+        void OnSwitchItem(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

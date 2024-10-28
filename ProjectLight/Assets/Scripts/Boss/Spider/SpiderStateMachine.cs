@@ -7,18 +7,13 @@ public enum SpiderStateType
 {
     Idle,
     Move,
-    Skill
+    Skill,
+    ChangingPhase
 }
 
 public class SpiderStateMachine : StateMachine
 {
     [Header("Boss属性")]
-
-#if UNITY_EDITOR
-    [Label("处于弱点状态")]
-#endif
-    public bool isWeak = false;
-
 #if UNITY_EDITOR
     [Label("可以被伤害")]
 #endif
@@ -70,6 +65,9 @@ public class SpiderStateMachine : StateMachine
     private float maxTargetAngle;
     public float MaxTargetAngle => maxTargetAngle;
 
+    public Vector2 rangeX;
+    public Vector2 rangeY;
+
     [Header("随从参数")]
     [SerializeField
 #if UNITY_EDITOR
@@ -87,6 +85,8 @@ public class SpiderStateMachine : StateMachine
     public Animator animator;
     public Rigidbody2D rb;
     public List<SpiderState> states;
+    public SpiderState spiderState_ChangingPhase;
+    public SpiderState spiderState_Dead;
 
     public LinkedList<SpiderState> stateList = new LinkedList<SpiderState>();
     public LinkedListNode<SpiderState> nextState;
@@ -94,11 +94,16 @@ public class SpiderStateMachine : StateMachine
     private SpiderStateType currentStateType;
     public SpiderStateType CurrentStateType => currentStateType;
 
+    public HealthManager healthManager;
+
     void Awake()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         currentServantAmonut = 0;
+
+        spiderState_ChangingPhase.Init(animator, this);
+        spiderState_Dead.Init(animator, this);
 
         foreach (SpiderState state in states)
         {
@@ -149,6 +154,22 @@ public class SpiderStateMachine : StateMachine
 
         bulletSkill.UpdatePlayerPos(GetPlayerPosition());
         bulletSkill.Cast();
+    }
+
+    public void ChangePhase()
+    {
+        ChangeState(spiderState_ChangingPhase);
+        WwiseAudioManager.GetInstance().PostEvent("spider_change_phase", gameObject);
+    }
+
+    public void CloseLight()
+    {
+        healthManager.SwitchLight(false);
+    }
+
+    public void Dead()
+    {
+        ChangeState(spiderState_Dead);
     }
 
     public void PlayWalkAudio()

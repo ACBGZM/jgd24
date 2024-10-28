@@ -28,11 +28,15 @@ namespace AK
         static const AkUniqueID PLAY_LITTLE_SPIDER_FOOTSTEPS = 1741564502U;
         static const AkUniqueID PLAY_LITTLE_SPIDER_FOOTSTEPS_01 = 535372708U;
         static const AkUniqueID PLAY_LITTLE_SPIDER_INCUBATION = 3020140973U;
+        static const AkUniqueID PLAY_OCTOPUS_LASER_CHARGE = 4175431908U;
+        static const AkUniqueID PLAY_OCTOPUS_LASER_EMISSION = 2996450757U;
+        static const AkUniqueID PLAY_OCTOPUS_PHASE_II = 299129062U;
         static const AkUniqueID PLAY_OCTOPUS_TELEPORT = 1241574133U;
         static const AkUniqueID PLAY_OCTOPUS_UNDER_THE_SEA = 2585982154U;
         static const AkUniqueID PLAY_PLAYER_FOOTSTEPS = 98439365U;
         static const AkUniqueID PLAY_SECOND_CANDLE = 1741580086U;
         static const AkUniqueID PLAY_SPIDER_OF_HOLE = 4244968688U;
+        static const AkUniqueID PLAY_SPIDER_PHASE_II = 1087567146U;
         static const AkUniqueID PLAY_SUNRISE = 3517109807U;
         static const AkUniqueID PLAY_UI_BUTTON = 43599987U;
     } // namespace EVENTS
@@ -63,6 +67,8 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

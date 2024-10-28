@@ -1,6 +1,10 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+// using static UnityEditor.Progress;
 
 public enum PlayerStatus
 {
@@ -9,6 +13,21 @@ public enum PlayerStatus
     moving = 2,
     idle = 3,
     on_hit = 4,
+}
+
+[Serializable]
+public class PlayerItem
+{
+    public PlayerItem(int id, uint count)
+    {
+        m_count = count;
+        m_item_id = id;
+    }
+
+    public int m_item_id;
+    public uint m_count;
+    public GameObject m_prefab;
+    public Sprite m_ui_sprite;
 }
 
 public class PlayerController : MonoBehaviour
@@ -20,6 +39,7 @@ public class PlayerController : MonoBehaviour
     private PlayerInput m_player_input;
     private InputAction m_plant_a_bomb_action;
     private InputAction m_detonate_all_bombs_action;
+    private InputAction m_switch_item_action;
 
     private InputAction m_pause_game_action;
 
@@ -46,8 +66,33 @@ public class PlayerController : MonoBehaviour
     private const float m_planting_progress_line_width = 0.3f;
     private const float m_planting_progress_line_height = 0.8f;
 
-    private const double m_planting_duration = 1.0f; // todo
+    private const double m_planting_duration = 0.6f; // todo
     private double m_planting_start_time;
+
+    // switch bomb
+    [SerializeField] private List<PlayerItem> m_items;
+
+    public void AddItem(int item_id)
+    {
+        PlayerItem item = m_items.Find(t => t.m_item_id == item_id);
+        if (item != null)
+        {
+            ++item.m_count;
+        }
+        else
+        {
+            m_items.Add(new PlayerItem(item_id, 1));
+        }
+
+        m_ui_logic.UpdateCurrentItem(m_items.Find(t => t.m_item_id == m_current_item));
+    }
+
+    [SerializeField
+#if UNITY_EDITOR
+        , ReadOnly
+#endif
+        ]
+    private int m_current_item = -1;
 
     // animation
     private PlayerAnimationController m_animation_controller = null;
@@ -71,6 +116,7 @@ public class PlayerController : MonoBehaviour
         m_plant_a_bomb_action = m_player_input.GP.PlantBomb;
         m_detonate_all_bombs_action = m_player_input.GP.DetonateBomb;
         m_pause_game_action = m_player_input.GP.PauseGame;
+        m_switch_item_action = m_player_input.GP.SwitchItem;
     }
 
     private void OnEnable()
@@ -82,6 +128,7 @@ public class PlayerController : MonoBehaviour
         m_plant_a_bomb_action.canceled += PlantABombCanceled;
 
         m_detonate_all_bombs_action.performed += DetonateAllBombs;
+        m_switch_item_action.performed += SwitchItem;
 
         m_pause_game_action.performed += PauseGame;
     }
@@ -93,6 +140,7 @@ public class PlayerController : MonoBehaviour
         m_plant_a_bomb_action.canceled -= PlantABombCanceled;
 
         m_detonate_all_bombs_action.performed -= DetonateAllBombs;
+        m_switch_item_action.performed -= SwitchItem;
 
         m_pause_game_action.performed -= PauseGame;
 
@@ -113,14 +161,17 @@ public class PlayerController : MonoBehaviour
         m_planting_progress_line.sortingLayerName =  "Player";
         m_planting_progress_line.sortingOrder = 30;
 
-
-
         m_animation_controller = GetComponentInChildren<PlayerAnimationController>();
         Debug.Log(m_animation_controller);
         m_animation_controller.SetResetHitAction(ResetOnHitStatus);
 
         m_player_on_hit = GetComponent<PlayerOnHit>();
         m_player_on_hit.SetOnHitAction(SetOnHitStatus);
+
+        m_player_on_hit.OnDead += Dead;
+
+        m_current_item = m_items.First().m_item_id;
+        m_ui_logic.UpdateCurrentItem(m_items.Find(t => t.m_item_id == m_current_item));
     }
 
     private bool m_is_on_hit_last_frame = false;
@@ -187,6 +238,15 @@ public class PlayerController : MonoBehaviour
                     + (new Vector2(movement_input.x, movement_input.y)) * speed * Time.deltaTime
             );
 
+            if (m_input_movement.x > 0)
+            {
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            else if (m_input_movement.x < 0)
+            {
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+
             if (m_status != PlayerStatus.planting_a_bomb)
             {
                 m_status = PlayerStatus.moving;
@@ -200,12 +260,27 @@ public class PlayerController : MonoBehaviour
 
     private void PlantABombPerformed(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
-        BombManager.GetInstance().PlantABomb(transform);
+        PlayerItem current_item = m_items.Find(t => t.m_item_id == m_current_item);
+        if (current_item == null || current_item.m_count == 0)
+        {
+            return;
+        }
+
+        --current_item.m_count;
+        BombManager.GetInstance().PlantABomb(transform, current_item);
         m_status = PlayerStatus.default_status;
+
+        m_ui_logic.UpdateCurrentItem(current_item);
     }
 
     private void PlantABombStarted(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
+        PlayerItem current_item = m_items.Find(t => t.m_item_id == m_current_item);
+        if (current_item == null || current_item.m_count == 0)
+        {
+            return;
+        }
+
         m_status = PlayerStatus.planting_a_bomb;
 
         m_planting_start_time = Time.time;
@@ -213,6 +288,12 @@ public class PlayerController : MonoBehaviour
 
     private void PlantABombCanceled(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
+        PlayerItem current_item = m_items.Find(t => t.m_item_id == m_current_item);
+        if (current_item == null || current_item.m_count == 0)
+        {
+            return;
+        }
+
         if (m_status != PlayerStatus.on_hit)
         {
             m_status = PlayerStatus.default_status;
@@ -285,5 +366,32 @@ public class PlayerController : MonoBehaviour
         m_player_input.Disable();
         m_plant_a_bomb_action.Disable();
         m_detonate_all_bombs_action.Disable();
+        m_switch_item_action.Disable();
+    }
+
+    private void Dead()
+    {
+        m_ui_logic.GameOver(false);
+    }
+
+    private void SwitchItem(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        SwitchItemInner();
+    }
+
+    private void SwitchItemInner()
+    {
+        PlayerItem current_item = m_items.Find(t => t.m_item_id == m_current_item);
+        int index = m_items.IndexOf(current_item);
+        if (index >= m_items.Count - 1)
+        {
+            m_current_item = m_items.First().m_item_id;
+        }
+        else
+        {
+            m_current_item = m_items[++index].m_item_id;
+        }
+
+        m_ui_logic.UpdateCurrentItem(m_items.Find(t => t.m_item_id == m_current_item));
     }
 }

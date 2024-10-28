@@ -13,7 +13,7 @@ public class BombMirrorShell : MonoBehaviour, LaserDamage
     private float lastLifeTime;
     private float brokenSpeed = 1.0f;
 
-    public GameObject MirrorBrokenAnimPrefab;
+    // public GameObject MirrorBrokenAnimPrefab;
     
     
     public void Start()
@@ -33,8 +33,8 @@ public class BombMirrorShell : MonoBehaviour, LaserDamage
 
     private void MirrorDestroy()
     {   
-        GameObject newMirrirBrokenAnim =  Instantiate(MirrorBrokenAnimPrefab, transform.position, Quaternion.identity);
+        // GameObject newMirrirBrokenAnim =  Instantiate(MirrorBrokenAnimPrefab, transform.position, Quaternion.identity);
         MirrorBrokenEvent.CallReportMirrorBroken();
-        Destroy(gameObject); // 销毁镜面
+        // Destroy(gameObject); // 销毁镜面
     }
 }

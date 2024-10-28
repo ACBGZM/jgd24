@@ -31,7 +31,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.25
+        time: 0.6875
         value: 0
         inSlope: 0
         outSlope: 0
@@ -40,7 +40,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.4375
+        time: 0.9375
         value: 0
         inSlope: 0
         outSlope: 0
@@ -70,7 +70,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.25
+        time: 0.6875
         value: -0.15
         inSlope: 0
         outSlope: 0
@@ -79,7 +79,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.4375
+        time: 0.9375
         value: -0.18
         inSlope: 0
         outSlope: 0
@@ -92,6 +92,84 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_Offset.y
     path: 
+    classID: 70
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6875
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9375
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Offset.x
+    path: CollisionDamageArea
+    classID: 70
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.18
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6875
+        value: -0.15
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9375
+        value: -0.18
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Offset.y
+    path: CollisionDamageArea
     classID: 70
     script: {fileID: 0}
     flags: 0
@@ -114,6 +192,22 @@ AnimationClip:
       value: {fileID: 21300000, guid: 0f3235877fd50f6419793b2feac4ade4, type: 3}
     - time: 0.4375
       value: {fileID: 21300000, guid: 4990fa67a3b0398408148f299156028b, type: 3}
+    - time: 0.5
+      value: {fileID: 21300000, guid: 25d0f2dd5a9ad044997b7fbab2ee8a50, type: 3}
+    - time: 0.5625
+      value: {fileID: 21300000, guid: 35be0f71ce662fd41bfa9019ef4dec37, type: 3}
+    - time: 0.625
+      value: {fileID: 21300000, guid: 4a8f6c4d8fe07a34a85067c5108bafc8, type: 3}
+    - time: 0.6875
+      value: {fileID: 21300000, guid: 6706ab62710b4c34383ad87a5c500c35, type: 3}
+    - time: 0.75
+      value: {fileID: 21300000, guid: dd5c7927d6e9db04e97a7eb9f1f7f214, type: 3}
+    - time: 0.8125
+      value: {fileID: 21300000, guid: ed1d5b7f8a81fdd4da61bfcc76f2e725, type: 3}
+    - time: 0.875
+      value: {fileID: 21300000, guid: 5ad974877f15f6b48aac34d9f3a09c9f, type: 3}
+    - time: 0.9375
+      value: {fileID: 21300000, guid: 0caea094c838e214b8a053e47a074129, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -128,6 +222,15 @@ AnimationClip:
     genericBindings:
     - serializedVersion: 2
       path: 0
+      attribute: 1872933342
+      script: {fileID: 0}
+      typeID: 70
+      customType: 0
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 2258353846
       attribute: 1872933342
       script: {fileID: 0}
       typeID: 70
@@ -153,6 +256,15 @@ AnimationClip:
       isPPtrCurve: 0
       isIntCurve: 0
       isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 2258353846
+      attribute: 413499720
+      script: {fileID: 0}
+      typeID: 70
+      customType: 0
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping:
     - {fileID: 21300000, guid: ada16150b5b1eeb47910a199f7a616f7, type: 3}
     - {fileID: 21300000, guid: 5d2a0d37cd2b765448c871dd46136478, type: 3}
@@ -162,12 +274,20 @@ AnimationClip:
     - {fileID: 21300000, guid: 0f9944376f3e79c4eb9b8989e246c324, type: 3}
     - {fileID: 21300000, guid: 0f3235877fd50f6419793b2feac4ade4, type: 3}
     - {fileID: 21300000, guid: 4990fa67a3b0398408148f299156028b, type: 3}
+    - {fileID: 21300000, guid: 25d0f2dd5a9ad044997b7fbab2ee8a50, type: 3}
+    - {fileID: 21300000, guid: 35be0f71ce662fd41bfa9019ef4dec37, type: 3}
+    - {fileID: 21300000, guid: 4a8f6c4d8fe07a34a85067c5108bafc8, type: 3}
+    - {fileID: 21300000, guid: 6706ab62710b4c34383ad87a5c500c35, type: 3}
+    - {fileID: 21300000, guid: dd5c7927d6e9db04e97a7eb9f1f7f214, type: 3}
+    - {fileID: 21300000, guid: ed1d5b7f8a81fdd4da61bfcc76f2e725, type: 3}
+    - {fileID: 21300000, guid: 5ad974877f15f6b48aac34d9f3a09c9f, type: 3}
+    - {fileID: 21300000, guid: 0caea094c838e214b8a053e47a074129, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5
+    m_StopTime: 1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -197,7 +317,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.25
+        time: 0.6875
         value: 0
         inSlope: 0
         outSlope: 0
@@ -206,7 +326,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.4375
+        time: 0.9375
         value: 0
         inSlope: 0
         outSlope: 0
@@ -236,7 +356,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.25
+        time: 0.6875
         value: -0.15
         inSlope: 0
         outSlope: 0
@@ -245,7 +365,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.4375
+        time: 0.9375
         value: -0.18
         inSlope: 0
         outSlope: 0
@@ -258,6 +378,84 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_Offset.y
     path: 
+    classID: 70
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6875
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9375
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Offset.x
+    path: CollisionDamageArea
+    classID: 70
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.18
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6875
+        value: -0.15
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9375
+        value: -0.18
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Offset.y
+    path: CollisionDamageArea
     classID: 70
     script: {fileID: 0}
     flags: 0

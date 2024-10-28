@@ -36,7 +36,6 @@ public class LaserLauncher : MonoBehaviour
         direction = MathTool.RotateVector2(direction, launcherStat.InitLaunchAngle);
         Vector2 StartPosition = transform.position + (Vector3)direction * launcherStat.InstantiateDistanceOffset;
         GameObject laserObject = Instantiate(launcherStat.LaserPrefab, StartPosition, Quaternion.identity);
-        laserObject.GetComponent<Laser>().SetLaserStat(launcherStat);
     }
 
 }

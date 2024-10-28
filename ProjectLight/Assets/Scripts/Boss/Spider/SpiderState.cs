@@ -7,6 +7,7 @@ public class SpiderState : ScriptableObject, IState
 
     public virtual void Enter()
     {
+        
     }
 
     public virtual void Execute()

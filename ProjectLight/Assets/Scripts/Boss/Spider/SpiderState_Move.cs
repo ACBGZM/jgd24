@@ -2,6 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Security.AccessControl;
 using Cinemachine;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -72,6 +73,22 @@ public class SpiderState_Move : SpiderState
         float targetLength = UnityEngine.Random.Range(stateMachine.TargetAreaInnerRadius, stateMachine.TargetAreaExternalRadius);
         Vector2 unitDirectionVector = MathTool.RotateVector2(pc.normalized, Mathf.Deg2Rad * targetAngle);
         targetPos = playerPos + unitDirectionVector * targetLength;
+        if (targetPos.x < stateMachine.rangeX.x)
+        {
+            targetPos.x = stateMachine.rangeX.x;
+        }
+        else if (targetPos.x > stateMachine.rangeX.y)
+        {
+            targetPos.x = stateMachine.rangeX.y;
+        }
+        if (targetPos.y < stateMachine.rangeY.x)
+        {
+            targetPos.y = stateMachine.rangeY.x;
+        }
+        else if (targetPos.y > stateMachine.rangeY.y)
+        {
+            targetPos.y = stateMachine.rangeY.y;
+        }
 
         Debug.DrawLine(currentPos, targetPos, Color.yellow, 1f);
 

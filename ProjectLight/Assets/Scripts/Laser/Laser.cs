@@ -32,11 +32,11 @@ public class Laser : MonoBehaviour
 
     public float initLaunchAngle = 0;
     public float initLaunchDistanceOffet = 0;
-    public float rotateTime = 0;
-    public float rotateAngle = 0;
 
-    private float currentRotateAngle = 0;
-    private float rotateTimer = 0;
+    public Vector2 startPosition;
+    public Vector2 startDirection;
+
+    private float lifeTimer = 0;
 
 
     public List<Material> meterialList; // 0: Aim ; 1: Emit
@@ -53,15 +53,19 @@ public class Laser : MonoBehaviour
         lineRenderer.endWidth = lineWidth;
         lineRenderer.material = meterialList[0];
 
+        startPosition = Vector2.zero;
+        startDirection = Vector2.up;
+
         // 碰撞关系配置
         layerMask = LayerMask.GetMask(layerMasks);
 
-        currentRotateAngle = 0;
+        lifeTimer = 0;
     }
 
     void Start()
     {
         // lineRenderer = Instantiate(LaserLineRenderer).GetComponent<LineRenderer>();
+        Debug.Log((startPosition, startDirection));
     }
 
     void Update()
@@ -88,16 +92,13 @@ public class Laser : MonoBehaviour
         // Vector2 startDirection =  AngleToUnitVector2D(testAngle);
         */
 
-
-        if (currentRotateAngle < rotateAngle && rotateTime != 0)
+        LaserRay(startPosition, startDirection);
+        lifeTimer += Time.deltaTime;
+        if(lifeTimer >= laserLifeTime)
         {
-            currentRotateAngle += (rotateAngle / rotateTime) * Time.deltaTime;
+            Destroy(gameObject);
+            Destroy(lineRenderer.gameObject);
         }
-
-        Vector2 startDirection = MathTool.RotateVector2(Vector2.up, Mathf.Deg2Rad * (initLaunchAngle + currentRotateAngle));
-        Vector2 StartPosition = transform.position + (Vector3)startDirection * initLaunchDistanceOffet;
-
-        LaserRay(StartPosition, startDirection);
     }
 
     Vector2 AngleToUnitVector2D(float angleInDegrees)
@@ -174,10 +175,20 @@ public class Laser : MonoBehaviour
             }
     }
 
-    public void SetLaserStat(LaserLauncherStat launcherStat)
+    public void SetLaunchParameter(Vector2 startPosition, Vector2 startDirection)
     {
-        lineWidth = launcherStat.LaserWidth;
-        laserLifeTime = launcherStat.LaserLifeTime;
-        initLaunchAngle = launcherStat.InitLaunchAngle;
+        this.startPosition = startPosition;
+        this.startDirection = startDirection;
+    }
+
+    public void MoveLaser(Vector2 direction)
+    {
+        startPosition = startPosition + direction;
+    }
+
+    public void DestroyLaser()
+    {
+        Destroy(lineRenderer.gameObject);
+        Destroy(gameObject);
     }
 }

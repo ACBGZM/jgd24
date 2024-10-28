@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8651654119537277671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 849792731796273684}
+  - component: {fileID: 5282231008326339985}
+  - component: {fileID: 5426815043660612768}
+  - component: {fileID: 2332574821150399791}
+  - component: {fileID: 5663067818775697755}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &849792731796273684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8651654119537277671}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.228633, y: 5.1554785, z: 2.5861568}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5282231008326339985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8651654119537277671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b55ec2c2f658b14449d5017036bdf407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantOffet: {x: 0, y: -1.5}
+--- !u!114 &5426815043660612768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8651654119537277671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 181ac13abf1d4014fabf26c160f65b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_progress_bar: {fileID: 0}
+  m_progerss_text: {fileID: 0}
+  m_loading: {fileID: 0}
+  m_disable_while_loading:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &2332574821150399791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8651654119537277671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7714ded0160a84bd8a7e1b803df764fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 3205158364899642757, guid: 6a023645ddf434a179906a8f0d31ef63, type: 3}
+  player: {fileID: 0}
+  timer: 0
+  minDuration: 15
+  maxDuration: 18
+  minLength: 4.24
+  maxLength: 9.12
+  layerMasks:
+  - Wall
+  - Box
+  - Candle
+--- !u!114 &5663067818775697755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8651654119537277671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ab87ad6f6c1d2040af5f53375904f82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_state:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e5bcc2c37e99f3a40b48cc291f471b72, type: 2}
+  m_level_audio_bank:
+  - m_name: bgm
+    m_event:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: bb1538487e25d824dbf0a003dbc9519c, type: 2}
+  - m_name: ui_button_click
+    m_event:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 1f78b53e208334e49b6ef4467c4264ab, type: 2}
+  - m_name: player_move
+    m_event:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 038ad2c00960d7648946ca31151a6522, type: 2}
+  - m_name: player_on_hit
+    m_event:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: cdeff53a870521645be1be0dc20ee6ed, type: 2}
+  - m_name: bomb_plant
+    m_event:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 8945a9de9a00f7349974265c538a1d94, type: 2}
+  - m_name: bomb_detonate
+    m_event:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 829708a050aa4cb4d89653d318ed18ed, type: 2}
+  - m_name: box_break
+    m_event:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 69dbd7a58b834fd41ac0bbdb8efe4f38, type: 2}
+  - m_name: spider_walk
+    m_event:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: eccc1271d408c6343ace27e1a2917f06, type: 2}
+  - m_name: spider_incubate
+    m_event:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: d9e3150dbacea564a9fa206d7148ef4e, type: 2}
+  - m_name: spider_shoot
+    m_event:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: aeb111676ae7f764eb6a3a0a311a7831, type: 2}
+  - m_name: servant_spider_walk
+    m_event:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 0bad9542734431a46a37977f2ced0024, type: 2}
+  - m_name: servant_spider_incubate
+    m_event:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: de5480bd95605914395f459ea4ac0ea7, type: 2}
+  - m_name: servant_spider_fall
+    m_event:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: a7cc61cf190702e458584135fc2a8507, type: 2}
+  - m_name: candel_switch_light
+    m_event:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 049a4c572378e5e44991ed6cd94df95e, type: 2}

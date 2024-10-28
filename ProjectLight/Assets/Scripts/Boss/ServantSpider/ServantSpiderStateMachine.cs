@@ -7,7 +7,18 @@ public class ServantSpiderStateMachine : StateMachine
 #if UNITY_EDITOR
     [Label("可以被伤害")]
 #endif
-    public bool canBeDamaged = true;
+    private bool _canBeDamaged = true;
+    public bool canBeDamaged
+    {
+        get { return _canBeDamaged; }
+        set { 
+            _canBeDamaged = value;
+            SetHealthBarVisiable(value);
+         }
+    }
+    [SerializeField]
+    private RectTransform HealthBar;
+        
     [Header("Cocoon状态参数")]
     [SerializeField 
 #if UNITY_EDITOR 
@@ -115,12 +126,24 @@ public class ServantSpiderStateMachine : StateMachine
                 stateTable.Add(state.GetType(), newState);
                 AvailableStates.Add(newState);
             }
+            else if (state.GetType() == typeof(ServantSpiderState_Dead))
+            {
+                ServantSpiderState_Dead newState = ScriptableObject.CreateInstance<ServantSpiderState_Dead>();
+                newState.Init((ServantSpiderState_Dead)state);
+                stateTable.Add(state.GetType(), newState);
+                AvailableStates.Add(newState);
+            }
         }
     }
 
     void Start()
     {
         SwitchOn(stateTable[typeof(ServantSpiderState_Egg)]);
+    }
+
+    public void Dead()
+    {
+        ChangeState(stateTable[typeof(ServantSpiderState_Dead)]);
     }
 
     public Vector2 GetPlayerPosition()
@@ -141,5 +164,13 @@ public class ServantSpiderStateMachine : StateMachine
     public void PlayServantSpiderIncubateAudio()
     {
         WwiseAudioManager.GetInstance().PostEvent("servant_spider_incubate", gameObject);
+    }
+
+    public void SetHealthBarVisiable(bool isVisiable)
+    {
+        if(HealthBar != null)
+        {
+            HealthBar.gameObject.SetActive(isVisiable);
+        }
     }
 }

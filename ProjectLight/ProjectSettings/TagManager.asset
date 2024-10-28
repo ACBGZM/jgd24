@@ -9,6 +9,8 @@ TagManager:
   - Bomb
   - Wall
   - Enemy
+  - Boss
+  - Servant
   layers:
   - Default
   - TransparentFX
@@ -24,8 +26,8 @@ TagManager:
   - Boss
   - Bullet
   - Candle
-  - 
-  - 
+  - servants
+  - RayWall
   - 
   - 
   - 
@@ -49,9 +51,6 @@ TagManager:
   - name: Background
     uniqueID: 1645658549
     locked: 0
-  - name: Ray
-    uniqueID: 3684654543
-    locked: 0
   - name: DropItem
     uniqueID: 534666907
     locked: 0
@@ -61,9 +60,18 @@ TagManager:
   - name: Player
     uniqueID: 1174141911
     locked: 0
+  - name: Bomb
+    uniqueID: 3104774319
+    locked: 0
   - name: SceneItems
     uniqueID: 32393179
     locked: 0
   - name: Box
     uniqueID: 571473963
+    locked: 0
+  - name: Ray
+    uniqueID: 3684654543
+    locked: 0
+  - name: UI
+    uniqueID: 2155293465
     locked: 0

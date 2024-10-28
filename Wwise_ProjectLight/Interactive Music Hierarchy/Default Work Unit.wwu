@@ -12,7 +12,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42FA79B8-6518-4DC9-A928-B8100D2289CA}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6FFD945D-96B1-4410-871B-979C5BC366B0}"/>
+							<ObjectRef Name="Music" ID="{E12EC214-CB7A-4FD3-9265-37648EBCCAF6}" WorkUnitID="{6FFD945D-96B1-4410-871B-979C5BC366B0}"/>
 						</Reference>
 						<Reference Name="PlaylistRoot">
 							<Custom>
@@ -211,7 +211,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42FA79B8-6518-4DC9-A928-B8100D2289CA}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6FFD945D-96B1-4410-871B-979C5BC366B0}"/>
+							<ObjectRef Name="Music" ID="{E12EC214-CB7A-4FD3-9265-37648EBCCAF6}" WorkUnitID="{6FFD945D-96B1-4410-871B-979C5BC366B0}"/>
 						</Reference>
 						<Reference Name="PlaylistRoot">
 							<Custom>
@@ -407,7 +407,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42FA79B8-6518-4DC9-A928-B8100D2289CA}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6FFD945D-96B1-4410-871B-979C5BC366B0}"/>
+							<ObjectRef Name="Music" ID="{E12EC214-CB7A-4FD3-9265-37648EBCCAF6}" WorkUnitID="{6FFD945D-96B1-4410-871B-979C5BC366B0}"/>
 						</Reference>
 						<Reference Name="PlaylistRoot">
 							<Custom>
@@ -603,7 +603,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42FA79B8-6518-4DC9-A928-B8100D2289CA}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6FFD945D-96B1-4410-871B-979C5BC366B0}"/>
+							<ObjectRef Name="Music" ID="{E12EC214-CB7A-4FD3-9265-37648EBCCAF6}" WorkUnitID="{6FFD945D-96B1-4410-871B-979C5BC366B0}"/>
 						</Reference>
 						<Reference Name="PlaylistRoot">
 							<Custom>

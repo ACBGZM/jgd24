@@ -1,9 +1,13 @@
 using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 [RequireComponent(typeof(SpiderStateMachine))]
 public class Debug_Spider : MonoBehaviour
 {
-    private SpiderStateMachine stateMachine;
+    public SpiderStateMachine stateMachine;
 
 #if UNITY_EDITOR
     [Label("当前蜘蛛状态"), ReadOnly]
@@ -16,6 +20,11 @@ public class Debug_Spider : MonoBehaviour
     [Label("显示移动范围")]
 #endif
     public bool showMoveRange = true;
+
+    #if UNITY_EDITOR
+[Label("移动范围限制"), ReadOnlyIfFalse("showMoveLimit")]
+    #endif
+    public bool showMoveLimit = true;
 
     #endregion
 
@@ -139,6 +148,45 @@ public class Debug_Spider : MonoBehaviour
                     Gizmos.DrawLine(spiderPos, spiderPos + direction * OctoShotLineLength);
                 }
             }
+            if (showMoveLimit)
+            {
+                float minX = stateMachine.rangeX.x;
+                float maxX = stateMachine.rangeX.y;
+                float minY = stateMachine.rangeY.x;
+                float maxY = stateMachine.rangeY.y;
+                Vector2 p1 = new Vector2(minX, minY);
+                Vector2 p2 = new Vector2(minX, maxY);
+                Vector2 p3 = new Vector2(maxX, minY);
+                Vector2 p4 = new Vector2(maxX, maxY);
+                Gizmos.color = Color.blue;
+                Gizmos.DrawLine(p1, p2);
+                Gizmos.DrawLine(p1, p3);
+                Gizmos.DrawLine(p2, p4);
+                Gizmos.DrawLine(p3, p4);
+            }
         }
     }
 }
+
+#if UNITY_EDITOR
+[CustomEditor(typeof(Debug_Spider))]
+public class Debug_Spider_Editor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+        Debug_Spider debugSpider = (Debug_Spider)target;
+        if (GUILayout.Button("转阶段"))
+        {
+            if (EditorApplication.isPlaying)
+            {
+                debugSpider.stateMachine.ChangePhase();
+            }
+            else
+            {
+                Debug.LogError("请在运行时使用");
+            }
+        }
+    }
+}
+#endif
