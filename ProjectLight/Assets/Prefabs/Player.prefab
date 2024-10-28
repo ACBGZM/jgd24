@@ -103,8 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430e6d60ed3354c68921c7436bd7b6ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
-  health: 200
+  maxHealth: 300
+  health: 300
   bombDamageRate: 5
   laserDamageRate: 1
   bossDamageRate: 1
@@ -221,7 +221,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1174141911
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: c3f96884d28964d3b85c6b72e5f26b0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
