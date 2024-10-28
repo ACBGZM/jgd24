@@ -21,6 +21,14 @@
 							<ObjectRef Name="Play_little_spider_footsteps" ID="{296A0625-B363-46A0-ADDE-46472D5FB916}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}"/>
 							<Position X="1" Y="1"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Play_bomb_explosion" ID="{F9537402-43EB-4CB3-9ED1-74EBC690DD20}" WorkUnitID="{3556FD1C-EDB6-4E33-9F07-72A686333081}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Arrival" ID="{2A909935-209C-45FA-9BF1-189F88D4221C}" WorkUnitID="{704E2297-D87C-47F0-AB20-2BF3ECA0E10A}"/>
+							<Position X="2" Y="1"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">

@@ -245,6 +245,50 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_octopus_laser_emission" ID="{7F39FE60-8EA4-426E-A9B0-4D0944DA2B08}">
+					<ChildrenList>
+						<Action Name="" ID="{0DAEF75A-098F-47EE-9FBB-9B341DA7A5A5}" ShortID="577048371">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="octopus_laser emission" ID="{2BD1AA1D-EE5E-4C5F-87FB-08A56F81C43B}" WorkUnitID="{C98133B8-E4C4-4876-833E-5E3C42271831}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_octopus_laser_charge" ID="{9BBB6E7E-7DEE-49C4-88FE-E1023BC9026D}">
+					<ChildrenList>
+						<Action Name="" ID="{BC89AA4C-924A-4D89-B695-9D037686F673}" ShortID="933067807">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="octopus_laser_charge" ID="{9D9A8E91-E389-4962-ABD6-A6B103D1D227}" WorkUnitID="{C98133B8-E4C4-4876-833E-5E3C42271831}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_octopus_phase_II" ID="{407C0B6A-6CC6-411D-926F-73CAF092A166}">
+					<ChildrenList>
+						<Action Name="" ID="{584B25E9-1B15-4C10-96D2-A335E3967841}" ShortID="994637381">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="octopus_phase_II" ID="{90387723-083F-4169-A2AC-A2306D7FC72D}" WorkUnitID="{C98133B8-E4C4-4876-833E-5E3C42271831}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_spider_phase_II" ID="{8ACCB2BD-C9D6-4F4E-97A7-19053B0B459C}">
+					<ChildrenList>
+						<Action Name="" ID="{48CCE78E-C021-48B2-9EEE-33FD59BAE3D7}" ShortID="940300918">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="spider_phase_II" ID="{59B7E4FC-E3EB-4479-A1D7-999F595AA1EC}" WorkUnitID="{C98133B8-E4C4-4876-833E-5E3C42271831}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

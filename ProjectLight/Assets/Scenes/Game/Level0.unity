@@ -7974,6 +7974,14 @@ PrefabInstance:
       propertyPath: m_disable_while_loading.Array.data[2]
       value: 
       objectReference: {fileID: 1570976405}
+    - target: {fileID: 5663067818775697755, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
+      propertyPath: m_level_audio_bank.Array.data[13].m_name
+      value: candle_switch_light
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663067818775697755, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
+      propertyPath: m_level_audio_bank.Array.data[0].m_event.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: d91f3e649d0bea44e9d8d2ec54ecd3cf, type: 2}
     - target: {fileID: 8651654119537277671, guid: 9705ec08415c2d24f8dea466d6a95245, type: 3}
       propertyPath: m_Name
       value: GameManager

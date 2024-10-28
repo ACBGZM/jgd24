@@ -21,16 +21,16 @@
 						</Property>
 						<Property Name="MaxSampleRate" Type="int32">
 							<ValueList>
-								<Value Platform="iOS">0</Value>
-								<Value Platform="Android">0</Value>
-								<Value Platform="Windows">0</Value>
+								<Value Platform="iOS">44100</Value>
+								<Value Platform="Android">44100</Value>
+								<Value Platform="Windows">44100</Value>
 							</ValueList>
 						</Property>
 						<Property Name="MinSampleRate" Type="int32">
 							<ValueList>
-								<Value Platform="iOS">0</Value>
-								<Value Platform="Android">0</Value>
-								<Value Platform="Windows">0</Value>
+								<Value Platform="iOS">22050</Value>
+								<Value Platform="Android">22050</Value>
+								<Value Platform="Windows">22050</Value>
 							</ValueList>
 						</Property>
 						<Property Name="SampleRate" Type="int32">
@@ -43,13 +43,13 @@
 					</PropertyList>
 					<ConversionPluginInfoList>
 						<ConversionPluginInfo Platform="iOS">
-							<ConversionPlugin Name="" ID="{1233A09A-70EC-4C2F-B1BD-C4A4B078D288}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+							<ConversionPlugin Name="" ID="{CA192F3F-A011-410B-B42B-1D474555B120}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 						</ConversionPluginInfo>
 						<ConversionPluginInfo Platform="Android">
-							<ConversionPlugin Name="" ID="{0DCACC88-BC1D-457B-850D-BDB665C4CD5C}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+							<ConversionPlugin Name="" ID="{A3EC50A3-010F-4346-B022-C38664C5A489}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 						</ConversionPluginInfo>
 						<ConversionPluginInfo Platform="Windows">
-							<ConversionPlugin Name="" ID="{814FC2E2-0A75-43C9-BACE-B5403B4A7796}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+							<ConversionPlugin Name="" ID="{A4149795-DF8F-455A-92B1-7F48F496D39C}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 						</ConversionPluginInfo>
 					</ConversionPluginInfoList>
 				</Conversion>

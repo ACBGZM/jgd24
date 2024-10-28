@@ -159,6 +159,7 @@ public class SpiderStateMachine : StateMachine
     public void ChangePhase()
     {
         ChangeState(spiderState_ChangingPhase);
+        WwiseAudioManager.GetInstance().PostEvent("spider_change_phase", gameObject);
     }
 
     public void CloseLight()
