@@ -4,24 +4,64 @@ using UnityEngine;
 
 public class LaserRender : MonoBehaviour
 {
-//    // Render 与 检测逻辑分离
-//    // 托管全部需要画线的请求
+    public GameObject lineSegmentPrefab;
+    public GameObject startVFX;
+    public GameObject midVFX;
+    public GameObject endVFX;
+    public GameObject hitVFX;
 
-//     public  List<LaserRay> lasers;
+    // lines
+    private GameObject line_1;
+    private GameObject line_2;
 
-// class LaserRay
-// {
-//     // points
-//     // point count
-// }
 
-//     void Start()
-//     {
+    // public Material lineMaterial;
+    public List<Vector2> lines;
+    // private int pointCount = 0;
+
+    void Start()
+    {   
+        // lines = new 
+        //   = 
+        line_1 = Instantiate(lineSegmentPrefab,Vector3.zero,Quaternion.identity,this.transform); 
+        line_2 = Instantiate(lineSegmentPrefab,Vector3.zero,Quaternion.identity,this.transform); 
+
+    }
+    // public void DrawLines(List<Vector2> keyPoints,Material material,bool laserStatus,float lineWidth)
+    public void DrawLines(List<Vector2> keyPoints,bool laserStatus,float lineWidth)
+    {      
+        // // Draw Segment
+        if(keyPoints.Count>1)
+        {
+            line_1.GetComponent<LaserLineSegment>().DrawLineSegment(keyPoints[0],keyPoints[1]);
+        }
+        if(keyPoints.Count == 2)
+        {
+            line_2.GetComponent<LineRenderer>().enabled = false;
+        }
+        else
+        {
+            line_2.GetComponent<LaserLineSegment>().DrawLineSegment(keyPoints[1],keyPoints[2]);
+        }
+
+
+        // // Draw VFX
+
+        // if(keyPoints.Count == 3)
+        // {
+        //     // 画中点
+        // }
+        Debug.Log("激光关键点");
+        foreach (var k in keyPoints)
+        {
+             Debug.Log(k);
+        }
+        Debug.Log("---------");
+       
         
-//     }
 
-//     void Update()
-//     {
-        
-//     }
+    }
+
+    // public void DrawLineSegment(Vector2 startPoint, Vector2 endPoint, Material material)
+    
 }
