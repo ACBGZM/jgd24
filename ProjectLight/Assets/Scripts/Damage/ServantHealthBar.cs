@@ -16,6 +16,11 @@ public class ServantHealthBar : MonoBehaviour
         _fullWidth = _topBar.rect.width;
      }
 
+     void Update()
+     {
+      
+     }
+
 
      public void Change(int newHealth, int maxHealth)
      {
