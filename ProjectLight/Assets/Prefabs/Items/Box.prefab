@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 8746967768863615933}
   - component: {fileID: 5638636209022814067}
   - component: {fileID: 7165780886980478312}
+  - component: {fileID: 1049068926790249600}
   m_Layer: 3
   m_Name: Box
   m_TagString: Untagged
@@ -269,3 +270,24 @@ MonoBehaviour:
   startAngle: -23.72
   minPopHeight: 4
   maxPopHeight: 10
+--- !u!95 &1049068926790249600
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727602073023670250}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 961e7972923477a4587bf95787dbf6b5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
