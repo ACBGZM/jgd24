@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_damage: 1
-  m_explosion_range: 5
+  m_explosion_range: 8
   m_explosion_width: 0.5
   m_ray_visible_duration: 1
   m_ray_count_per_direction: 3

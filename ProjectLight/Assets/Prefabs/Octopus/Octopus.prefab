@@ -111,7 +111,7 @@ MonoBehaviour:
   currentPosition: {fileID: 0}
   randomTpPoints: []
   jellyfishes: []
-  palsyTime: 5
+  palsyTime: 8
   animator: {fileID: 0}
   rb: {fileID: 0}
   states_Phase1:
@@ -181,8 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3dad3afc2ee94dd3bc98c16a6c3a3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  health: 100
+  maxHealth: 80
+  health: 80
   bombDamageRate: 1
   shieldBombDamageRate: 0.3
   laserDamageRate: 1

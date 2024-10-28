@@ -907,11 +907,11 @@ PrefabInstance:
       objectReference: {fileID: 2123856020}
     - target: {fileID: 218095345358881656, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_items.Array.data[0].m_count
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 218095345358881656, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_items.Array.data[1].m_count
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 445419414756858238, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -956,6 +956,10 @@ PrefabInstance:
     - target: {fileID: 942027811654469703, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: bombDamageRate
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 942027811654469703, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: laserDamageRate
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3794023776475354191, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_Name
@@ -1413,10 +1417,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Octopus
       objectReference: {fileID: 0}
-    - target: {fileID: 590564588003445654, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 3260172847456519247, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.45
@@ -1456,6 +1456,10 @@ PrefabInstance:
     - target: {fileID: 3260172847456519247, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7740112493155590419, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      propertyPath: palsyTime
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7740112493155590419, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
       propertyPath: tpPoints.Array.data[0]
