@@ -56,7 +56,6 @@ public class OctopusStateMachine : StateMachine
         transform.position = currentPosition.position;
         jellyfishes.Clear();
 
-        Phase2 = false;
         palsyState.Init(animator, this);
         deadState.Init(animator, this);
         foreach (OctopusState state in states_Phase1)
