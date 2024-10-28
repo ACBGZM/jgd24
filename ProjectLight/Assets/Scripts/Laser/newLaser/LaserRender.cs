@@ -14,6 +14,7 @@ public class LaserRender : MonoBehaviour
     private GameObject line_1;
     private GameObject line_2;
 
+    public float lineWidth = 1.0f;
 
     // public Material lineMaterial;
     public List<Vector2> lines;
@@ -31,16 +32,16 @@ public class LaserRender : MonoBehaviour
     public void DrawLines(List<Vector2> keyPoints,bool laserStatus,float lineWidth)
     {      
         // // Draw Segment
-        if(keyPoints.Count>1)
-        {
-            line_1.GetComponent<LaserLineSegment>().DrawLineSegment(keyPoints[0],keyPoints[1]);
-        }
+
         if(keyPoints.Count == 2)
-        {
+        {   
+            line_1.GetComponent<LaserLineSegment>().DrawLineSegment(keyPoints[0],keyPoints[1]);
             line_2.GetComponent<LineRenderer>().enabled = false;
         }
-        else
-        {
+        else if(keyPoints.Count == 3)
+        {   
+            line_1.GetComponent<LaserLineSegment>().DrawLineSegment(keyPoints[0],keyPoints[1]);
+            line_2.GetComponent<LineRenderer>().enabled = true;
             line_2.GetComponent<LaserLineSegment>().DrawLineSegment(keyPoints[1],keyPoints[2]);
         }
 
@@ -51,12 +52,16 @@ public class LaserRender : MonoBehaviour
         // {
         //     // 画中点
         // }
-        Debug.Log("激光关键点");
-        foreach (var k in keyPoints)
-        {
-             Debug.Log(k);
-        }
-        Debug.Log("---------");
+
+
+
+
+        // Debug.Log("激光关键点");
+        // foreach (var k in keyPoints)
+        // {
+        //      Debug.Log(k);
+        // }
+        // Debug.Log("---------");
        
         
 

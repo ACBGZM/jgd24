@@ -9,6 +9,8 @@ TagManager:
   - Bomb
   - Wall
   - Enemy
+  - Boss
+  - Servant
   layers:
   - Default
   - TransparentFX
@@ -49,9 +51,6 @@ TagManager:
   - name: Background
     uniqueID: 1645658549
     locked: 0
-  - name: Ray
-    uniqueID: 3684654543
-    locked: 0
   - name: DropItem
     uniqueID: 534666907
     locked: 0
@@ -69,6 +68,9 @@ TagManager:
     locked: 0
   - name: Box
     uniqueID: 571473963
+    locked: 0
+  - name: Ray
+    uniqueID: 3684654543
     locked: 0
   - name: UI
     uniqueID: 2155293465
