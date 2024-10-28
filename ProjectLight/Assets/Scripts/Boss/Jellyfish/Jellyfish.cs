@@ -101,6 +101,8 @@ public class Jellyfish : MonoBehaviour
 
     public void LaunchLaser()
     {
+        WwiseAudioManager.GetInstance().PostEvent("octopus_laser_emission", gameObject);
+
         animator.Play("Jellyfish_Shot");
         laser = Instantiate(LaserLauncherPrefab, transform.position, Quaternion.identity);
         laser.GetComponent<NewLaserLogic>().SetLaunchParameter(transform.position, LaserDirection);
@@ -127,5 +129,11 @@ public class Jellyfish : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
+    public void PlayChargeAudio()
+    {
+        WwiseAudioManager.GetInstance().PostEvent("octopus_laser_charge", gameObject);
+    }
+
 }
 

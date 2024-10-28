@@ -1,0 +1,12 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2585982154	Play_Octopus_under_the_sea			\Default Work Unit\Play_Octopus_under_the_sea	
+	3235884521	Play_Arrival			\Default Work Unit\Play_Arrival	
+	3517109807	Play_Sunrise			\Default Work Unit\Play_Sunrise	
+	4244968688	Play_Spider_of_Hole			\Default Work Unit\Play_Spider_of_Hole	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	36954470	Arrival(常规战斗BGM)	E:\Unity Projects\Wwise_ProjectLight\.cache\iOS\SFX\Arrival(常规战斗BGM)_73625D90.wem		\Interactive Music Hierarchy\Default Work Unit\Arrival\Arrival\Arrival(常规战斗BGM)		2884027
+	193986832	Spider of Hole(洞穴蜘蛛)	E:\Unity Projects\Wwise_ProjectLight\.cache\iOS\SFX\Spider of Hole(洞穴蜘蛛)_73625D90.wem		\Interactive Music Hierarchy\Default Work Unit\Spider of Hole\Spider of Hole\Spider of Hole(洞穴蜘蛛)		2948729
+	497803314	Sunrise(游戏主界面BGM)	E:\Unity Projects\Wwise_ProjectLight\.cache\iOS\SFX\Sunrise(游戏主界面BGM)_73625D90.wem		\Interactive Music Hierarchy\Default Work Unit\Sunrise\Sunrise\Sunrise(游戏主界面BGM)		2321889
+	560751979	Octopus under the sea(深海章鱼)	E:\Unity Projects\Wwise_ProjectLight\.cache\iOS\SFX\Octopus under the sea(深海章鱼)_73625D90.wem		\Interactive Music Hierarchy\Default Work Unit\Octopus under the sea\Octopus under the sea\Octopus under the sea(深海章鱼)		2643843
+

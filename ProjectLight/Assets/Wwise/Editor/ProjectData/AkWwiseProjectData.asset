@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 5d94fd6fb1961044871b979c5bc366b0
     GuidInternal: 
-    m_lastTime: -8584715848559858283
+    m_lastTime: -8584714881136015423
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -54,6 +54,40 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Music
+      guid: 14c22ee17acbd34f926537648ebccaf6
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5d94fd6fb1961044871b979c5bc366b0
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music
+        ObjectType: 2
+        guid: 14c22ee17acbd34f926537648ebccaf6
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music
+    - name: SFX
+      guid: 559514f8e6f63a43bde0a6b0a2e5e4a9
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5d94fd6fb1961044871b979c5bc366b0
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 559514f8e6f63a43bde0a6b0a2e5e4a9
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -108,7 +142,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 1cfd5635b6ed334e9f0772a686333081
     GuidInternal: 
-    m_lastTime: -8584715848561361433
+    m_lastTime: -8584714881137348662
     List:
     - name: Play_Arrival
       guid: a515301cee82c54182375a1d6de6ada5
@@ -365,6 +399,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.4983071
       minDuration: 1.4983071
+    - name: Play_octopus_laser_charge
+      guid: 7e6ebb9bee7dc44988fee1023bc9026d
+      id: 4175431908
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1cfd5635b6ed334e9f0772a686333081
+      - ElementName: Play_octopus_laser_charge
+        ObjectType: 3
+        guid: 7e6ebb9bee7dc44988fee1023bc9026d
+      Path: Events\Default Work Unit\Play_octopus_laser_charge
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_octopus_laser_emission
+      guid: 60fe397fa48e6e42a9b04d0944da2b08
+      id: 2996450757
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1cfd5635b6ed334e9f0772a686333081
+      - ElementName: Play_octopus_laser_emission
+        ObjectType: 3
+        guid: 60fe397fa48e6e42a9b04d0944da2b08
+      Path: Events\Default Work Unit\Play_octopus_laser_emission
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_octopus_phase_II
+      guid: 6a0b7c40c66c1d41926f73caf092a166
+      id: 299129062
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1cfd5635b6ed334e9f0772a686333081
+      - ElementName: Play_octopus_phase_II
+        ObjectType: 3
+        guid: 6a0b7c40c66c1d41926f73caf092a166
+      Path: Events\Default Work Unit\Play_octopus_phase_II
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_octopus_teleport
       guid: 7687e93aad77844b8b909987215d548d
       id: 1241574133
@@ -447,6 +532,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: eec8063177d23e4ba8635d23a7be53d1
       Path: Events\Default Work Unit\Play_Spider_of_Hole
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_spider_phase_II
+      guid: bdb2cc8ad6c94e4f97a719053b0b459c
+      id: 1087567146
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1cfd5635b6ed334e9f0772a686333081
+      - ElementName: Play_spider_phase_II
+        ObjectType: 3
+        guid: bdb2cc8ad6c94e4f97a719053b0b459c
+      Path: Events\Default Work Unit\Play_spider_phase_II
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -607,8 +709,8 @@ MonoBehaviour:
     m_lastTime: -8584715848550606845
     List: []
   ExpandedFileSystemItemIds: 0200000003000000040000000500000006000000070000000a0000000b0000000c0000001c0000001d0000001e0000002200000023000000
-  ExpandedWaapiItemIds: 0200000003000000040000000500000006000000070000000a0000000b0000000c00000023000000
+  ExpandedWaapiItemIds: 0200000003000000040000000500000006000000070000000a0000000b0000000c0000001c0000001d0000001e0000002200000023000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 1
+  currentDataSource: 0
   CurrentPluginConfig: 

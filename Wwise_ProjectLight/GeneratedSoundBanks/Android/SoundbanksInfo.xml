@@ -9,10 +9,14 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{B86FBCA0-81BF-C4E5-C9BB-CD2271EEDC7E}">
+		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{EE392132-1A03-469A-A5EC-643B3B3D1F9F}">
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<Media>
+				<File Id="16027712" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>spider_phase_II.wav</ShortName>
+					<CachePath>SFX/spider_phase_II_D38ACD86.wem</CachePath>
+				</File>
 				<File Id="22203038" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>big_spider_footsteps_03.wav</ShortName>
 					<CachePath>SFX/big_spider_footsteps_03_D38ACD86.wem</CachePath>
@@ -45,6 +49,10 @@
 					<ShortName>little_spider_footsteps_06.wav</ShortName>
 					<CachePath>SFX/little_spider_footsteps_06_D38ACD86.wem</CachePath>
 				</File>
+				<File Id="274581232" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>octopus_phase_II.wav</ShortName>
+					<CachePath>SFX/octopus_phase_II_D38ACD86.wem</CachePath>
+				</File>
 				<File Id="293102080" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footstep_03.wav</ShortName>
 					<CachePath>SFX/Footstep_03_D38ACD86.wem</CachePath>
@@ -64,6 +72,10 @@
 				<File Id="397058062" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>candle_burning.wav</ShortName>
 					<CachePath>SFX/candle_burning_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="425355537" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>octopus_laser emission.wav</ShortName>
+					<CachePath>SFX/octopus_laser emission_D38ACD86.wem</CachePath>
 				</File>
 				<File Id="450905131" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footstep_06.wav</ShortName>
@@ -136,6 +148,10 @@
 				<File Id="1017258224" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>big_spider_footsteps_02.wav</ShortName>
 					<CachePath>SFX/big_spider_footsteps_02_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="1056921579" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>octopus_laser_charge.wav</ShortName>
+					<CachePath>SFX/octopus_laser_charge_D38ACD86.wem</CachePath>
 				</File>
 				<File Id="1057788871" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>little_spider_falling_05.wav</ShortName>
@@ -250,6 +266,21 @@
 						<MediaRef Id="1002582073"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="4175431908" Name="Play_octopus_laser_charge" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
+					<MediaRefs>
+						<MediaRef Id="1056921579"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2996450757" Name="Play_octopus_laser_emission" DurationType="OneShot" DurationMin="6" DurationMax="6">
+					<MediaRefs>
+						<MediaRef Id="425355537"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="299129062" Name="Play_octopus_phase_II" DurationType="OneShot" DurationMin="3.3749886" DurationMax="3.3749886">
+					<MediaRefs>
+						<MediaRef Id="274581232"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1241574133" Name="Play_octopus_teleport" DurationType="OneShot" DurationMin="1" DurationMax="1">
 					<MediaRefs>
 						<MediaRef Id="999867475"/>
@@ -270,6 +301,11 @@
 						<MediaRef Id="365336052"/>
 						<MediaRef Id="397058062"/>
 						<MediaRef Id="800256100"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1087567146" Name="Play_spider_phase_II" DurationType="OneShot" DurationMin="3" DurationMax="3">
+					<MediaRefs>
+						<MediaRef Id="16027712"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="43599987" Name="Play_ui_button" DurationType="OneShot" DurationMin="0.12498866" DurationMax="0.12498866">
@@ -357,5 +393,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3FF27E2C-9F9C-422D-4942-A260C743ECB3}</FileHash>
+	<FileHash>{DCDA04CB-EA56-A99B-CC1F-A55E1203D2CE}</FileHash>
 </SoundBanksInfo>

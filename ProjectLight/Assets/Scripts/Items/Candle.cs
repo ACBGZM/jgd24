@@ -59,7 +59,7 @@ public class Candle : MonoBehaviour,BombDamage
     {   
         if(status !=  lightStatus)
         {
-            WwiseAudioManager.GetInstance().PostEvent("candel_switch_light", gameObject);
+            WwiseAudioManager.GetInstance().PostEvent("candle_switch_light", gameObject);
         }
 
         lightStatus = status;

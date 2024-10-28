@@ -142,17 +142,21 @@ public class OctopusStateMachine : StateMachine
             rotateLaser.UpdatePlayerPos(GetPlayerPosition());
             rotateLaser.Cast();
         }
+
+        WwiseAudioManager.GetInstance().PostEvent("octopus_laser_emission", gameObject);
     }
 
     public void Transport(OctopusState_Transport state)
     {
         currentPosition = state.nextPosition;
         transform.position = state.nextPosition.position;
+        WwiseAudioManager.GetInstance().PostEvent("octopus_teleport", gameObject);
     }
 
     public void ChangePhase()
     {
         Phase2 = true;
+        WwiseAudioManager.GetInstance().PostEvent("octopus_change_phase", gameObject);
     }
 
     public void Palsy()
@@ -163,5 +167,6 @@ public class OctopusStateMachine : StateMachine
     public void Dead()
     {
         ChangeState(deadState);
+        WwiseAudioManager.GetInstance().PostEvent("octopus_change_phase", gameObject);
     }
 }
