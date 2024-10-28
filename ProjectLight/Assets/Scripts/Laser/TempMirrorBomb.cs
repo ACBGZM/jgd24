@@ -47,8 +47,10 @@ public class TempMirrorBomb : Bomb
 
     private void OnMirrorBroken()
     {   
-       
-        child_Animator.SetTrigger("Broke");
+       if(child_Animator != null)
+       {
+            child_Animator.SetTrigger("Broke");
+       }
         m_SpriteRenderer.sprite = spriteList[1];
 
         if(mirrorShell != null)
