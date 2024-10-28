@@ -55,7 +55,7 @@ MonoBehaviour:
   maxReflectTimes: 1
   MAX_LENGTH: 5000
   OFFSET: 0.0001
-  lineWidth: 0.1
+  lineWidth: 3
   laserLifeTime: 5
   initLaunchAngle: 0
   initLaunchDistanceOffet: 0

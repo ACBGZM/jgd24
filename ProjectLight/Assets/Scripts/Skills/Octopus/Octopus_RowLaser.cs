@@ -5,7 +5,6 @@ public class Octopus_RowLaser : LaserSkill
 {
     public float laserGap;
     public float instantiateDistanceOffset;
-    public GameObject jellyfishPrefab;
     public OctopusStateMachine stateMachine;
 
     public void Init(OctopusStateMachine stateMachine)
