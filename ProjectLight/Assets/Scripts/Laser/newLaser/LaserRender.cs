@@ -23,7 +23,8 @@ public class LaserRender : MonoBehaviour
     public Vector3 midVFXScale ;
     public Vector3 endVFXScale ;
 
-    private Color midVFXColor;
+    // private Color midVFXColor;
+    private ParticleSystemRenderer midVFXRenderer;
 
     // public Material lineMaterial;
     public List<Vector2> lines;
@@ -42,7 +43,8 @@ public class LaserRender : MonoBehaviour
         midVFX.transform.localScale = midVFXScale;
         endVFX.transform.localScale = endVFXScale;
 
-        midVFXColor = midVFX.GetComponent<ParticleSystemRenderer>().material.color;
+        // midVFXColor = midVFX.GetComponent<ParticleSystemRenderer>().material.color;
+        midVFXRenderer = midVFX.GetComponent<ParticleSystemRenderer>();
 
 
     }
@@ -53,6 +55,8 @@ public class LaserRender : MonoBehaviour
 
         if(keyPoints.Count == 2)
         {   
+            // midVFXColor.a = 0f;
+            midVFXRenderer.enabled = false;
 
             // Draw Segment
             line_1.GetComponent<LaserLineSegment>().DrawLineSegment(keyPoints[0],keyPoints[1]);
@@ -60,7 +64,7 @@ public class LaserRender : MonoBehaviour
             // Draw VFX
             startVFX.transform.position = keyPoints[0];
             endVFX.transform.position = keyPoints[1];
-            midVFXColor.a = 0f;
+            
           
 
 
@@ -76,8 +80,12 @@ public class LaserRender : MonoBehaviour
             // Draw VFX 
             startVFX.transform.position = keyPoints[0];
             endVFX.transform.position = keyPoints[2];
+            
             midVFX.transform.position = keyPoints[1];
-            midVFXColor.a = 1f;
+            // midVFXColor.a = 1f;
+            midVFXRenderer.enabled = true;
+
+           
 
 
         }

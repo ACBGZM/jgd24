@@ -49,7 +49,7 @@ MonoBehaviour:
   LaserLinePrefab: {fileID: 1542992487088693455, guid: 2c88c7dda2977df409e212c7fac30c12, type: 3}
   layerMasks:
   - Player
-  - Wall
+  - RayWall
   - Mirror
   - Boss
   maxReflectTimes: 1
