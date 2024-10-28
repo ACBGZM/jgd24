@@ -7082,7 +7082,7 @@ Transform:
   m_GameObject: {fileID: 2095202088}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.14, y: -9.259256, z: 0}
+  m_LocalPosition: {x: -0.1192, y: -9.259256, z: 0}
   m_LocalScale: {x: 0.96831256, y: 1.0003685, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7128,13 +7128,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1645658549
   m_SortingLayer: 1
-  m_SortingOrder: 10
+  m_SortingOrder: 11
   m_Sprite: {fileID: -1606233737, guid: 7998e8e2e05ea4f4187bceb29910267a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 23.43, y: 9.046666}
+  m_Size: {x: 23.47306, y: 9.046666}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -7498,6 +7498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f8cfc6a8bb74046be0c9720db2cbd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_servant_spiders: []
   m_ui_logic: {fileID: 2123856020}
 --- !u!1 &2146980068
 GameObject:
