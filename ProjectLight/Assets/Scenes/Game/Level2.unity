@@ -1650,6 +1650,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5899786945232979625, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      propertyPath: m_Size.x
+      value: 9.49972
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899786945232979625, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      propertyPath: m_Size.y
+      value: 9.49972
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899786945232979625, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.000000029779489
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899786945232979625, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.24980849
+      objectReference: {fileID: 0}
+    - target: {fileID: 7740112493155590419, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      propertyPath: palsyTime
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7740112493155590419, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
       propertyPath: tpPoints.Array.data[0]
       value: 
