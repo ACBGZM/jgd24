@@ -8,6 +8,7 @@ public class TempMirrorBomb : Bomb
     // 贴图更换
     public List<Sprite> spriteList; // 0: 初始 1:Broken
     private SpriteRenderer m_SpriteRenderer;
+    private BombMirrorShell mirrorShell;
 
     public void OnEnable()
     {
@@ -25,6 +26,8 @@ public class TempMirrorBomb : Bomb
         base.Start();
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
         m_SpriteRenderer.sprite = spriteList[0];
+
+        mirrorShell = GetComponentInChildren<BombMirrorShell>();
     }
 
     void Update()
@@ -36,6 +39,11 @@ public class TempMirrorBomb : Bomb
     private void OnMirrorBroken()
     {
          m_SpriteRenderer.sprite = spriteList[1];
+         if(mirrorShell != null)
+         {
+           Destroy(mirrorShell.gameObject);
+         }
+
     }
 
 

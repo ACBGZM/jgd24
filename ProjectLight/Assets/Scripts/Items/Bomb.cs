@@ -23,6 +23,8 @@ public class Bomb : MonoBehaviour
     private int m_order_in_sorting_layer;
     [SerializeField] private Material m_unlit_material;
 
+    private Animator m_animator = null;
+
     //private LineRenderer[] m_line_renderers;
     private void Awake()
     {
@@ -36,6 +38,8 @@ public class Bomb : MonoBehaviour
         SpriteRenderer sprite = GetComponentInChildren<SpriteRenderer>();
         m_sorting_layer = sprite != null ? sprite.sortingLayerName : "Bomb";
         m_order_in_sorting_layer = sprite != null ? sprite.sortingOrder : 100;
+
+        m_animator = GetComponent<Animator>();
     }
 
     public void Explode()
@@ -46,6 +50,10 @@ public class Bomb : MonoBehaviour
         {
             ShootParallelRays(direction);
         }
+
+        //  爆炸动画
+        m_animator.SetTrigger("Explode");
+        
     }
 
     private void ShootParallelRays(Vector2 base_direction)

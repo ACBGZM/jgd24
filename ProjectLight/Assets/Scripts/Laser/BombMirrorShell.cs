@@ -35,6 +35,6 @@ public class BombMirrorShell : MonoBehaviour, LaserDamage
     {   
         // GameObject newMirrirBrokenAnim =  Instantiate(MirrorBrokenAnimPrefab, transform.position, Quaternion.identity);
         MirrorBrokenEvent.CallReportMirrorBroken();
-        Destroy(gameObject); // 销毁镜面
+        // Destroy(gameObject); // 销毁镜面
     }
 }

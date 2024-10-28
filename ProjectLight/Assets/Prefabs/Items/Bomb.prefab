@@ -92,6 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5903392969382955094}
   - component: {fileID: 6008462905532872252}
+  - component: {fileID: 8540979837947478197}
   m_Layer: 8
   m_Name: Bomb
   m_TagString: Bomb
@@ -145,6 +146,27 @@ MonoBehaviour:
   m_beam_top_sprite: {fileID: -1413227356, guid: bf4c6e2effcdd4b049ac9a3b18758107, type: 3}
   m_beam_stretch_sprite: {fileID: 821988665, guid: bf4c6e2effcdd4b049ac9a3b18758107, type: 3}
   m_unlit_material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!95 &8540979837947478197
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7167747920772202834}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb603bae4ed6bfd4cb1fc32e33c61699, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7630843625597929767
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +238,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1190192977
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 966bc4bfc032c4d129269cc3efea9dd6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
