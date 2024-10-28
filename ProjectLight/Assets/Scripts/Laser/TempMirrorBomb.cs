@@ -9,7 +9,12 @@ public class TempMirrorBomb : Bomb
     public List<Sprite> spriteList; // 0: 初始 1:Broken
     private SpriteRenderer m_SpriteRenderer;
     private BombMirrorShell mirrorShell;
-    private Animator m_animator = null;
+    // private Animator m_animator = null;
+    public new Animator child_Animator 
+    {
+        get { return m_animator; }
+        set { m_animator = value; }
+    }
 
     public void OnEnable()
     {
@@ -29,7 +34,9 @@ public class TempMirrorBomb : Bomb
         m_SpriteRenderer.sprite = spriteList[0];
 
         mirrorShell = GetComponentInChildren<BombMirrorShell>();
-        m_animator = GetComponent<Animator>();
+        child_Animator = GetComponent<Animator>();
+
+        
     }
 
     void Update()

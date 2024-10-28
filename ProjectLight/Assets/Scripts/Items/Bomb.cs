@@ -23,7 +23,7 @@ public class Bomb : MonoBehaviour
     private int m_order_in_sorting_layer;
     [SerializeField] private Material m_unlit_material;
 
-    private Animator m_animator = null;
+    public Animator m_animator = null;
 
     //private LineRenderer[] m_line_renderers;
     private void Awake()
