@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8485715442274734290}
-  - component: {fileID: -8338458834150986608}
+  - component: {fileID: 6121048313878627589}
   m_Layer: 0
   m_Name: LaserLauncher
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-8338458834150986608
+--- !u!114 &6121048313878627589
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,25 +41,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 7141545529058785104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76cb6c02eb43b4dc18666e619e619ab7, type: 3}
+  m_Script: {fileID: 11500000, guid: ffe50ea1603dc334c8f8d0469e159606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_damage: 20
   testAngle: 0
-  LaserLinePrefab: {fileID: 8559424999833446516, guid: 719812b7ce28f4c4e8d3d159a317efd1, type: 3}
+  LaserLinePrefab: {fileID: 1542992487088693455, guid: 2c88c7dda2977df409e212c7fac30c12, type: 3}
   layerMasks:
   - Player
   - Wall
   - Mirror
   - Boss
-  MAX_LENGTH: 1000
+  maxReflectTimes: 1
+  MAX_LENGTH: 5000
   OFFSET: 0.0001
-  lineWidth: 0.5
+  lineWidth: 0.1
   laserLifeTime: 5
   initLaunchAngle: 0
   initLaunchDistanceOffet: 0
   startPosition: {x: 0, y: 0}
   startDirection: {x: 0, y: 0}
-  meterialList:
-  - {fileID: 2100000, guid: deb49da8142c6824ead3ce2d04d049c9, type: 2}
-  - {fileID: 2100000, guid: 0f5d3f538ba163a48a060d9834b99226, type: 2}
+  meterial: {fileID: 2100000, guid: 31edf692b14054eeaafed98d2473b50f, type: 2}

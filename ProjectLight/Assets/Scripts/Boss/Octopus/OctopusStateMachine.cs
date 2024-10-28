@@ -151,6 +151,11 @@ public class OctopusStateMachine : StateMachine
         transform.position = state.nextPosition.position;
     }
 
+    public void ChangePhase()
+    {
+        Phase2 = true;
+    }
+
     public void Palsy()
     {
         ChangeState(palsyState);
