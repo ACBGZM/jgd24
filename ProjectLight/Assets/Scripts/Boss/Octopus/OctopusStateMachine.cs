@@ -142,8 +142,6 @@ public class OctopusStateMachine : StateMachine
             rotateLaser.UpdatePlayerPos(GetPlayerPosition());
             rotateLaser.Cast();
         }
-
-        WwiseAudioManager.GetInstance().PostEvent("octopus_laser_emission", gameObject);
     }
 
     public void Transport(OctopusState_Transport state)
