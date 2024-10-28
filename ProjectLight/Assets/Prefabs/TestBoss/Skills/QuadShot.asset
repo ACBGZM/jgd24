@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41fd3f8b45d85aa46abc939cbd4543ff, type: 3}
+  m_Name: QuadShot
+  m_EditorClassIdentifier: 
+  skillID: 2
+  skillName: QuadShot
+  Range: 5
+  launcherPrefab: {fileID: 8171210220696821468, guid: 78f5f57a905b3744db693084d042e943, type: 3}
+  launcherStats:
+  - {fileID: 11400000, guid: 3dcbf59ef81484144bc2da41ecfd0b10, type: 2}
+  - {fileID: 11400000, guid: 955eca7600ddc3e4e93170ad9ffc93fa, type: 2}
+  - {fileID: 11400000, guid: c7e149cf8c8464e47a81e2c17aa9b3d0, type: 2}
+  - {fileID: 11400000, guid: 42e5ed3ea93f82a439028d342dc9e7ad, type: 2}

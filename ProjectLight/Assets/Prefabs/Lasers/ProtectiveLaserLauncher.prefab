@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7141545529058785104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8485715442274734290}
+  - component: {fileID: 6121048313878627589}
+  m_Layer: 0
+  m_Name: ProtectiveLaserLauncher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8485715442274734290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7141545529058785104}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6121048313878627589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7141545529058785104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe50ea1603dc334c8f8d0469e159606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_damage: 20
+  testAngle: 0
+  LaserLinePrefab: {fileID: 1542992487088693455, guid: 9cae728776f260d4aaf3efad83c74946, type: 3}
+  layerMasks:
+  - Player
+  - RayWall
+  - Mirror
+  maxReflectTimes: 1
+  MAX_LENGTH: 5000
+  OFFSET: 0.0001
+  lineWidth: 3
+  laserLifeTime: 5
+  initLaunchAngle: 0
+  initLaunchDistanceOffet: 0
+  startPosition: {x: 0, y: 0}
+  startDirection: {x: 0, y: 0}
+  meterial: {fileID: 2100000, guid: b7fc8dacadb25f540a17b54021f5f62c, type: 2}

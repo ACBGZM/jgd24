@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - CinemachineConfiner
+  - Mirror
+  - Bomb
+  - Wall
+  - Enemy
+  - Boss
+  - Servant
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - GameObject
+  - Water
+  - UI
+  - Player
+  - Wall
+  - Bomb
+  - Mirror
+  - Box
+  - Boss
+  - Bullet
+  - Candle
+  - servants
+  - RayWall
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1645658549
+    locked: 0
+  - name: DropItem
+    uniqueID: 534666907
+    locked: 0
+  - name: Boss
+    uniqueID: 1723428189
+    locked: 0
+  - name: Player
+    uniqueID: 1174141911
+    locked: 0
+  - name: Bomb
+    uniqueID: 3104774319
+    locked: 0
+  - name: SceneItems
+    uniqueID: 32393179
+    locked: 0
+  - name: Box
+    uniqueID: 571473963
+    locked: 0
+  - name: Ray
+    uniqueID: 3684654543
+    locked: 0
+  - name: UI
+    uniqueID: 2155293465
+    locked: 0

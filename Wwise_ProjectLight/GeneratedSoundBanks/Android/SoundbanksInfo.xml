@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Android</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{EE392132-1A03-469A-A5EC-643B3B3D1F9F}">
+			<ShortName>SFX</ShortName>
+			<Path>SFX.bnk</Path>
+			<Media>
+				<File Id="16027712" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>spider_phase_II.wav</ShortName>
+					<CachePath>SFX/spider_phase_II_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="22203038" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>big_spider_footsteps_03.wav</ShortName>
+					<CachePath>SFX/big_spider_footsteps_03_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="46592874" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>big_spider_footsteps_01.wav</ShortName>
+					<CachePath>SFX/big_spider_footsteps_01_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="90250860" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>little_spider_footsteps_04.wav</ShortName>
+					<CachePath>SFX/little_spider_footsteps_04_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="93494578" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>box_break.wav</ShortName>
+					<CachePath>SFX/box_break_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="117944658" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>little_spider_falling_04.wav</ShortName>
+					<CachePath>SFX/little_spider_falling_04_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="189487169" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep_02.wav</ShortName>
+					<CachePath>SFX/Footstep_02_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="224041703" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>bomb_explosion_01.wav</ShortName>
+					<CachePath>SFX/bomb_explosion_01_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="262506413" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>little_spider_footsteps_06.wav</ShortName>
+					<CachePath>SFX/little_spider_footsteps_06_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="274581232" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>octopus_phase_II.wav</ShortName>
+					<CachePath>SFX/octopus_phase_II_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="293102080" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep_03.wav</ShortName>
+					<CachePath>SFX/Footstep_03_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="307342716" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep_05.wav</ShortName>
+					<CachePath>SFX/Footstep_05_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="316551093" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>big_spider_shooting.wav</ShortName>
+					<CachePath>SFX/big_spider_shooting_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="365336052" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>candle_lit.wav</ShortName>
+					<CachePath>SFX/candle_lit_247D2252.wem</CachePath>
+				</File>
+				<File Id="397058062" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>candle_burning.wav</ShortName>
+					<CachePath>SFX/candle_burning_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="425355537" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>octopus_laser emission.wav</ShortName>
+					<CachePath>SFX/octopus_laser emission_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="450905131" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep_06.wav</ShortName>
+					<CachePath>SFX/Footstep_06_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="472866851" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>little_spider_footsteps_01.wav</ShortName>
+					<CachePath>SFX/little_spider_footsteps_01_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="578068760" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep_04.wav</ShortName>
+					<CachePath>SFX/Footstep_04_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="629957731" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep_01.wav</ShortName>
+					<CachePath>SFX/Footstep_01_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="635289607" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>bomb_explosion_02.wav</ShortName>
+					<CachePath>SFX/bomb_explosion_02_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="637940541" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>big_spider_footsteps_04.wav</ShortName>
+					<CachePath>SFX/big_spider_footsteps_04_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="694625940" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>little_spider_falling_02.wav</ShortName>
+					<CachePath>SFX/little_spider_falling_02_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="738846136" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>character_attacked.wav</ShortName>
+					<CachePath>SFX/character_attacked_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="743781653" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>little_spider_footsteps_02.wav</ShortName>
+					<CachePath>SFX/little_spider_footsteps_02_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="800256100" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>candle_off.wav</ShortName>
+					<CachePath>SFX/candle_off_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="837382017" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>little_spider_falling_03.wav</ShortName>
+					<CachePath>SFX/little_spider_falling_03_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="872952315" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>little_spider_footsteps_05.wav</ShortName>
+					<CachePath>SFX/little_spider_footsteps_05_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="921242520" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>little_spider_falling_01.wav</ShortName>
+					<CachePath>SFX/little_spider_falling_01_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="961402630" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_button.wav</ShortName>
+					<CachePath>SFX/ui_button_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="972075333" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>little_spider_footsteps_03.wav</ShortName>
+					<CachePath>SFX/little_spider_footsteps_03_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="999867475" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>octopus_teleport.wav</ShortName>
+					<CachePath>SFX/octopus_teleport_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="1002582073" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>little_spider_incubation.wav</ShortName>
+					<CachePath>SFX/little_spider_incubation_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="1017258224" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>big_spider_footsteps_02.wav</ShortName>
+					<CachePath>SFX/big_spider_footsteps_02_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="1056921579" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>octopus_laser_charge.wav</ShortName>
+					<CachePath>SFX/octopus_laser_charge_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="1057788871" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>little_spider_falling_05.wav</ShortName>
+					<CachePath>SFX/little_spider_falling_05_D38ACD86.wem</CachePath>
+				</File>
+				<File Id="1058791541" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>bomb_place.wav</ShortName>
+					<CachePath>SFX/bomb_place_D38ACD86.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1523723936" Name="Play_big_spider_footsteps" DurationType="OneShot" DurationMin="0.31249434" DurationMax="0.31249434">
+					<MediaRefs>
+						<MediaRef Id="22203038"/>
+						<MediaRef Id="46592874"/>
+						<MediaRef Id="637940541"/>
+						<MediaRef Id="1017258224"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3738137027" Name="Play_big_spider_incubation" DurationType="OneShot" DurationMin="2" DurationMax="2">
+					<MediaRefs>
+						<MediaRef Id="1002582073"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3867217528" Name="Play_big_spider_shooting" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<MediaRefs>
+						<MediaRef Id="316551093"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4166525010" Name="Play_bomb_explosion" DurationType="OneShot" DurationMin="1" DurationMax="1">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="621635301" Id="491961918" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="635289607"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="621635301" Id="376462290"/>
+							<MediaRefs>
+								<MediaRef Id="224041703"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3175281290" Name="Play_bomb_place" DurationType="OneShot" DurationMin="0.25" DurationMax="0.25">
+					<MediaRefs>
+						<MediaRef Id="1058791541"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2558917896" Name="Play_bomb_place_01" DurationType="OneShot" DurationMin="0.25" DurationMax="0.25">
+					<MediaRefs>
+						<MediaRef Id="1058791541"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3331416737" Name="Play_box_break" DurationType="OneShot" DurationMin="0.6249887" DurationMax="0.6249887">
+					<MediaRefs>
+						<MediaRef Id="93494578"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4168788445" Name="Play_candle_burning" DurationType="OneShot" DurationMin="8" DurationMax="8">
+					<MediaRefs>
+						<MediaRef Id="397058062"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="106681101" Name="Play_character_attacked" DurationType="OneShot" DurationMin="0.25" DurationMax="0.25">
+					<MediaRefs>
+						<MediaRef Id="738846136"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3854155799" Name="Play_Footsteps" DurationType="OneShot" DurationMin="0.2471285" DurationMax="0.25290486">
+					<MediaRefs>
+						<MediaRef Id="189487169"/>
+						<MediaRef Id="293102080"/>
+						<MediaRef Id="307342716"/>
+						<MediaRef Id="450905131"/>
+						<MediaRef Id="578068760"/>
+						<MediaRef Id="629957731"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3878302902" Name="Play_little_spider_falling" DurationType="OneShot" DurationMin="1.0800475" DurationMax="1.4668907">
+					<MediaRefs>
+						<MediaRef Id="117944658"/>
+						<MediaRef Id="694625940"/>
+						<MediaRef Id="837382017"/>
+						<MediaRef Id="921242520"/>
+						<MediaRef Id="1057788871"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1741564502" Name="Play_little_spider_footsteps" DurationType="OneShot" DurationMin="0.09102027" DurationMax="0.09654409">
+					<MediaRefs>
+						<MediaRef Id="90250860"/>
+						<MediaRef Id="262506413"/>
+						<MediaRef Id="472866851"/>
+						<MediaRef Id="743781653"/>
+						<MediaRef Id="872952315"/>
+						<MediaRef Id="972075333"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="535372708" Name="Play_little_spider_footsteps_01" DurationType="OneShot" DurationMin="0.09102027" DurationMax="0.09654409">
+					<MediaRefs>
+						<MediaRef Id="90250860"/>
+						<MediaRef Id="262506413"/>
+						<MediaRef Id="472866851"/>
+						<MediaRef Id="743781653"/>
+						<MediaRef Id="872952315"/>
+						<MediaRef Id="972075333"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3020140973" Name="Play_little_spider_incubation" DurationType="OneShot" DurationMin="1.4983071" DurationMax="1.4983071">
+					<MediaRefs>
+						<MediaRef Id="1002582073"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4175431908" Name="Play_octopus_laser_charge" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
+					<MediaRefs>
+						<MediaRef Id="1056921579"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2996450757" Name="Play_octopus_laser_emission" DurationType="OneShot" DurationMin="6" DurationMax="6">
+					<MediaRefs>
+						<MediaRef Id="425355537"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="299129062" Name="Play_octopus_phase_II" DurationType="OneShot" DurationMin="3.3749886" DurationMax="3.3749886">
+					<MediaRefs>
+						<MediaRef Id="274581232"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1241574133" Name="Play_octopus_teleport" DurationType="OneShot" DurationMin="1" DurationMax="1">
+					<MediaRefs>
+						<MediaRef Id="999867475"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="98439365" Name="Play_Player_Footsteps" DurationType="OneShot" DurationMin="0.2471285" DurationMax="0.25290486">
+					<MediaRefs>
+						<MediaRef Id="189487169"/>
+						<MediaRef Id="293102080"/>
+						<MediaRef Id="307342716"/>
+						<MediaRef Id="450905131"/>
+						<MediaRef Id="578068760"/>
+						<MediaRef Id="629957731"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1741580086" Name="Play_Second_candle" DurationType="OneShot" DurationMin="7.700257" DurationMax="7.700257">
+					<MediaRefs>
+						<MediaRef Id="365336052"/>
+						<MediaRef Id="397058062"/>
+						<MediaRef Id="800256100"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1087567146" Name="Play_spider_phase_II" DurationType="OneShot" DurationMin="3" DurationMax="3">
+					<MediaRefs>
+						<MediaRef Id="16027712"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="43599987" Name="Play_ui_button" DurationType="OneShot" DurationMin="0.12498866" DurationMax="0.12498866">
+					<MediaRefs>
+						<MediaRef Id="961402630"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="621635301" Name="bomb_explosion">
+					<States>
+						<State Id="376462290" Name="sea"/>
+						<State Id="491961918" Name="forest"/>
+						<State Id="748895195" Name="None"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{130FC8AF-4335-2582-179F-FB48B64D7BA2}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
+			</Busses>
+			<StateGroups>
+				<StateGroup Id="621635301" Name="bomb_explosion">
+					<States>
+						<State Id="376462290" Name="sea"/>
+						<State Id="491961918" Name="forest"/>
+						<State Id="748895195" Name="None"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{89548201-22BF-21F5-5F8D-395B1B90856E}">
+			<ShortName>Music</ShortName>
+			<Path>Music.bnk</Path>
+			<Media>
+				<File Id="36954470" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Arrival(常规战斗BGM).wav</ShortName>
+					<CachePath>SFX/Arrival(常规战斗BGM)_73625D90.wem</CachePath>
+				</File>
+				<File Id="193986832" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Spider of Hole(洞穴蜘蛛).wav</ShortName>
+					<CachePath>SFX/Spider of Hole(洞穴蜘蛛)_73625D90.wem</CachePath>
+				</File>
+				<File Id="497803314" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sunrise(游戏主界面BGM).wav</ShortName>
+					<CachePath>SFX/Sunrise(游戏主界面BGM)_73625D90.wem</CachePath>
+				</File>
+				<File Id="560751979" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Octopus under the sea(深海章鱼).wav</ShortName>
+					<CachePath>SFX/Octopus under the sea(深海章鱼)_73625D90.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3235884521" Name="Play_Arrival" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="36954470"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2585982154" Name="Play_Octopus_under_the_sea" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="560751979"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4244968688" Name="Play_Spider_of_Hole" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="193986832"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3517109807" Name="Play_Sunrise" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="497803314"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{DCDA04CB-EA56-A99B-CC1F-A55E1203D2CE}</FileHash>
+</SoundBanksInfo>

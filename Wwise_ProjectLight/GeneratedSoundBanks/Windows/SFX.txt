@@ -1,0 +1,71 @@
+Event	ID	Name			Wwise Object Path	Notes
+	43599987	Play_ui_button			\Default Work Unit\Play_ui_button	
+	98439365	Play_Player_Footsteps			\Default Work Unit\Play_Player_Footsteps	
+	106681101	Play_character_attacked			\Default Work Unit\Play_character_attacked	
+	299129062	Play_octopus_phase_II			\Default Work Unit\Play_octopus_phase_II	
+	535372708	Play_little_spider_footsteps_01			\Default Work Unit\Play_little_spider_footsteps_01	
+	1087567146	Play_spider_phase_II			\Default Work Unit\Play_spider_phase_II	
+	1241574133	Play_octopus_teleport			\Default Work Unit\Play_octopus_teleport	
+	1523723936	Play_big_spider_footsteps			\Default Work Unit\Play_big_spider_footsteps	
+	1741564502	Play_little_spider_footsteps			\Default Work Unit\Play_little_spider_footsteps	
+	1741580086	Play_Second_candle			\Default Work Unit\Play_Second_candle	
+	2558917896	Play_bomb_place_01			\Default Work Unit\Play_bomb_place_01	
+	2996450757	Play_octopus_laser_emission			\Default Work Unit\Play_octopus_laser_emission	
+	3020140973	Play_little_spider_incubation			\Default Work Unit\Play_little_spider_incubation	
+	3175281290	Play_bomb_place			\Default Work Unit\Play_bomb_place	
+	3331416737	Play_box_break			\Default Work Unit\Play_box_break	
+	3738137027	Play_big_spider_incubation			\Default Work Unit\Play_big_spider_incubation	
+	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
+	3867217528	Play_big_spider_shooting			\Default Work Unit\Play_big_spider_shooting	
+	3878302902	Play_little_spider_falling			\Default Work Unit\Play_little_spider_falling	
+	4166525010	Play_bomb_explosion			\Default Work Unit\Play_bomb_explosion	
+	4168788445	Play_candle_burning			\Default Work Unit\Play_candle_burning	
+	4175431908	Play_octopus_laser_charge			\Default Work Unit\Play_octopus_laser_charge	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	621635301	bomb_explosion			\Default Work Unit\bomb_explosion	
+
+State	ID	Name	State Group			Notes
+	376462290	sea	bomb_explosion			
+	491961918	forest	bomb_explosion			
+	748895195	None	bomb_explosion			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	16027712	spider_phase_II	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\spider_phase_II_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\big_spider\spider_phase_II		54073
+	22203038	big_spider_footsteps_03	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\big_spider_footsteps_03_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\big_spider\big_spider_footsteps\big_spider_footsteps_03		5794
+	46592874	big_spider_footsteps_01	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\big_spider_footsteps_01_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\big_spider\big_spider_footsteps\big_spider_footsteps_01		5918
+	90250860	little_spider_footsteps_04	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\little_spider_footsteps_04_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\little_spider\little_spider_footsteps\little_spider_footsteps_04		2373
+	93494578	box_break	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\box_break_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Bomb\box_break		9713
+	117944658	little_spider_falling_04	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\little_spider_falling_04_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\little_spider\little_spider_falling\little_spider_falling_04		26789
+	189487169	Footstep_02	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\Footstep_02_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Player_Footsteps\Footstep_02		3206
+	224041703	bomb_explosion_sea	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\bomb_explosion_01_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Bomb\bomb_explosion\bomb_explosion_sea		19550
+	262506413	little_spider_footsteps_06	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\little_spider_footsteps_06_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\little_spider\little_spider_footsteps\little_spider_footsteps_06		2317
+	274581232	octopus_phase_II	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\octopus_phase_II_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\octopus\octopus_phase_II		34319
+	293102080	Footstep_03	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\Footstep_03_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Player_Footsteps\Footstep_03		3054
+	307342716	Footstep_05	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\Footstep_05_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Player_Footsteps\Footstep_05		3297
+	316551093	big_spider_shooting	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\big_spider_shooting_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\big_spider\big_spider_shooting		8613
+	365336052	candle_lit	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\candle_lit_247D2252.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Candle\Second_candle\candle_lit		5918
+	397058062	candle_burning	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\candle_burning_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Candle\Second_candle\candle_burning		149969
+	425355537	octopus_laser emission	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\octopus_laser emission_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\octopus\octopus_laser emission		161213
+	450905131	Footstep_06	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\Footstep_06_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Player_Footsteps\Footstep_06		2988
+	472866851	little_spider_footsteps_01	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\little_spider_footsteps_01_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\little_spider\little_spider_footsteps\little_spider_footsteps_01		2506
+	578068760	Footstep_04	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\Footstep_04_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Player_Footsteps\Footstep_04		3971
+	629957731	Footstep_01	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\Footstep_01_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Player_Footsteps\Footstep_01		3464
+	635289607	bomb_explosion_forest	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\bomb_explosion_02_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Bomb\bomb_explosion\bomb_explosion_forest		19320
+	637940541	big_spider_footsteps_04	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\big_spider_footsteps_04_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\big_spider\big_spider_footsteps\big_spider_footsteps_04		5780
+	694625940	little_spider_falling_02	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\little_spider_falling_02_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\little_spider\little_spider_falling\little_spider_falling_02		28263
+	738846136	character_attacked	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\character_attacked_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\character_attacked		5532
+	743781653	little_spider_footsteps_02	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\little_spider_footsteps_02_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\little_spider\little_spider_footsteps\little_spider_footsteps_02		2338
+	800256100	candle_off	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\candle_off_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Candle\Second_candle\candle_off		11775
+	837382017	little_spider_falling_03	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\little_spider_falling_03_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\little_spider\little_spider_falling\little_spider_falling_03		26679
+	872952315	little_spider_footsteps_05	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\little_spider_footsteps_05_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\little_spider\little_spider_footsteps\little_spider_footsteps_05		2370
+	921242520	little_spider_falling_01	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\little_spider_falling_01_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\little_spider\little_spider_falling\little_spider_falling_01		27491
+	961402630	ui_button	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\ui_button_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\ui_button		3150
+	972075333	little_spider_footsteps_03	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\little_spider_footsteps_03_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\little_spider\little_spider_footsteps\little_spider_footsteps_03		2293
+	999867475	octopus_teleport	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\octopus_teleport_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\octopus\octopus_teleport		17582
+	1002582073	big_spider_incubation	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\little_spider_incubation_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\big_spider\big_spider_incubation		36889
+	1017258224	big_spider_footsteps_02	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\big_spider_footsteps_02_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\big_spider\big_spider_footsteps\big_spider_footsteps_02		6320
+	1056921579	octopus_laser_charge	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\octopus_laser_charge_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\octopus\octopus_laser_charge		26853
+	1057788871	little_spider_falling_05	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\little_spider_falling_05_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\little_spider\little_spider_falling\little_spider_falling_05		27766
+	1058791541	bomb_place	E:\UnityProjects\jgd24\Wwise_ProjectLight\.cache\Windows\SFX\bomb_place_D38ACD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Bomb\bomb_place		4537
+
