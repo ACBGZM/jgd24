@@ -87,7 +87,7 @@ public class Jellyfish : MonoBehaviour
 
             if(laser != null)
             {
-                laser.GetComponent<Laser>().SetLaunchParameter(transform.position, LaserDirection);
+                laser.GetComponent<NewLaserLogic>().SetLaunchParameter(transform.position, LaserDirection);
             }
         }
     }
@@ -103,7 +103,7 @@ public class Jellyfish : MonoBehaviour
     {
         animator.Play("Jellyfish_Shot");
         laser = Instantiate(LaserLauncherPrefab, transform.position, Quaternion.identity);
-        laser.GetComponent<Laser>().SetLaunchParameter(transform.position, LaserDirection);
+        laser.GetComponent<NewLaserLogic>().SetLaunchParameter(transform.position, LaserDirection);
         AnimationTool.AwaitCurrentAnimWhenEnd(animator, () =>
         {
             animator.Play("Jellyfish_Fade");
@@ -123,7 +123,7 @@ public class Jellyfish : MonoBehaviour
         }
         if(laser)
         {
-            laser.GetComponent<Laser>().DestroyLaser();
+            laser.GetComponent<NewLaserLogic>().DestroyLaser();
         }
         Destroy(gameObject);
     }
