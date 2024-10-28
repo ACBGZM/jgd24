@@ -4,7 +4,7 @@ using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEditor.Progress;
+// using static UnityEditor.Progress;
 
 public enum PlayerStatus
 {
