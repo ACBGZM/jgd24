@@ -16,22 +16,30 @@ public class OctopusState_Palsy : OctopusState
     public override void Enter()
     {
         base.Enter();
+        timer = 0;
         stateMachine.canBeDamaged = true;
+        timerStart = false;
         animator.Play("Octopus_Idle2Palsy");
         AnimationTool.AwaitCurrentAnimWhenEnd(animator, () =>
         {
             timerStart = true;
             animator.Play("Octopus_Palsy");
-            AnimationTool.AwaitCurrentAnimWhenEnd(animator, () =>
-            {
-                animator.Play("Octopus_Palsy2Idle");
-            });
         });
     }
 
     public override void Execute()
     {
         base.Execute();
+
+        if (timerStart)
+        {
+            timer += Time.deltaTime;
+            Debug.Log(timer);
+            if (timer >= stateMachine.PalsyTime)
+            {
+                animator.Play("Octopus_Palsy2Idle");
+            }
+        }
     }
 
     public override void Exit()

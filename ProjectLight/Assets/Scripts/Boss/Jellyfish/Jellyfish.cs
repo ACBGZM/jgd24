@@ -117,6 +117,10 @@ public class Jellyfish : MonoBehaviour
 
     public void Dead()
     {
+        if(warningLine)
+        {
+            Destroy(warningLine.gameObject);
+        }
         if(laser)
         {
             laser.GetComponent<Laser>().DestroyLaser();
