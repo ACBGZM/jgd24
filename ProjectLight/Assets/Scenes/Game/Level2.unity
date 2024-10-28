@@ -1668,7 +1668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7740112493155590419, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
       propertyPath: Phase2
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7740112493155590419, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
       propertyPath: palsyTime
@@ -1694,6 +1694,14 @@ PrefabInstance:
       propertyPath: m_ui_logic
       value: 
       objectReference: {fileID: 2123856020}
+    - target: {fileID: 8056756829468572487, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      propertyPath: laserDamageRate
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056756829468572487, guid: 1e5f0cf4ef3b8fe418d969e526a2a32f, type: 3}
+      propertyPath: shieldLaserDamageRate
+      value: 0.01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
