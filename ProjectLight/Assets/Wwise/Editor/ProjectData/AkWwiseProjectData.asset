@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 13c6ed4b7d42d0479aeeb5e7c7db8ae0
     GuidInternal: 
-    m_lastTime: -8584715848550626931
+    m_lastTime: -8584714844559828639
     List:
     - name: Music
       guid: 117a155c1a3278458848932fdd6c341d
@@ -414,8 +414,8 @@ MonoBehaviour:
         guid: 7e6ebb9bee7dc44988fee1023bc9026d
       Path: Events\Default Work Unit\Play_octopus_laser_charge
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.5
+      minDuration: 1.5
     - name: Play_octopus_laser_emission
       guid: 60fe397fa48e6e42a9b04d0944da2b08
       id: 2996450757
@@ -431,8 +431,8 @@ MonoBehaviour:
         guid: 60fe397fa48e6e42a9b04d0944da2b08
       Path: Events\Default Work Unit\Play_octopus_laser_emission
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 6
+      minDuration: 6
     - name: Play_octopus_phase_II
       guid: 6a0b7c40c66c1d41926f73caf092a166
       id: 299129062
@@ -448,8 +448,8 @@ MonoBehaviour:
         guid: 6a0b7c40c66c1d41926f73caf092a166
       Path: Events\Default Work Unit\Play_octopus_phase_II
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.3749886
+      minDuration: 3.3749886
     - name: Play_octopus_teleport
       guid: 7687e93aad77844b8b909987215d548d
       id: 1241574133
@@ -550,8 +550,8 @@ MonoBehaviour:
         guid: bdb2cc8ad6c94e4f97a719053b0b459c
       Path: Events\Default Work Unit\Play_spider_phase_II
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3
+      minDuration: 3
     - name: Play_Sunrise
       guid: dd5f597ce99703478895aef511ea15c8
       id: 3517109807
