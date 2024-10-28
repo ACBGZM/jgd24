@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3260172847456519247}
   - component: {fileID: 7454882355554415874}
   - component: {fileID: 7740112493155590419}
+  - component: {fileID: 5995406470460784530}
   - component: {fileID: 8331900696005160218}
   - component: {fileID: 5899697362340695791}
   - component: {fileID: 8056756829468572487}
@@ -124,6 +125,20 @@ MonoBehaviour:
   deadState: {fileID: 11400000, guid: cefd6929af6b96448bfe2e3b4144b28a, type: 2}
   Phase2: 0
   canBeDamaged: 0
+--- !u!114 &5995406470460784530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590564588003445654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940712a13834bec46844424c57c41d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shieldLifeTime: 0.1
+  shieldLifeTimer: 0
 --- !u!95 &8331900696005160218
 Animator:
   serializedVersion: 5
