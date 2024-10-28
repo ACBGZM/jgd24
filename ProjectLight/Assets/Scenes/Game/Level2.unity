@@ -969,21 +969,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4441462010799986016, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.87169814
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441462010799986016, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: m_Color.g
+      value: 0.87169814
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441462010799986016, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.87169814
+      objectReference: {fileID: 0}
     - target: {fileID: 5569250022616967946, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.37
       objectReference: {fileID: 0}
     - target: {fileID: 8257994754077778119, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_Color.b
-      value: 0.50201297
+      value: 0.25200623
       objectReference: {fileID: 0}
     - target: {fileID: 8257994754077778119, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_Color.g
-      value: 0.509434
+      value: 0.2528302
       objectReference: {fileID: 0}
     - target: {fileID: 8257994754077778119, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_Color.r
-      value: 0.42532933
+      value: 0.24376647
       objectReference: {fileID: 0}
     - target: {fileID: 8257994754077778119, guid: eb7eac78c94e3a045b9e72e4631086b2, type: 3}
       propertyPath: m_Intensity
